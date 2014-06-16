@@ -1,5 +1,6 @@
 library(RMySQL)
 library(e1071)
+library(stats)
 
 
 dataset_desc_analysis <- function(dataset_id){
@@ -56,11 +57,13 @@ dataset_desc_analysis <- function(dataset_id){
 			'var' = numeric(length(descriptors)),
 			'skewness' = numeric(length(descriptors)),
 			'kurtosis' = numeric(length(descriptors)),
+			'iqr' = numeric(length(descriptors)),
 			'norm_mean' = numeric(length(descriptors)),
 			'norm_median' = numeric(length(descriptors)),
 			'norm_var' = numeric(length(descriptors)),
 			'norm_skewness' = numeric(length(descriptors)),
-			'norm_kurtosis' = numeric(length(descriptors))
+			'norm_kurtosis' = numeric(length(descriptors)),
+			'norm_iqr' = numeric(length(descriptors))
 		)
 		
 		for(desc in descriptors){
@@ -77,7 +80,8 @@ dataset_desc_analysis <- function(dataset_id){
 			summary[which(summary$desc == desc), 'std'] = sd(values_desc)
 			summary[which(summary$desc == desc), 'var'] = var(values_desc)
 			summary[which(summary$desc == desc), 'skewness'] = skewness(values_desc)
-			summary[which(summary$desc == desc), 'kurtosis'] = kurtosis(values_desc)			
+			summary[which(summary$desc == desc), 'kurtosis'] = kurtosis(values_desc)
+			summary[which(summary$desc == desc), 'iqr'] = IQR(values_desc)			
 					
 		 	if (minimum != maximum){
 				norm_values_desc = (values_desc - minimum)/ (maximum - minimum)
@@ -92,13 +96,23 @@ dataset_desc_analysis <- function(dataset_id){
 			summary[which(summary$desc == desc), 'norm_var'] = var(norm_values_desc)
 			summary[which(summary$desc == desc), 'norm_skewness'] = skewness(norm_values_desc)
 			summary[which(summary$desc == desc), 'norm_kurtosis'] = kurtosis(norm_values_desc)
+			summary[which(summary$desc == desc), 'norm_iqr'] = IQR(norm_values_desc)
 		
 			
 		}
 		
 		
+		print('STD')
 		sum_order <- order(summary$norm_std)
-		print(summary$desc[sum_order][1:20])
+		print(summary[sum_order[1:20], c('desc', 'norm_std')])
+		print('IQR')
+		sum_order <- order(summary$norm_iqr)
+		print(summary[sum_order[1:20], c('desc', 'norm_iqr')])
+		print('KUR')
+		sum_order <- order(abs(summary$norm_kurtosis))
+		print(summary[sum_order[1:20], c('desc', 'norm_kurtosis')])
+		
+		
 		complete_summary[[name$name]] <- summary
 		
 	

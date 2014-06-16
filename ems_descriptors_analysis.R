@@ -3,27 +3,50 @@ library(RMySQL)
 
 dataset_desc_analysis <- function(dataset_id){
 	
+	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
+	
+	all <- dbReadTable(db, 'excerpts_descriptors')
+	
+	desc_with_na <- names(all[, colMeans(is.na(all)) != 0])
+	descriptors <- names(all)[2:length(names(all))]
+	descriptors <- subset(descriptors, ! descriptors %in% desc_with_na)
+	
+	rm(all)
+	
+	print(length(descriptors))
+	
+	
+	query <- paste('SELECT albums_artists.*, excerpts_descriptors.* FROM excerpts_descriptors INNER JOIN excerpts ON excerpts_descriptors.excerpt_id  = excerpts.id INNER JOIN albums_artists ON excerpts.album_id = albums_artists.album_id INNER JOIN excerpts_datasets ON excerpts.id = excerpts_datasets.excerpt_id WHERE excerpts_datasets.dataset_id = ' , dataset_id)
+
+
+
+	dataset <- dbGetQuery(db, query)
+	dataset <- dataset[, c('excerpt_id', 'artist_id', 'album_id', descriptors)]
+	
+	
+	return(dataset)
+	
 }
 
-dataset_id <-  1
-
-db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
-
-query <- paste('SELECT albums_artists.artist_id, excerpts_descriptors.* FROM excerpts_descriptors INNER JOIN excerpts ON excerpts_descriptors.excerpt_id  = excerpts.id INNER JOIN albums_artists ON excerpts.album_id = albums_artists.album_id INNER JOIN excerpts_datasets ON excerpts.id = excerpts_datasets.excerpt_id WHERE excerpts_datasets.dataset_id = ' , dataset_id)
 
 
-dataset <- dbGetQuery(db, query)
+
+
+
+
 
 #artists_ids <- unique(dataset$artist_id)
 #artists_names <- vector(mode = "list", length(artists_ids))
 #names(artists_names) <- artists_ids
 
 #descriptors <- names(dataset)[3:4]
-descriptors <- names(dataset)[3:length(names(dataset))]
+#descriptors <- names(dataset)[3:length(names(dataset))]
 
-for(desc in descriptors){
-	cat(desc, '\n')
-}
+#for(desc in descriptors){
+#	cat(desc, '\n')
+#}
 
 # for (id in artists_ids){
 	# query = paste('SELECT name FROM artists_info WHERE id = ', id)

@@ -1,4 +1,5 @@
 library(RMySQL)
+library(e1071)
 
 
 dataset_desc_analysis <- function(dataset_id){
@@ -33,77 +34,82 @@ dataset_desc_analysis <- function(dataset_id){
 	
 	print(artists_ids)
 	
+	complete_summary <- vector(mode = "list", 0)
+	
+	
 	for(id in artists_ids){
 		query = paste('SELECT name FROM artists_info WHERE id = ', id)
 		name <- dbGetQuery(db, query)
 		artists_names[[paste(id)]] <- name$name
 	
+		print(paste("ARTIST: ", artists_names[[paste(id)]]))
+	
 		values = dataset[which(dataset$artist_id == id),]
 	
-		print(paste("ARTIST: ", artists_names[[paste(id)]]))
-	}
-	return(dataset)
+		summary = data.frame(
+			'desc' = descriptors,
+			'min' = numeric(length(descriptors)),
+			'max' = numeric(length(descriptors)),
+			'mean' = numeric(length(descriptors)),
+			'median' = numeric(length(descriptors)),
+			'std' = numeric(length(descriptors)),
+			'var' = numeric(length(descriptors)),
+			'skewness' = numeric(length(descriptors)),
+			'kurtosis' = numeric(length(descriptors)),
+			'norm_mean' = numeric(length(descriptors)),
+			'norm_median' = numeric(length(descriptors)),
+			'norm_var' = numeric(length(descriptors)),
+			'norm_skewness' = numeric(length(descriptors)),
+			'norm_kurtosis' = numeric(length(descriptors))
+		)
+		
+		for(desc in descriptors){
+		
+			values_desc = values[[desc]]
+			
+			minimum <- min(values_desc)
+			maximum <- max(values_desc)
+			
+			summary[which(summary$desc == desc), 'min'] = minimum
+			summary[which(summary$desc == desc), 'max'] = maximum
+			summary[which(summary$desc == desc), 'mean'] = mean(values_desc)
+			summary[which(summary$desc == desc), 'median'] = median(values_desc)
+			summary[which(summary$desc == desc), 'std'] = sd(values_desc)
+			summary[which(summary$desc == desc), 'var'] = var(values_desc)
+			summary[which(summary$desc == desc), 'skewness'] = skewness(values_desc)
+			summary[which(summary$desc == desc), 'kurtosis'] = kurtosis(values_desc)			
+					
+		 	if (minimum != maximum){
+				norm_values_desc = (values_desc - minimum)/ (maximum - minimum)
+			}
+			else{
+				norm_values_desc = 0.5
+			}
+		
+			summary[which(summary$desc == desc), 'norm_mean'] = mean(norm_values_desc)
+			summary[which(summary$desc == desc), 'norm_median'] = median(norm_values_desc)
+			summary[which(summary$desc == desc), 'norm_std'] = sd(norm_values_desc)
+			summary[which(summary$desc == desc), 'norm_var'] = var(norm_values_desc)
+			summary[which(summary$desc == desc), 'norm_skewness'] = skewness(norm_values_desc)
+			summary[which(summary$desc == desc), 'norm_kurtosis'] = kurtosis(norm_values_desc)
+		
+			
+		}
+		
+		
+		sum_order <- order(summary$norm_std)
+		print(summary$desc[sum_order][1:20])
+		complete_summary[[name$name]] <- summary
+		
 	
-	dbDisconnect(db)	
+	}
+	
+	
+	dbDisconnect(db)
+	
+	return(complete_summary)	
 }
 
-
-
-
-
-
-
-
-
-
-# for (id in artists_ids){
-	# query = paste('SELECT name FROM artists_info WHERE id = ', id)
-	# name <- dbGetQuery(db, query)
-	# artists_names[[paste(id)]] <- name$name
-	
-	# values = dataset[which(dataset$artist_id == id),]
-	
-	# print(paste("ARTIST: ", id))
-			
-	# for(desc in descriptors){
-		
-		# print(desc)
-		
-		# values_desc = values[[desc]]
-		
-		# minimum = min(values_desc)
-		# maximum = max(values_desc)
-		
-		# print(paste("MIN: ", minimum))
-		# print(paste("MAX: ", maximum))
-		# print(paste("MEAN: ", mean(values_desc)))
-		# print(paste("MEDIAN: ", median(values_desc)))
-		# print(paste("VAR: ", var(values_desc)))
-		
-		# if (minimum != maximum){
-			# norm_values_desc = (values_desc - minimum)/ (maximum - minimum)
-		# }
-		# else{
-			# norm_values_desc = 0.5
-		# }
-		
-		
-		
-		# norm_minimum = min(norm_values_desc)
-		# norm_maximum = max(norm_values_desc)
-		
-		# print(paste("NORMALIZED MIN: ", norm_minimum))
-		# print(paste("NORMALIZED MAX: ", norm_maximum))
-		# print(paste("NORMALIZED MEAN: ", mean(norm_values_desc)))
-		# print(paste("NORMALIZED MEDIAN: ", median(norm_values_desc)))
-		# print(paste("NORMALIZED VAR: ", var(norm_values_desc)))
-
-		
-		# print("")
-	
-	# }
-	
-# }
 
 # # for(desc in descriptors){
 	

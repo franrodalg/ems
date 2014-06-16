@@ -555,7 +555,7 @@ def perform_analysis(excerpt_ids, extractors):
 
         file_path = main_path + excerpt['path']
 
-        excerpt_analysis = analyze_file(file_path, excerpt['id'], extractors)
+        excerpt_analysis = analyze_file(file_path, extractors)
         excerpt_analysis['id'] = excerpt['id']
 
         analysis.append(excerpt_analysis)

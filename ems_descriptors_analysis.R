@@ -3,7 +3,7 @@ library(e1071)
 library(stats)
 
 
-dataset_desc_analysis <- function(dataset_id){
+get_dataset_desc <- function(dataset_id){
 	
 	
 	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
@@ -16,10 +16,7 @@ dataset_desc_analysis <- function(dataset_id){
 	descriptors <- subset(descriptors, ! descriptors %in% desc_with_na)
 	
 	rm(all)
-	
-	print(length(descriptors))
-	
-	
+		
 	query <- paste('SELECT albums_artists.*, excerpts_descriptors.* FROM excerpts_descriptors INNER JOIN excerpts ON excerpts_descriptors.excerpt_id  = excerpts.id INNER JOIN albums_artists ON excerpts.album_id = albums_artists.album_id INNER JOIN excerpts_datasets ON excerpts.id = excerpts_datasets.excerpt_id WHERE excerpts_datasets.dataset_id = ' , dataset_id)
 
 	dataset <- dbGetQuery(db, query)
@@ -27,13 +24,18 @@ dataset_desc_analysis <- function(dataset_id){
 	dataset <- dataset[order(dataset$excerpt_id),]
 	row.names(dataset) <- dataset$excerpt_id
 	
-	print(head(dataset)[1:4])
+	return(dataset)
+	
+	
+	dbDisconnect(db)
+}
+
+
+get_dataset_summary <- function(dataset){
 	
 	artists_ids <- unique(dataset$artist_id)
 	artists_names <- vector(mode = "list", length(artists_ids))
 	names(artists_names) <- artists_ids
-	
-	print(artists_ids)
 	
 	complete_summary <- vector(mode = "list", 0)
 	
@@ -42,8 +44,6 @@ dataset_desc_analysis <- function(dataset_id){
 		query = paste('SELECT name FROM artists_info WHERE id = ', id)
 		name <- dbGetQuery(db, query)
 		artists_names[[paste(id)]] <- name$name
-	
-		print(paste("ARTIST: ", artists_names[[paste(id)]]))
 	
 		values = dataset[which(dataset$artist_id == id),]
 	
@@ -101,21 +101,8 @@ dataset_desc_analysis <- function(dataset_id){
 			
 		}
 		
-		
-		print('STD')
-		sum_order <- order(summary$norm_std)
-		print(summary[sum_order[1:20], c('desc', 'norm_std')])
-		print('IQR')
-		sum_order <- order(summary$norm_iqr)
-		print(summary[sum_order[1:20], c('desc', 'norm_iqr')])
-		print('KUR')
-		sum_order <- order(abs(summary$norm_kurtosis))
-		print(summary[sum_order[1:20], c('desc', 'norm_kurtosis')])
-		
-		
 		complete_summary[[name$name]] <- summary
 		
-	
 	}
 	
 	
@@ -125,14 +112,46 @@ dataset_desc_analysis <- function(dataset_id){
 }
 
 
-# # for(desc in descriptors){
+print_summary <- function(summary){
 	
+	for(artist in names(summary)){
+		
+		
+		print(paste("ARTIST: ", artist))
+		art_summary <- summary[[artist]]
+		
+		print('STD')
+		sum_order <- order(art_summary$norm_std)
+		print(art_summary[sum_order[1:20], c('desc', 'norm_std')])
+		print('IQR')
+		sum_order <- order(art_summary$norm_iqr)
+		print(art_summary[sum_order[1:20], c('desc', 'norm_iqr')])
+		print('KUR')
+		sum_order <- order(abs(art_summary$norm_kurtosis))
+		print(art_summary[sum_order[1:20], c('desc', 'norm_kurtosis')])
 
-	# # pdf(file = paste('Figures/', dataset_id, '_bxplt_', desc, '.pdf'))
+		
+	}
 	
-	# # boxplot(dataset[[desc]]~artist_id, data=dataset, main=desc, 
-  	 # # xlab="Artist", ylab=desc)
 	
-	# # dev.off()
-# # }
+	
+}
 
+plot_dataset <- function(dataset_id, dataset){
+
+	#descriptors <- names(dataset)[4:length(descriptors)]
+	descriptors <- names(dataset)[4]
+	
+	print(descriptors)
+	
+	for(desc in descriptors){
+	
+		pdf(file = paste('Figures/', dataset_id, '_bxplt_', desc, '.pdf'))
+	
+		boxplot(dataset[[desc]]~artist_id, data=dataset, main=desc, 
+			xlab="Artist", ylab=desc)
+	
+		dev.off()
+	}
+
+}

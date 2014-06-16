@@ -626,6 +626,12 @@ def store_excerpt_analysis(analysis, extractors, descriptors = None):
     if descriptors is None:
         descriptors = _get_descriptors(analysis, extractors)
 
+    if(analysis['id'] < 10):
+        str_id = '0' + str(analysis['id'])
+    else:
+        str_id = str(analysis['id'])
+
+
     for extractor in extractors:
 
         print 'Extractor: ' + extractor
@@ -727,6 +733,10 @@ def store_excerpt_analysis(analysis, extractors, descriptors = None):
                                 'excerpts_en_segments',
                                 analysis[extractor]['structure']['segments']
                                 )
+                if 'strings' in analysis[extractor].keys():
+                    with open('Features/strings_'+ str_id + '.json', 'w') as f:
+                        json.dump(analysis[extractor]['strings'], f)
+
 
             elif cmp(extractor, 'mirtoolbox') == 0:
                 if 'onsets' in analysis[extractor].keys():
@@ -743,11 +753,6 @@ def store_excerpt_analysis(analysis, extractors, descriptors = None):
             
             elif cmp(extractor, 'essentia') == 0:
 
-                if(analysis['id'] < 10):
-                    str_id = '0' + str(analysis['id'])
-                else:
-                    str_id = str(analysis['id'])
-
                 if 'melodia' in analysis[extractor].keys():
                     melodia_aux = {}
                     if 'mel_pitch' in analysis[extractor]['melodia']:
@@ -757,7 +762,7 @@ def store_excerpt_analysis(analysis, extractors, descriptors = None):
                         melodia_aux['mel_pitch_salience'] = \
                             [np.asscalar(m) for m in analysis[extractor]['melodia']['mel_pitch_salience']]
 
-                    with open('../Features/melodia_'+ str_id + '.json', 'w') as f:
+                    with open('Features/melodia_'+ str_id + '.json', 'w') as f:
                         json.dump(melodia_aux, f)
 
             if 'meta' in analysis[extractor].keys():

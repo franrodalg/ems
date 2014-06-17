@@ -129,11 +129,11 @@ get_dataset_summary <- function(dataset){
 
 get_ordered_desc <- function(art_summary, stat = 'norm_std', num = 20, reverse = FALSE){
 	
-	valid <- names(art_summary)[2:length(art_summary)]
+	valid <- names(art_summary)[2:length(names(art_summary))]
 	
 	if(! stat %in% valid){
-		cat(paste('\'', stat, '\'', ' is no valid statistic.\n'))
-		cat(paste('Valid statistics: ', valid))
+		cat(paste('\'', stat, '\'', ' is no valid statistic.\n', sep = ''))
+		cat(paste('Valid statistics: ', paste(valid, collapse = ", ")))
 		return(NULL)
 	}
 	

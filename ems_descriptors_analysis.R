@@ -33,11 +33,15 @@ get_dataset_desc <- function(dataset_id){
 
 get_dataset_summary <- function(dataset){
 	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
 	artists_ids <- unique(dataset$artist_id)
 	artists_names <- vector(mode = "list", length(artists_ids))
 	names(artists_names) <- artists_ids
 	
 	complete_summary <- vector(mode = "list", 0)
+	
+	descriptors <- names(dataset)[4:length(names(dataset))]
 	
 	
 	for(id in artists_ids){

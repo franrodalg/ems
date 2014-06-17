@@ -4,6 +4,24 @@ library(RMySQL)
 
 class_svm <- function(dataset, descriptors = NULL){
 		
+	train_test_datasets <- get_train_test_datasets(dataset, descriptors)
+	
+	model <- svm(artist_id~., data = train_dataset)
+	
+	prediction <- predict(model, test_dataset[,-1])
+	
+	print(prediction)
+	print(test_dataset[,1])
+	
+	tab <- table(pred = prediction, true <- test_dataset[,1])
+
+}
+
+get_train_test_datasets <- function(dataset, descriptors = NULL){
+	
+	
+	train_test_datasets <- vector(mode = "list")
+	
 	if(is.null(descriptors)){
 		descriptors <- names(dataset)[4:length(names(dataset))]		
 	}
@@ -19,13 +37,9 @@ class_svm <- function(dataset, descriptors = NULL){
 	train_dataset$artist_id <- as.factor(train_dataset$artist_id)
 	test_dataset$artist_id <- as.factor(test_dataset$artist_id)
 	
-	model <- svm(artist_id~., data = train_dataset)
+	train_test_datasets$train <- train_dataset
+	train_test_datasets$train <- test_dataset
 	
-	prediction <- predict(model, test_dataset[,-1])
-	
-	tab <- table(pred = prediction, true <- test_dataset[,1])
-	
-	print(tab)
 }
 
 get_train_test_albums <- function(dataset){

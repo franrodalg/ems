@@ -2,6 +2,20 @@ library(RMySQL)
 library(e1071)
 library(stats)
 
+get_artist_name <- function(artist_id){
+	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
+	
+	artist_name <- dbGetQuery(db, 
+		paste('SELECT name FROM artists_info WHERE id = ', artist_id))$name
+	
+	dbDisconnect(db)
+	
+	return(artist_name)
+	
+}
+
 
 get_dataset_desc <- function(dataset_id){
 	
@@ -24,10 +38,8 @@ get_dataset_desc <- function(dataset_id){
 	dataset <- dataset[order(dataset$excerpt_id),]
 	row.names(dataset) <- dataset$excerpt_id
 	
-	return(dataset)
-	
-	
 	dbDisconnect(db)
+	return(dataset)
 }
 
 
@@ -132,17 +144,21 @@ get_ordered_desc <- function(art_summary, stat = 'norm_std', num = 20, reverse =
 
 plot_dataset <- function(dataset_id, dataset){
 
-	#descriptors <- names(dataset)[4:length(descriptors)]
-	descriptors <- names(dataset)[4]
+	descriptors <- names(dataset)[4:length(names(dataset))]
 	
-	print(descriptors)
+	artist_ids <- unique(dataset$artist_id)
+	artist_ids <- artist_ids[order(artist_ids)]
+	artist_names <- unlist(lapply(artist_ids, get_artist_name))
+	
+	print(artist_names)
 	
 	for(desc in descriptors){
 	
 		pdf(file = paste('Figures/dat_', dataset_id, '_bxplt_', desc, '.pdf'))
 	
 		boxplot(dataset[[desc]]~artist_id, data=dataset, main=desc, 
-			xlab="Artist", ylab=desc)
+			xlab="Artist", ylab=desc, names = artist_names)
+
 	
 		dev.off()
 	}

@@ -2,10 +2,30 @@ library(e1071)
 library(RMySQL)
 
 
-test_svm <- function(dataset){
+class_svm <- function(dataset, descriptors = NULL){
 		
+	if(is.null(descriptors)){
+		descriptors <- names(dataset)[4:length(names(dataset))]		
+	}
 	
+	train_test <- get_train_test_albums(dataset)
 	
+	train_dataset <- dataset[which(dataset$album_id %in% train_test$train),]
+	test_dataset <- dataset[which(dataset$album_id %in% train_test$test),]
+	
+	train_dataset <- train_dataset[, c('artist_id', paste(descriptors))]
+	test_dataset <- test_dataset[, c('artist_id', paste(descriptors))]
+	
+	train_dataset$artist_id <- as.factor(train_dataset$artist_id)
+	test_dataset$artist_id <- as.factor(test_dataset$artist_id)
+	
+	model <- svm(artist_id~., data = train_dataset)
+	
+	prediction <- predict(model, test_dataset[,-1])
+	
+	tab <- table(pred = prediction, true <- test_dataset[,1])
+	
+	print(tab)
 }
 
 get_train_test_albums <- function(dataset){

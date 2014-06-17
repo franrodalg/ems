@@ -1,6 +1,6 @@
 library(e1071)
 library(RMySQL)
-
+library(jsonlite)
 
 class_svm <- function(dataset, descriptors = NULL){
 		
@@ -14,8 +14,22 @@ class_svm <- function(dataset, descriptors = NULL){
 	print(test_dataset[,1])
 	
 	tab <- table(pred = prediction, true <- test_dataset[,1])
+	
+	print(tab)
 
 }
+
+obtain_train_test_datasets <- function(dataset_id){
+	
+	
+	
+	
+	train_json <- toJSON(train_test_datasets$train, pretty = TRUE, digits = 10)
+	test_json <- toJSON(train_test_datasets$train, pretty = TRUE, digits = 10)
+	
+	
+}
+
 
 get_train_test_datasets <- function(dataset, descriptors = NULL){
 	
@@ -39,6 +53,8 @@ get_train_test_datasets <- function(dataset, descriptors = NULL){
 	
 	train_test_datasets$train <- train_dataset
 	train_test_datasets$train <- test_dataset
+	
+	return(train_test_datasets)
 	
 }
 

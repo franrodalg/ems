@@ -115,26 +115,18 @@ get_dataset_summary <- function(dataset){
 	return(complete_summary)	
 }
 
-get_ordered_desc <- function(art_summary, desc = 'std', num = 20, reverse = FALSE){
+get_ordered_desc <- function(art_summary, stat = 'norm_std', num = 20, reverse = FALSE){
 	
-	if(desc == 'std'){
-		sum_order <- order(art_summary$norm_std, decreasing = reverse)
-		return(art_summary[sum_order[1:num], c('desc', 'norm_std')])
-	}
-	else if(desc == 'kurt'){
-		sum_order <- order(art_summary$norm_kurtosis, decreasing = reverse)
-		return(art_summary[sum_order[1:num], c('desc', 'norm_kurtosis')])
-	}
-	else if(desc == 'iqr'){
-		sum_order <- order(art_summary$norm_iqr, decreasing = reverse)
-		return(art_summary[sum_order[1:num], c('desc', 'norm_iqr')])
-	}
-	else{
-		print(paste('\'', desc, '\'', ' is no valid descriptor.'))
+	valid <- names(art_summary)[2:length(art_summary)]
+	
+	if(! stat %in% valid){
+		cat(paste('\'', stat, '\'', ' is no valid statistic.\n'))
+		cat(paste('Valid statistics: ', valid))
 		return(NULL)
 	}
-
 	
+	sum_order <- order(art_summary[[stat]], decreasing = reverse)
+	return(art_summary[sum_order[1:num], c('desc', stat)])
 	
 }
 

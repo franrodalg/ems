@@ -115,28 +115,25 @@ get_dataset_summary <- function(dataset){
 	return(complete_summary)	
 }
 
-
-print_summary <- function(summary){
+get_ordered_desc <- function(art_summary, desc = 'std', num = 20, reverse = FALSE){
 	
-	for(artist in names(summary)){
-		
-		
-		print(paste("ARTIST: ", artist))
-		art_summary <- summary[[artist]]
-		
-		print('STD')
-		sum_order <- order(art_summary$norm_std)
-		print(art_summary[sum_order[1:20], c('desc', 'norm_std')])
-		print('IQR')
-		sum_order <- order(art_summary$norm_iqr)
-		print(art_summary[sum_order[1:20], c('desc', 'norm_iqr')])
-		print('KUR')
-		sum_order <- order(abs(art_summary$norm_kurtosis))
-		print(art_summary[sum_order[1:20], c('desc', 'norm_kurtosis')])
-
-		
+	if(desc == 'std'){
+		sum_order <- order(art_summary$norm_std, decreasing = reverse)
+		return(art_summary[sum_order[1:num], c('desc', 'norm_std')])
 	}
-	
+	else if(desc == 'kurt'){
+		sum_order <- order(art_summary$norm_kurtosis, decreasing = reverse)
+		return(art_summary[sum_order[1:num], c('desc', 'norm_kurtosis')])
+	}
+	else if(desc == 'iqr'){
+		sum_order <- order(art_summary$norm_iqr, decreasing = reverse)
+		return(art_summary[sum_order[1:num], c('desc', 'norm_iqr')])
+	}
+	else{
+		print(paste('\'', desc, '\'', ' is no valid descriptor.'))
+		return(NULL)
+	}
+
 	
 	
 }

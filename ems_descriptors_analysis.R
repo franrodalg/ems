@@ -139,7 +139,7 @@ plot_dataset <- function(dataset_id, dataset){
 	
 	for(desc in descriptors){
 	
-		pdf(file = paste('Figures/', dataset_id, '_bxplt_', desc, '.pdf'))
+		pdf(file = paste('Figures/dat_', dataset_id, '_bxplt_', desc, '.pdf'))
 	
 		boxplot(dataset[[desc]]~artist_id, data=dataset, main=desc, 
 			xlab="Artist", ylab=desc)

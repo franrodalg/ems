@@ -56,3 +56,17 @@ get_dataset <- function(dataset_id, descriptors = NULL){
 	return(dataset)
 	
 }
+
+get_path <- function(excerpt_id){
+	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
+	query <- paste('SELECT path FROM excerpts WHERE id = ' , excerpt_id)
+
+	path <- dbGetQuery(db, query)$path
+	
+	dbDisconnect(db)
+	return(path)
+	
+	
+}

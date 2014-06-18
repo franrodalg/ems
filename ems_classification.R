@@ -2,33 +2,37 @@ library(e1071)
 library(RMySQL)
 library(jsonlite)
 
+source('ems_db_interface.R')
+
 class_svm <- function(dataset, descriptors = NULL){
 		
 	train_test_datasets <- get_train_test_datasets(dataset, descriptors)
 	
-	model <- svm(artist_id~., data = train_dataset)
+	# str(train_test_datasets)
 	
-	prediction <- predict(model, test_dataset[,-1])
+	model <- svm(artist_id~., data = train_test_datasets$train)
 	
-	print(prediction)
-	print(test_dataset[,1])
+	predictions <- predict(model, train_test_datasets$test[,-1])
 	
-	tab <- table(pred = prediction, true <- test_dataset[,1])
+	tab <- table(pred = predictions, true <- train_test_datasets$test[,1])
 	
-	print(tab)
+	
+	results <- vector(mode = 'list')
+	
+	results$predictions <- predictions
+	results$ground_truth <- train_test_datasets$test[,1]
+	results$confusion_table <- tab
+	
+	return(results)
 
 }
 
-obtain_train_test_datasets <- function(dataset_id){
+#save_train_test_datasets <- function(train_test_datasets){
 	
+#	train_json <- toJSON(train_test_datasets$train, pretty = TRUE, digits = 10)
+#	test_json <- toJSON(train_test_datasets$test, pretty = TRUE, digits = 10)	
 	
-	
-	
-	train_json <- toJSON(train_test_datasets$train, pretty = TRUE, digits = 10)
-	test_json <- toJSON(train_test_datasets$train, pretty = TRUE, digits = 10)
-	
-	
-}
+#}
 
 
 get_train_test_datasets <- function(dataset, descriptors = NULL){
@@ -52,7 +56,7 @@ get_train_test_datasets <- function(dataset, descriptors = NULL){
 	test_dataset$artist_id <- as.factor(test_dataset$artist_id)
 	
 	train_test_datasets$train <- train_dataset
-	train_test_datasets$train <- test_dataset
+	train_test_datasets$test <- test_dataset
 	
 	return(train_test_datasets)
 	
@@ -64,7 +68,6 @@ get_train_test_albums <- function(dataset){
 	train_test_albums <- vector(mode = 'list', length = 0)
 	train_test_albums$train <- numeric(0)
 	train_test_albums$test <- numeric(0)
-	
 	
 	for(artist in unique(dataset$artist_id)){
 		
@@ -79,7 +82,6 @@ get_train_test_albums <- function(dataset){
 	
 	return(train_test_albums)
 	
-	
 }
 
 get_album_year <- function(album_id){
@@ -91,5 +93,106 @@ get_album_year <- function(album_id){
 	dbDisconnect(db)
 	
 	return(year)
+	
+}
+
+evaluate <- function(class_results){
+	
+	df <- as.data.frame(class_results$confusion_table)
+	names(df) <- c('pred', 'real', 'freq')
+	df <- df[, c('real', 'pred', 'freq')]
+	
+	eval <- vector(mode = 'list')
+	all_tp <- 0
+	all_prec <- numeric(0)
+	all_rec <- numeric(0)
+	all_f1 <- numeric(0)
+	
+	art_ids <- unique(df$real)
+	art_names <- unlist(lapply(art_ids, get_artist_name))
+	artists <- data.frame('id' = art_ids, 'name' = art_names)
+	
+	for(artist in art_ids){
+		
+		real <- df[which(df$real == artist),]
+		pred <- df[which(df$pred == artist),]
+		
+		tp <- sum(real[which(real$pred == artist), 'freq'])
+		fn <- sum(real[which(real$pred != artist), 'freq'])
+		fp <- sum(pred[which(pred$real != artist), 'freq'])
+		
+		prec <- tp / (tp + fp)
+		rec <- tp / (tp + fn)
+		f1 <- (2*prec*rec) / (prec + rec)
+		
+		name <- get_artist_name(artist)
+		
+		eval[[name]] <- vector(mode = 'list')
+		eval[[name]][['precision']] <- prec
+		eval[[name]][['recall']] <- rec
+		eval[[name]][['f1-score']] <- f1
+		
+		other_artists <- art_ids[-which(art_ids == artist)]
+		times_with <- numeric(length(other_artists))
+		times_by <- numeric(length(other_artists))
+		
+		for (i in 1:length(times_with)){
+				
+			times_with[i] = real[which(real$pred == other_artists[i]), 'freq']
+			times_by[i] = pred[which(pred$real == other_artists[i]), 'freq']
+			
+		}
+		
+		other_artists = replace_artist(other_artists, artists)
+		
+		eval[[name]][['conf_with']] <- data.frame('name' = other_artists, 
+			'times' = times_with)
+		eval[[name]][['conf_by']] <- data.frame('name' = other_artists, 
+			'times' = times_by)
+		
+		
+		all_tp <- all_tp + tp
+		all_prec <- c(all_prec, prec)
+		all_rec <- c(all_rec, rec)
+		all_f1 <- c(all_f1, f1)
+	
+	}
+	
+	eval[['accuracy']] <- all_tp / sum(class_results$confusion_table)
+	eval[['precision']] <- mean(all_prec)
+	eval[['recall']] <- mean(all_rec)
+	eval[['f1-score']] <- mean(all_f1)
+	
+	
+	predictions <- data.frame('real' = class_results$ground_truth, 
+		'pred' = class_results$predictions)
+	
+	predictions$pred <- replace_artist(predictions$pred, artists)
+	predictions$real <- replace_artist(predictions$real, artists)
+	eval[['predictions']] <-predictions 
+	
+	confusions <- predictions[which(predictions$real != predictions$pred),]
+	paths <- unlist(lapply(row.names(confusions), get_path))
+	eval[['confusions']] <- data.frame('path' = paths, confusions)
+	
+
+	
+	return(eval)
+		
+}
+
+replace_artist <- function(array, artists){
+	
+	aux <- character(length(array))
+	
+	for(i in 1:length(array)){
+		
+		artist <- array[i]
+		name <- as.character(artists[which(artists$id == artist), ]$name)
+		aux[i] <- name
+		
+	}
+	
+	return(aux)
 	
 }

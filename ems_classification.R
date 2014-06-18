@@ -4,7 +4,7 @@ library(jsonlite)
 
 source('ems_db_interface.R')
 
-class_svm <- function(dataset, descriptors = NULL){
+class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
 		
 	train_test_datasets <- get_train_test_datasets(dataset, descriptors)
 	
@@ -12,15 +12,23 @@ class_svm <- function(dataset, descriptors = NULL){
 	
 	model <- svm(artist_id~., data = train_test_datasets$train)
 	
-	predictions <- predict(model, train_test_datasets$test[,-1])
 	
-	tab <- table(pred = predictions, true <- train_test_datasets$test[,1])
+	if(self_class){
+		predictions <- predict(model, train_test_datasets$train[,-1])
+		ground_truth <- train_test_datasets$train[,1]
+		
+	}
+	else{
+		predictions <- predict(model, train_test_datasets$test[,-1])	
+		ground_truth <- train_test_datasets$test[,1]
+	}
 	
+	tab <- table(pred = predictions, true <- ground_truth)	
 	
 	results <- vector(mode = 'list')
 	
 	results$predictions <- predictions
-	results$ground_truth <- train_test_datasets$test[,1]
+	results$ground_truth <- ground_truth
 	results$confusion_table <- tab
 	
 	return(results)

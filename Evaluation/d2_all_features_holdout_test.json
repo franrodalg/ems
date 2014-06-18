@@ -1,0 +1,271 @@
+{
+	"The Album Leaf" : {
+		"precision" : [
+			0.5833333333
+		],
+		"recall" : [
+			0.7
+		],
+		"f1-score" : [
+			0.6363636364
+		],
+		"conf_with" : [
+			{
+				"name" : "Tycho",
+				"times" : 1
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 2
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Tycho",
+				"times" : 1
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 4
+			}
+		]
+	},
+	"Tycho" : {
+		"precision" : [
+			0.9
+		],
+		"recall" : [
+			0.9
+		],
+		"f1-score" : [
+			0.9
+		],
+		"conf_with" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 1
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 1
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		]
+	},
+	"The American Dollar" : {
+		"precision" : [
+			0.75
+		],
+		"recall" : [
+			0.6
+		],
+		"f1-score" : [
+			0.6666666667
+		],
+		"conf_with" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 4
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 2
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			}
+		]
+	},
+	"accuracy" : [
+		0.7333333333
+	],
+	"precision" : [
+		0.7444444444
+	],
+	"recall" : [
+		0.7333333333
+	],
+	"f1-score" : [
+		0.7343434343
+	],
+	"predictions" : [
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		}
+	],
+	"confusions" : [
+		{
+			"path" : "Collection/Tycho/2004 - Sunrise Projector/11 - Cloud Generator.mp3",
+			"real" : "Tycho",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/The Album Leaf/2006 - Into the Blue Again/02 - Always for You.mp3",
+			"real" : "The Album Leaf",
+			"pred" : "Tycho"
+		},
+		{
+			"path" : "Collection/The Album Leaf/2006 - Into the Blue Again/03 - Shine.mp3",
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"path" : "Collection/The Album Leaf/2001 - One Day I'll Be On Time/09 - Asleep.mp3",
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"path" : "Collection/The American Dollar/2010 - Atlas/11 - Frontier Melt.mp3",
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/The American Dollar/2007 - The Technicolour Sleep/12 - Palestine.mp3",
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/The American Dollar/2007 - The Technicolour Sleep/11 - Raided by Waves.mp3",
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/The American Dollar/2007 - The Technicolour Sleep/09 - Summer of War.mp3",
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		}
+	]
+}

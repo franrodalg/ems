@@ -1,0 +1,290 @@
+{
+	"Michael Stearns" : {
+		"precision" : [
+			1
+		],
+		"recall" : [
+			1
+		],
+		"f1-score" : [
+			1
+		],
+		"conf_with" : [
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			}
+		]
+	},
+	"Tetsu Inoue" : {
+		"precision" : [
+			1
+		],
+		"recall" : [
+			1
+		],
+		"f1-score" : [
+			1
+		],
+		"conf_with" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			}
+		]
+	},
+	"Vidna Obmana" : {
+		"precision" : [
+			1
+		],
+		"recall" : [
+			1
+		],
+		"f1-score" : [
+			1
+		],
+		"conf_with" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			}
+		]
+	},
+	"accuracy" : [
+		1
+	],
+	"precision" : [
+		1
+	],
+	"recall" : [
+		1
+	],
+	"f1-score" : [
+		1
+	],
+	"predictions" : [
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		}
+	],
+	"confusions" : []
+}

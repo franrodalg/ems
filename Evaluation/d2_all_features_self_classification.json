@@ -1,0 +1,290 @@
+{
+	"The Album Leaf" : {
+		"precision" : [
+			1
+		],
+		"recall" : [
+			1
+		],
+		"f1-score" : [
+			1
+		],
+		"conf_with" : [
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		]
+	},
+	"Tycho" : {
+		"precision" : [
+			1
+		],
+		"recall" : [
+			1
+		],
+		"f1-score" : [
+			1
+		],
+		"conf_with" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		]
+	},
+	"The American Dollar" : {
+		"precision" : [
+			1
+		],
+		"recall" : [
+			1
+		],
+		"f1-score" : [
+			1
+		],
+		"conf_with" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			}
+		]
+	},
+	"accuracy" : [
+		1
+	],
+	"precision" : [
+		1
+	],
+	"recall" : [
+		1
+	],
+	"f1-score" : [
+		1
+	],
+	"predictions" : [
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		}
+	],
+	"confusions" : []
+}

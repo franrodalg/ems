@@ -1,0 +1,683 @@
+{
+	"Michael Stearns" : {
+		"precision" : [
+			0.5
+		],
+		"recall" : [
+			0.8
+		],
+		"f1-score" : [
+			0.6153846154
+		],
+		"conf_with" : [
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 1
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 1
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 1
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 6
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 1
+			}
+		]
+	},
+	"Tetsu Inoue" : {
+		"precision" : [
+			0.8888888889
+		],
+		"recall" : [
+			0.8
+		],
+		"f1-score" : [
+			0.8421052632
+		],
+		"conf_with" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 1
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 1
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 1
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		]
+	},
+	"The Album Leaf" : {
+		"precision" : [
+			0.6
+		],
+		"recall" : [
+			0.6
+		],
+		"f1-score" : [
+			0.6
+		],
+		"conf_with" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 1
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			},
+			{
+				"name" : "Tycho",
+				"times" : 1
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 2
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 1
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 1
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 2
+			}
+		]
+	},
+	"Vidna Obmana" : {
+		"precision" : [
+			0.5
+		],
+		"recall" : [
+			0.3
+		],
+		"f1-score" : [
+			0.375
+		],
+		"conf_with" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 6
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 1
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 1
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 1
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 1
+			}
+		]
+	},
+	"Tycho" : {
+		"precision" : [
+			0.9090909091
+		],
+		"recall" : [
+			1
+		],
+		"f1-score" : [
+			0.9523809524
+		],
+		"conf_with" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 0
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 1
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			},
+			{
+				"name" : "The American Dollar",
+				"times" : 0
+			}
+		]
+	},
+	"The American Dollar" : {
+		"precision" : [
+			0.75
+		],
+		"recall" : [
+			0.6
+		],
+		"f1-score" : [
+			0.6666666667
+		],
+		"conf_with" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 1
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 2
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 1
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			}
+		],
+		"conf_by" : [
+			{
+				"name" : "Michael Stearns",
+				"times" : 0
+			},
+			{
+				"name" : "Tetsu Inoue",
+				"times" : 0
+			},
+			{
+				"name" : "The Album Leaf",
+				"times" : 2
+			},
+			{
+				"name" : "Vidna Obmana",
+				"times" : 0
+			},
+			{
+				"name" : "Tycho",
+				"times" : 0
+			}
+		]
+	},
+	"accuracy" : [
+		0.6833333333
+	],
+	"precision" : [
+		0.6913299663
+	],
+	"recall" : [
+		0.6833333333
+	],
+	"f1-score" : [
+		0.6752562496
+	],
+	"predictions" : [
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "Vidna Obmana",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Tetsu Inoue",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Michael Stearns",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "Tycho",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "Tycho"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The Album Leaf",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "The American Dollar"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"real" : "The American Dollar",
+			"pred" : "Michael Stearns"
+		}
+	],
+	"confusions" : [
+		{
+			"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/03 - A Scenic Fall.mp3",
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+			"real" : "Vidna Obmana",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/02 - Out From the Garden Reminded.mp3",
+			"real" : "Vidna Obmana",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+			"real" : "Tetsu Inoue",
+			"pred" : "Michael Stearns"
+		},
+		{
+			"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+			"real" : "Tetsu Inoue",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+			"real" : "Michael Stearns",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/03 - Wherever Two or More Are Gathered....mp3",
+			"real" : "Michael Stearns",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"path" : "Collection/The Album Leaf/2006 - Into the Blue Again/02 - Always for You.mp3",
+			"real" : "The Album Leaf",
+			"pred" : "Tycho"
+		},
+		{
+			"path" : "Collection/The Album Leaf/2006 - Into the Blue Again/03 - Shine.mp3",
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"path" : "Collection/The Album Leaf/2001 - One Day I'll Be On Time/05 - The Audio Pool.mp3",
+			"real" : "The Album Leaf",
+			"pred" : "Tetsu Inoue"
+		},
+		{
+			"path" : "Collection/The Album Leaf/2001 - One Day I'll Be On Time/09 - Asleep.mp3",
+			"real" : "The Album Leaf",
+			"pred" : "The American Dollar"
+		},
+		{
+			"path" : "Collection/The American Dollar/2010 - Atlas/11 - Frontier Melt.mp3",
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/The American Dollar/2007 - The Technicolour Sleep/12 - Palestine.mp3",
+			"real" : "The American Dollar",
+			"pred" : "The Album Leaf"
+		},
+		{
+			"path" : "Collection/The American Dollar/2007 - The Technicolour Sleep/11 - Raided by Waves.mp3",
+			"real" : "The American Dollar",
+			"pred" : "Vidna Obmana"
+		},
+		{
+			"path" : "Collection/The American Dollar/2007 - The Technicolour Sleep/09 - Summer of War.mp3",
+			"real" : "The American Dollar",
+			"pred" : "Michael Stearns"
+		}
+	]
+}

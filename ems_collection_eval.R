@@ -1,6 +1,10 @@
 library(RCurl)
+library(RMySQL)
 
-gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur = 0, split_time = NULL, filt_artists = NULL, tag = NULL, init_year = NULL, final_year = NULL, merge = FALSE, colab = FALSE, alias = TRUE){
+
+
+
+gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur = 0, split_time = NULL, filt_artists = NULL, avoid_artists = NULL, tag = NULL, init_year = NULL, final_year = NULL, merge = FALSE, colab = FALSE, alias = TRUE){
 	
 	
 	albums_artists <- dbReadTable(db, "albums_artists")
@@ -16,6 +20,12 @@ gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur
 	if(!is.null(filt_artists)){
 						
 		artists <- artists[artists %in% filt_artists]
+
+	}
+	
+	if(!is.null(avoid_artists)){
+						
+		artists <- artists[! artists %in% avoid_artists]
 
 	}
 	
@@ -398,13 +408,8 @@ print_report <- function(report, summary = FALSE, show_tracks = TRUE){
 		albums <- attributes(artist)$albums
 		
 		cat("Number of valid albums: ", length(albums), '\n')
-		
-		if(summary){
 			
-			
-			
-		}	
-		else{
+		if(!summary){
 		
 			cat("List of albums:", '\n\n')
 		

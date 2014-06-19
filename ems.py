@@ -13,6 +13,8 @@ der_extractors = ['rhythm_pos', 'en_structure', 'rhythm_structure']
 
 extractors = audio_extractors + der_extractors
 
+
+
 def _init_args():
 
 	parser = argparse.ArgumentParser(description = 
@@ -72,26 +74,47 @@ def _init_args():
 		help='the minimum duration of the tracks to be included ' + \
 			'in the dataset. Default: 60', type = int, default = 60)
 
-	parser.add_argument('-ec', '--excerpt_cut',
-		help='specifies the type of cut to be performed to the dataset ' + \
-			'tracks in order to obtain the excerpts. Options:\n' + \
-			'0.- Full track (default)\n' + \
-			'1.- Full track without initial and final silences (pending)' + \
-			'2.- Only the second half of the first minute (pending)', 
-		type = int, default = 0, choices = [0, 1, 2])	
-
-	group_artists.add_argument('-ex', '--extractors',
+	parser.add_argument('-ex', '--extractors',
 		help='an array containing the names of the feature extractors ' + \
 			'to be employed', type = str, nargs = '+', choices = extractors)
 
+	parser.add_argument('-ec', '--excerpt_cut',
+		help='specifies the type of cut to be performed to the dataset ' + \
+			'tracks in order to obtain the excerpts. Options: \n' + \
+			'0.- Full track (default); \n' + \
+			'1.- Full track without initial and final silences (pending); \n' + \
+			'2.- Only the second half of the first minute (pending) ', 
+		type = int, default = 0, choices = [0, 1, 2])
 
 	parser.add_argument('-fa', '--force_analysis',
 		help='forces the calculation of the features associated with ' + \
 			'the excerpts of the dataset, even if they are already ' + \
 			'stored in the database', action = 'store_true')
+	
+	# Artist Suggestion Mode
 
 
+	parser.add_argument('-as', '--artist_suggestion',
+		help='returns a list of artists included in the collection ' + \
+			'that match certain conditions.\n' + \
+			'Suggestion: Use it together with -na, -nt, -td, -tg and/or -ar',
+		action = 'store_true')
 
+	parser.add_argument('-tg', '--tag', 
+		help='allows to filter the artist suggestion mode (-as)' + \
+			'by indicating a tag. ' + \
+			'Only those artists that match that tag ' + \
+			'will be shown.',
+		type = str)
+
+	parser.add_argument('-ar', '--avoid_repetition',
+		help='in the artist suggestion mode (-as), impedes the system to' +\
+			'suggest artists that have been already included in stored datasets',
+		action = 'store_true')
+
+	parser.add_argument('-te', '--test',
+		help='test mode. Creates dataset and removes it just afterwards',
+		action = 'store_true')
 
 	return parser.parse_args()
 
@@ -99,27 +122,64 @@ def _check_args(args):
 
 	# Dataset ID and Name
 
-	if args.dataset_id is None and args.dataset_name is None \
-		and args.clean_excerpts is False:
-		print 'No Dataset Name or ID specified'
-		print 'Exiting'
-		sys.exit(0)
-
-
-if __name__=='__main__':
-
-
-	args = _init_args()
-	_check_args(args)
+	if not args.artist_suggestion:
+		if args.dataset_id is None and args.dataset_name is None \
+			and args.clean_excerpts is False:
+			print 'No Dataset Name or ID specified'
+			print 'Exiting'
+			sys.exit(0)
 
 	if args.excerpt_cut != 0:
 		print 'Excerpt Cut Mode not yet implemented. Sorry'
 		print 'Exiting'
 		sys.exit(0)
 
+if __name__=='__main__':
 
 	print ''
 
+	args = _init_args()
+	_check_args(args)
+
+	# Check if the user asked for artist suggestion mode
+
+	if args.artist_suggestion:
+
+		print 'Artist Suggestion Mode\n'
+
+		if args.tag is None:
+			tag = 'NULL'
+		else:
+			tag = '\'{}\''.format(args.tag)
+
+		if args.avoid_repetition:
+			ar = 'TRUE'
+		else:
+			ar = 'FALSE'
+
+		print 'Searching for artists that fulfill: '
+		print '- Have at least {} albums '.format(args.num_albums) + \
+			'with at least {} tracks of {} seconds length or more'.\
+			format(args.num_tracks, args.track_duration)
+		print '- Have the tag {} associated with them'.\
+			format(tag)
+		if(args.avoid_repetition):
+			print '- Have not been included in any other dataset before'
+
+
+		v = ro.r('source("ems_gen_dataset.R");')
+
+
+		r_call = 'suggest_artists(' + \
+			'{}, {}, {}, '.format(args.num_albums, args.num_tracks, 
+				args.track_duration) + \
+			'tag = {}, avoid_repetition = {})'.\
+			format(tag, ar)
+
+		v = ro.r(r_call)
+
+		print 'Exiting'
+		sys.exit(0)
 
 	# Check if the Dataset already exists in the database
 
@@ -170,7 +230,8 @@ if __name__=='__main__':
 	# Generate, Update, Remove, proceed to the Analysis section or Exit
 
 	if args.dataset_removal:
-		if found:		
+		if found:
+
 			print 'Removing data related with the dataset \'{}\'...'\
 				.format(ret_dataset['name'])
 
@@ -223,9 +284,7 @@ if __name__=='__main__':
 				.format(args.dataset_name)
 			dataset_name = args.dataset_name
 
-
-
-	if args.dataset_update or not found:			
+	if (args.dataset_update or not found):			
 
 		# Generate Tracklist of the dataset
 
@@ -335,6 +394,21 @@ if __name__=='__main__':
 
 		print 'Dataset excerpts successfully stored\n'
 
+		if args.test:
+
+			print 'Removing data related with the dataset \'{}\'...'\
+				.format(ret_dataset['name'])
+
+			db_i.remove_dataset(ret_dataset['id'])
+			
+			if args.clean_excerpts:
+				print 'Removing orphan excerpts...'
+				db_i.remove_orphans()
+
+			print 'Dataset \'{}\' successfully removed from the database'\
+				.format(ret_dataset['name'])
+			print 'Exiting'
+			sys.exit(0)
 
 
 	print 'Checking which excerpts need to be analyzed...'
@@ -380,11 +454,9 @@ if __name__=='__main__':
 	print 'Storing dataset analysis in the database...'
 
 	if len(not_analyzed) > 0:
-		print 'SIMULANDO ALMACENAMIENTO NUEVOS'
-		#an.store_analysis(analysis_new, extractors)
+		an.store_analysis(analysis_new, extractors)
 	if len(analyzed) > 0 and args.force_analysis:
-		print 'SIMULANDO ALMACENAMIENTO ANTIGUOS'
-		#an.store_analysis(analysis_old, extractors)
+		an.store_analysis(analysis_old, extractors)
 
 	print 'Done\n'
 
@@ -394,19 +466,15 @@ if __name__=='__main__':
 
 		print 'Computing derived descriptors...'
 		if len(not_analyzed) > 0:
-			#print 'SIMULANDO ANALISIS NUEVOS'
 			der_new = an.compute_der_descriptors(not_analyzed, extractors)
 		if len(analyzed) > 0 and args.force_analysis:
-			#print 'SIMULANDO ANALISIS ANTIGUOS'
 			der_old = an.compute_der_descriptors(analyzed, extractors)
 		print 'Done\n'
 
 		print 'Storing derived descriptors...'
 
 		if len(not_analyzed) > 0:
-			#print 'SIMULANDO ALMACENAMIENTO NUEVOS'
 			an.store_analysis(der_new, extractors)
 		if len(analyzed) > 0 and args.force_analysis:
-			#print 'SIMULANDO ALMACENAMIENTO ANTIGUOS'
 			an.store_analysis(der_old, extractors)
 		print 'Done\n'

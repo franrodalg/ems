@@ -1,6 +1,5 @@
 library(RMySQL)
 
-
 get_artist_name <- function(artist_id){
 	
 	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
@@ -12,6 +11,22 @@ get_artist_name <- function(artist_id){
 	dbDisconnect(db)
 	
 	return(artist_name)
+	
+}
+
+get_artists_in_datasets <- function(){
+	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
+	
+	query = 'SELECT DISTINCT albums_artists.artist_id FROM excerpts_datasets 
+		INNER JOIN excerpts ON excerpts_datasets.excerpt_id = excerpts.id 
+		INNER JOIN albums_artists ON albums_artists.album_id = excerpts.album_id'
+	
+	artists_ids <- dbGetQuery(db,query)$artist_id	
+	dbDisconnect(db)
+	
+	return(artists_ids)
 	
 }
 

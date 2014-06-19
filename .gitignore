@@ -4,3 +4,7 @@
 *.pyc
 
 ems_descriptors_analysis (Autosaved).R
+
+.RData
+
+.Rhistory

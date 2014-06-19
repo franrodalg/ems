@@ -157,15 +157,15 @@ if __name__=='__main__':
 		else:
 			ar = 'FALSE'
 
-		print 'Searching for artists that fulfill: '
-		print '- Have at least {} albums '.format(args.num_albums) + \
+		print 'Searching for artists that: '
+		print '- have at least {} albums '.format(args.num_albums) + \
 			'with at least {} tracks of {} seconds length or more'.\
 			format(args.num_tracks, args.track_duration)
-		print '- Have the tag {} associated with them'.\
+		print '- have the tag {} associated with them'.\
 			format(tag)
 		if(args.avoid_repetition):
-			print '- Have not been included in any other dataset before'
-
+			print '- have not been included in any other dataset before'
+		print ''
 
 		v = ro.r('source("ems_gen_dataset.R");')
 
@@ -443,11 +443,11 @@ if __name__=='__main__':
 	print 'Performing analyis...'
 
 	if len(not_analyzed) > 0:
-		print 'SIMULANDO ANALISIS NUEVOS'
-		#analysis_new = an.perform_analysis(not_analyzed, extractors)
+		#print 'SIMULANDO ANALISIS NUEVOS'
+		analysis_new = an.perform_analysis(not_analyzed, extractors)
 	if len(analyzed) > 0 and args.force_analysis:
-		print 'SIMULANDO ANALISIS ANTIGUOS'
-		#analysis_old = an.perform_analysis(analyzed, extractors)
+		#print 'SIMULANDO ANALISIS ANTIGUOS'
+		analysis_old = an.perform_analysis(analyzed, extractors)
 
 	print 'Done\n'
 

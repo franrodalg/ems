@@ -30,11 +30,7 @@ suggest_artists <- function(num_albums = 5, num_tracks = 5,
 		avoid_artists = NULL;
 	}
 	
-	print(avoid_artists)
-	
 	db <- dbConnect(MySQL(), db = 'ems', host = 'localhost', user = 'root');
-
-	print(tag)
 
 	report <- gen_report(db = db, min_num_albums = num_albums, 
 		min_num_tracks = num_tracks, min_track_dur = min_track_dur, 

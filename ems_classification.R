@@ -2,7 +2,64 @@ library(e1071)
 library(RMySQL)
 library(jsonlite)
 
+source('ems_feature_sets.R')
+
 source('ems_db_interface.R')
+
+classification <- function(){
+	
+	modes <- vector(mode = 'list', length = 2)
+	names(modes) <- c('holdout', 'self')
+	
+	datasets <- vector(mode = 'list')
+	datasets$atmospherical <- get_dataset(1)
+	datasets$postrock <- get_dataset(2)
+	datasets$techno
+	datasets$ambient <- rbind(datasets$atmospherical, datasets$postrock)
+	datasets$ambient_techno <- rbind(datasets$atmospherical, datasets$postrock)
+	evals <- vector(mode = 'list', length = length(modes))
+	names(evals) <- names(modes)
+	
+	
+	feature_sets <- get_feature_sets()
+	
+	for(mode in names(modes)){
+	
+		evals_datasets <- vector(mode = 'list', length = length(datasets))
+		names(evals_datasets) <- names(datasets)
+	
+		for(dataset in names(datasets)){
+		
+			results_sets <- vector(mode = 'list', length = length(feature_sets))
+			names(results_sets) <- names(feature_sets)
+			evals_sets <- vector(mode = 'list', length = length(feature_sets))
+			names(evals_sets) <- names(feature_sets)
+	
+			for(set in names(feature_sets)){
+			
+				if(mode == 'holdout'){
+					results_sets[[set]] <- class_svm(datasets[[dataset]], descriptors = feature_sets[[set]])
+				}
+				else{
+					results_sets[[set]] <- class_svm(datasets[[dataset]], descriptors = feature_sets[[set]], self_class = TRUE)
+
+				}
+			
+				evals_sets[[set]] <- evaluate(results_sets[[set]])
+			}
+			
+			evals_datasets[[dataset]] <- evals_sets	
+			
+		}
+		
+		evals[[mode]] <- evals_datasets
+		
+	}
+	
+	return(evals)
+	
+}
+
 
 class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
 		
@@ -14,8 +71,11 @@ class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
 	
 	
 	if(self_class){
-		predictions <- predict(model, train_test_datasets$train[,-1])
-		ground_truth <- train_test_datasets$train[,1]
+		
+		train_test <- rbind(train_test_datasets$train, train_test_datasets$test)
+		
+		predictions <- predict(model, train_test[,-1])
+		ground_truth <- train_test[,1]
 		
 	}
 	else{
@@ -34,13 +94,6 @@ class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
 	return(results)
 
 }
-
-#save_train_test_datasets <- function(train_test_datasets){
-	
-#	train_json <- toJSON(train_test_datasets$train, pretty = TRUE, digits = 10)
-#	test_json <- toJSON(train_test_datasets$test, pretty = TRUE, digits = 10)	
-	
-#}
 
 
 get_train_test_datasets <- function(dataset, descriptors = NULL){

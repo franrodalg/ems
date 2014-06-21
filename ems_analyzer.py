@@ -452,6 +452,8 @@ def essentia(file_path):
     """
     """
 
+    print 'Computing Essentia descriptors not included in the Freesound extractor...'
+
     audio = MonoLoader(filename = file_path)()
 
     pitch, pitchSalience = PredominantMelody()(audio)
@@ -478,6 +480,8 @@ def essentia(file_path):
     analysis['desc']['ess_danceability'] = Danceability()(audio)
 
     analysis['desc']['ess_dynamic_complexity'] = DynamicComplexity()(audio)[0]
+
+    print 'Done'
 
     return analysis
 
@@ -565,6 +569,27 @@ def perform_analysis(excerpt_ids, extractors):
     return analysis
 
 
+def perform_store_analysis(excerpt_ids, extractors):
+
+    paths = i.get_paths(excerpt_ids = excerpt_ids)
+
+    count = 0
+
+    for excerpt in paths:
+        
+        print '[{}/{}]'.format(count + 1, len(excerpt_ids))
+
+        file_path = main_path + excerpt['path']
+
+        excerpt_analysis = analyze_file(file_path, extractors)
+        excerpt_analysis['id'] = excerpt['id']
+
+        store_excerpt_analysis(excerpt_analysis, extractors)
+
+        count = count + 1    
+
+
+
 def compute_der_descriptors_excerpt(excerpt_id, extractors):
     """
     """
@@ -579,7 +604,6 @@ def compute_der_descriptors_excerpt(excerpt_id, extractors):
         analysis['en_structure'] = en_structure(excerpt_id)
     if 'rhythm_structure' in extractors:
         analysis['rhythm_structure'] = rhythm_structure(excerpt_id)
-
 
     return analysis
 
@@ -605,6 +629,21 @@ def compute_der_descriptors(excerpt_ids, extractors):
 
     return analysis
 
+def compute_store_der_descriptors(excerpt_ids, extractors):
+
+    count = 0
+
+    for excerpt in excerpt_ids:
+
+        print '\n[{}/{}]\n'.format(count + 1, len(excerpt_ids))
+
+        excerpt_analysis = \
+            compute_der_descriptors_excerpt(excerpt, extractors)
+        excerpt_analysis['id'] = excerpt
+
+        store_excerpt_analysis(excerpt_analysis, extractors)
+
+        count = count + 1
 
 def store_analysis(analysis, extractors, descriptors = None):
     """

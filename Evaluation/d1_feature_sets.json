@@ -1,0 +1,3484 @@
+{
+	"all" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.5625
+			],
+			"recall" : [
+				0.9
+			],
+			"f1-score" : [
+				0.6923076923
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 6
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				1
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.8888888889
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.6666666667
+			],
+			"recall" : [
+				0.4
+			],
+			"f1-score" : [
+				0.5
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 6
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.7
+		],
+		"precision" : [
+			0.7430555556
+		],
+		"recall" : [
+			0.7
+		],
+		"f1-score" : [
+			0.6937321937
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/03 - A Scenic Fall.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"essentia" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.5882352941
+			],
+			"recall" : [
+				1
+			],
+			"f1-score" : [
+				0.7407407407
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 6
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				1
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.8888888889
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.8
+			],
+			"recall" : [
+				0.4
+			],
+			"f1-score" : [
+				0.5333333333
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 6
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.7333333333
+		],
+		"precision" : [
+			0.7960784314
+		],
+		"recall" : [
+			0.7333333333
+		],
+		"f1-score" : [
+			0.7209876543
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/03 - A Scenic Fall.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"mirtoolbox" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.6428571429
+			],
+			"recall" : [
+				0.9
+			],
+			"f1-score" : [
+				0.75
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 5
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				0.8181818182
+			],
+			"recall" : [
+				0.9
+			],
+			"f1-score" : [
+				0.8571428571
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 2
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.6
+			],
+			"recall" : [
+				0.3
+			],
+			"f1-score" : [
+				0.4
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 5
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 2
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.7
+		],
+		"precision" : [
+			0.687012987
+		],
+		"recall" : [
+			0.7
+		],
+		"f1-score" : [
+			0.669047619
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/03 - A Scenic Fall.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/02 - Out From the Garden Reminded.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/01 - Man Made Heaven.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/05 - Dimensional Shift (Across the Threshold).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"echonest" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.5
+			],
+			"recall" : [
+				0.6
+			],
+			"f1-score" : [
+				0.5454545455
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 4
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 5
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				1
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.8888888889
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.5
+			],
+			"recall" : [
+				0.5
+			],
+			"f1-score" : [
+				0.5
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 5
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 4
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.6333333333
+		],
+		"precision" : [
+			0.6666666667
+		],
+		"recall" : [
+			0.6333333333
+		],
+		"f1-score" : [
+			0.6447811448
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/03 - Wherever Two or More Are Gathered....mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/04 - Life in the Gravity Well.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/06 - Within (Choir of the Ascending Spirit).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"dynamics" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.4166666667
+			],
+			"recall" : [
+				0.5
+			],
+			"f1-score" : [
+				0.4545454545
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 5
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 7
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				1
+			],
+			"recall" : [
+				0.9
+			],
+			"f1-score" : [
+				0.9473684211
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.3333333333
+			],
+			"recall" : [
+				0.3
+			],
+			"f1-score" : [
+				0.3157894737
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 7
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 5
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.5666666667
+		],
+		"precision" : [
+			0.5833333333
+		],
+		"recall" : [
+			0.5666666667
+		],
+		"f1-score" : [
+			0.5725677831
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/02 - Out From the Garden Reminded.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/07 - Until the Glowering Space 1.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/05 - Polychrome Chant.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/05 - As the Earth Kissed the Moon.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/04 - Life in the Gravity Well.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/02 - Toto, I've a Feeling We're Not in Kansas Anymore.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/10 - Star Dreams (Peace Eternal).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"rhythm" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.4375
+			],
+			"recall" : [
+				0.7
+			],
+			"f1-score" : [
+				0.5384615385
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 3
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 2
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 7
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				1
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.8888888889
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 2
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.5
+			],
+			"recall" : [
+				0.3
+			],
+			"f1-score" : [
+				0.375
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 7
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 3
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			]
+		},
+		"accuracy" : [
+			0.6
+		],
+		"precision" : [
+			0.6458333333
+		],
+		"recall" : [
+			0.6
+		],
+		"f1-score" : [
+			0.6007834758
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/02 - Ephemeral Vision.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/05 - Still Wandering.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/01 - Man Made Heaven.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/10 - Star Dreams (Peace Eternal).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/06 - Within (Choir of the Ascending Spirit).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"timbre" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.5333333333
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.64
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 6
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				0.8888888889
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.8421052632
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.6666666667
+			],
+			"recall" : [
+				0.4
+			],
+			"f1-score" : [
+				0.5
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 6
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.6666666667
+		],
+		"precision" : [
+			0.6962962963
+		],
+		"recall" : [
+			0.6666666667
+		],
+		"f1-score" : [
+			0.6607017544
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/03 - A Scenic Fall.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/07 - Until the Glowering Space 1.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/01 - Man Made Heaven.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/02 - Toto, I've a Feeling We're Not in Kansas Anymore.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/07 - Distant Thunder (Solitary Witness).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			}
+		]
+	},
+	"pitch_tonal" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.5833333333
+			],
+			"recall" : [
+				0.7
+			],
+			"f1-score" : [
+				0.6363636364
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 2
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 5
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				0.8
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.8
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 2
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 2
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.625
+			],
+			"recall" : [
+				0.5
+			],
+			"f1-score" : [
+				0.5555555556
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 5
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 2
+				}
+			]
+		},
+		"accuracy" : [
+			0.6666666667
+		],
+		"precision" : [
+			0.6694444444
+		],
+		"recall" : [
+			0.6666666667
+		],
+		"f1-score" : [
+			0.663973064
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/02 - Out From the Garden Reminded.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/05 - Polychrome Chant.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/06 - Within (Choir of the Ascending Spirit).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/05 - Dimensional Shift (Across the Threshold).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			}
+		]
+	},
+	"high_level" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.4285714286
+			],
+			"recall" : [
+				0.6
+			],
+			"f1-score" : [
+				0.5
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 4
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 2
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 6
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				1
+			],
+			"recall" : [
+				0.5
+			],
+			"f1-score" : [
+				0.6666666667
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 2
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 3
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.3636363636
+			],
+			"recall" : [
+				0.4
+			],
+			"f1-score" : [
+				0.380952381
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 6
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 4
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 3
+				}
+			]
+		},
+		"accuracy" : [
+			0.5
+		],
+		"precision" : [
+			0.5974025974
+		],
+		"recall" : [
+			0.5
+		],
+		"f1-score" : [
+			0.5158730159
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/03 - A Scenic Fall.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/05 - Still Wandering.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1998 - Waterloo Terminal/02 - DSP Terminal.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/01 - Man Made Heaven.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/05 - Polychrome Chant.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/05 - As the Earth Kissed the Moon.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/10 - Star Dreams (Peace Eternal).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/06 - Within (Choir of the Ascending Spirit).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"rhythm_pos" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.4
+			],
+			"recall" : [
+				0.6
+			],
+			"f1-score" : [
+				0.48
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 3
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 3
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 6
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				0.5454545455
+			],
+			"recall" : [
+				0.6
+			],
+			"f1-score" : [
+				0.5714285714
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 3
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 3
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 2
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.5
+			],
+			"recall" : [
+				0.2
+			],
+			"f1-score" : [
+				0.2857142857
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 6
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 2
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.4666666667
+		],
+		"precision" : [
+			0.4818181818
+		],
+		"recall" : [
+			0.4666666667
+		],
+		"f1-score" : [
+			0.4457142857
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/02 - Ephemeral Vision.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/03 - A Scenic Fall.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/05 - Still Wandering.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/02 - Out From the Garden Reminded.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1998 - Waterloo Terminal/03 - Digital Fiction.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1998 - Waterloo Terminal/02 - DSP Terminal.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/05 - Polychrome Chant.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/05 - As the Earth Kissed the Moon.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/03 - Wherever Two or More Are Gathered....mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/10 - Star Dreams (Peace Eternal).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/03 - The Beacon (Those Who Have Gone Before).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Tetsu Inoue"
+			}
+		]
+	},
+	"structure" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.5333333333
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.64
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 2
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 6
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				1
+			],
+			"recall" : [
+				0.8
+			],
+			"f1-score" : [
+				0.8888888889
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 1
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 0
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.5714285714
+			],
+			"recall" : [
+				0.4
+			],
+			"f1-score" : [
+				0.4705882353
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 6
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 2
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.6666666667
+		],
+		"precision" : [
+			0.7015873016
+		],
+		"recall" : [
+			0.6666666667
+		],
+		"f1-score" : [
+			0.6664923747
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/06 - Weaving Cluster.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/03 - Unfold Gradient.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/02 - Out From the Garden Reminded.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/04 - Life in the Gravity Well.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	},
+	"rhythm_structure" : {
+		"Michael Stearns" : {
+			"precision" : [
+				0.2307692308
+			],
+			"recall" : [
+				0.3
+			],
+			"f1-score" : [
+				0.2608695652
+			],
+			"conf_with" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 7
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 6
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 4
+				}
+			]
+		},
+		"Tetsu Inoue" : {
+			"precision" : [
+				0.75
+			],
+			"recall" : [
+				0.3
+			],
+			"f1-score" : [
+				0.4285714286
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 6
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 0
+				},
+				{
+					"name" : "Vidna Obmana",
+					"times" : 1
+				}
+			]
+		},
+		"Vidna Obmana" : {
+			"precision" : [
+				0.3846153846
+			],
+			"recall" : [
+				0.5
+			],
+			"f1-score" : [
+				0.4347826087
+			],
+			"conf_with" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 4
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			],
+			"conf_by" : [
+				{
+					"name" : "Michael Stearns",
+					"times" : 7
+				},
+				{
+					"name" : "Tetsu Inoue",
+					"times" : 1
+				}
+			]
+		},
+		"accuracy" : [
+			0.3666666667
+		],
+		"precision" : [
+			0.4551282051
+		],
+		"recall" : [
+			0.3666666667
+		],
+		"f1-score" : [
+			0.3747412008
+		],
+		"predictions" : [
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Vidna Obmana",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		],
+		"confusions" : [
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/01 - The Angelic Appearance.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1996 - The River of Appearance/04 - Night-Blooming.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/09 - The Gilding Marrow.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/05 - Still Wandering.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Tetsu Inoue"
+			},
+			{
+				"path" : "Collection/Vidna Obmana/1993 - Revealed by Composed Nature/02 - Out From the Garden Reminded.mp3",
+				"real" : "Vidna Obmana",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1998 - Waterloo Terminal/06 - Hi-Fi Static.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1998 - Waterloo Terminal/04 - Arc Texture.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1998 - Waterloo Terminal/02 - DSP Terminal.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/05 - Polychrome Chant.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/02 - Static Soul.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/03 - Automatic Motion.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Tetsu Inoue/1995 - Slow and Low/06 - Speculative Vision.mp3",
+				"real" : "Tetsu Inoue",
+				"pred" : "Michael Stearns"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/06 - Something's Moving.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/05 - As the Earth Kissed the Moon.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/03 - Wherever Two or More Are Gathered....mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1984 - Planetary Unfolding/04 - Life in the Gravity Well.mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/07 - Distant Thunder (Solitary Witness).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/06 - Within (Choir of the Ascending Spirit).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			},
+			{
+				"path" : "Collection/Michael Stearns/1988 - Encounter. A Journey in the Key of Space/03 - The Beacon (Those Who Have Gone Before).mp3",
+				"real" : "Michael Stearns",
+				"pred" : "Vidna Obmana"
+			}
+		]
+	}
+}

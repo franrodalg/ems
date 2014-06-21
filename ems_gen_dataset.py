@@ -21,20 +21,32 @@ def gen_dataset(report, num_artists = 3, num_albums = 5, num_tracks = 5):
 
     artists = []
 
-    for i in random.sample(set(range(len(report['artists']))), num_artists):
+
+    print(report.keys())
+    #print(set(report.keys())
+
+    for i in random.sample(report.keys(), num_artists):
+
+        #print(i)
+
+
         artist = {}
-        artist['id'] = report['artists'][i]['id']
+        artist['id'] = report[i]
         artist['albums'] = []
-        for j in random.sample(set(range(len(report['artists'][i]['albums']))), num_albums):
+        for j in random.sample(report[i]['albums'].keys(), num_albums):
             album = {}
-            album['id'] = report['artists'][i]['albums'][j]['id']
+            album['id'] = j
             album['tracks'] = []
-            for k in random.sample(set(range(len(report['artists'][i]['albums'][j]['tracks']))), num_tracks):
-                album['tracks'].append(report['artists'][i]['albums'][j]['tracks'][k]['id'])
+            for k in random.sample(report[i]['albums'][j]['tracks'].keys(), num_tracks):
+                track = {}
+                track['id'] = k
+                album['tracks'].append(track)
             artist['albums'].append(album)
         artists.append(artist)
 
     dataset['artists'] = artists
+
+    print(dataset)
 
     return dataset
 
@@ -78,7 +90,7 @@ def store_dataset_db(filename = None, dataset = None, name = None,
     for artist in dataset['artists']:
         for album in artist['albums']:
             for track in album['tracks']:
-                tracks.append({'track_id': track, 'album_id': album['id']})
+                tracks.append({'track_id': track['id'], 'album_id': album['id']})
 
     i.add_dataset(name = name, tracks = tracks, excerpt_cut = excerpt_cut)
 

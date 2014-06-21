@@ -401,6 +401,29 @@ def check_album(album_id = None, mb_id = None):
 
     return check
 
+def check_excerpt(excerpt_id):
+    """
+    """
+
+    query = "SELECT id FROM excerpts " + \
+            "WHERE id = " + str(excerpt_id) + ";"
+
+    conn, cur = _connect_()
+    cur = _do_query_(cur, query)
+
+    response = cur.fetchall()
+
+    if len(response) > 0:
+        check = True
+    else:
+        check = False
+
+    _close_(conn, cur)
+
+    return check
+
+
+
 def check_full(excerpt_id):
     """
     """

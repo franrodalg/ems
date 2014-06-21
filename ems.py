@@ -5,6 +5,7 @@ import ems_gen_dataset as gen_d
 import ems_analyzer as an
 import rpy2.robjects as ro
 import json
+import codecs
 
 
 audio_extractors = ['freesound', 'echonest', 'mirtoolbox', 'essentia']
@@ -19,6 +20,12 @@ def _init_args():
 
 	parser = argparse.ArgumentParser(description = 
 		'Generate and Analyze a Music Dataset.')
+
+	parser.add_argument('-ei', '--excerpt_ids', 
+		help = 'allows to analyze a series of excerpts individually. '+ \
+			'Caution: the analysis will be performed even if the ' + \
+			'excerpt had been already analyzed.',
+		type = int, nargs = '+')
 
 	group_dataset = parser.add_mutually_exclusive_group()
 
@@ -123,11 +130,15 @@ def _check_args(args):
 	# Dataset ID and Name
 
 	if not args.artist_suggestion:
-		if args.dataset_id is None and args.dataset_name is None \
-			and args.clean_excerpts is False:
-			print 'No Dataset Name or ID specified'
-			print 'Exiting'
-			sys.exit(0)
+		
+		if args.excerpt_ids is None:
+
+			if args.dataset_id is None and args.dataset_name is None \
+				and args.clean_excerpts is False:
+
+				print 'No Dataset Name or ID specified'
+				print 'Exiting'
+				sys.exit(0)
 
 	if args.excerpt_cut != 0:
 		print 'Excerpt Cut Mode not yet implemented. Sorry'
@@ -214,6 +225,25 @@ if __name__=='__main__':
 			print 'Exiting'
 			sys.exit(0)
 
+	elif args.excerpt_ids is not None:
+
+		print 'Checking if the specified excerpts are stored in the database...'
+
+		missing = []
+
+		for excerpt in args.excerpt_ids:
+			if not db_i.check_excerpt(excerpt):
+				missing.append(excerpt)
+
+		if len(missing) > 0:
+			print 'Excerpt(s) {} not found in the database'.\
+				format(', '.join(map(str,missing)))
+			print 'Exiting'
+			sys.exit(0)
+		else:
+			print 'Every excerpt has been successfully found\n'
+
+
 	elif args.clean_excerpts:
 		print 'Removing orphan excerpts'
 		db_i.remove_orphans()
@@ -272,19 +302,17 @@ if __name__=='__main__':
 
 			dataset_name = ret_dataset['name']
 
-
-
 		else:
 			print 'No dataset found for updating'
 			print 'Exiting'
 			sys.exit(0)
 	else:
-		if not found:
+		if args.excerpt_ids is None and not found:
 			print 'Trying to generate dataset \'{}\'...\n'\
 				.format(args.dataset_name)
 			dataset_name = args.dataset_name
 
-	if (args.dataset_update or not found):			
+	if (args.excerpt_ids is None and (args.dataset_update or not found)):			
 
 		# Generate Tracklist of the dataset
 
@@ -339,12 +367,15 @@ if __name__=='__main__':
 		with open('dataset_temp.json') as f:
 			report = json.load(f)
 
-		os.remove('dataset_temp.json')
+		#print report
 
-		num_valid_artists = len(report['artists'])
+		#os.remove('dataset_temp.json')
+
+
+		num_valid_artists = len(report)
 		valid_artists = []
-		for a in report['artists']:
-			valid_artists.append(a['id'])
+		for a in report:
+			valid_artists.append(a)
 
 		if args.num_artists is not None:
 			min_num_artists = args.num_artists
@@ -365,6 +396,8 @@ if __name__=='__main__':
 				print 'Invalid artists: {}'\
 					.format(', '.join(map(str, not_valid)))
 			sys.exit(0)
+
+		#sys.exit(0)
 
 		dataset = gen_d.gen_dataset(report, min_num_artists, 
 			args.num_albums, args.num_tracks)
@@ -413,68 +446,56 @@ if __name__=='__main__':
 
 	print 'Checking which excerpts need to be analyzed...'
 
-	analyzed = db_i.get_excerpts(
-		dataset_id = ret_dataset['id'],
-		analyzed = True)
+	if args.excerpt_ids is None:
 
-	not_analyzed = db_i.get_excerpts(
-		dataset_id = ret_dataset['id'],
-		analyzed = False)
+		analyzed = db_i.get_excerpts(
+			dataset_id = ret_dataset['id'],
+			analyzed = True)
+
+		not_analyzed = db_i.get_excerpts(
+			dataset_id = ret_dataset['id'],
+			analyzed = False)
 			
-	if len(not_analyzed) > 0 and len(analyzed) > 0:
-		print 'Found {} excerpts that have been already analyzed' \
-			.format(len(analyzed)) + \
-			' and {} that need to be analyzed\n'\
-			.format(len(not_analyzed))
-	elif len(analyzed) == 0:
-		print 'No excerpt has been previously analyzed\n'
-	else:
-		print 'Every excerpt has been previously analyzed'
-		if not args.force_analysis:
-			print 'Exiting'
-			sys.exit(0)
+		if len(not_analyzed) > 0 and len(analyzed) > 0:
+			print 'Found {} excerpts that have been already analyzed' \
+				.format(len(analyzed)) + \
+				' and {} that need to be analyzed\n'\
+				.format(len(not_analyzed))
+		elif len(analyzed) == 0:
+			print 'No excerpt has been previously analyzed\n'
 		else:
-			print 'Excerpts will be re-analyzed\n'
+			print 'Every excerpt has been previously analyzed'
+			if not args.force_analysis:
+				print 'Exiting'
+				sys.exit(0)
+			else:
+				print 'Excerpts will be re-analyzed\n'
+
+	else:
+
+		not_analyzed = args.excerpt_ids
+		analyzed = []
 
 
 	if args.extractors is not None:
 		extractors = args.extractors
 
-	print 'Performing analyis...'
+	print 'Performing analysis and storing...'
 
 	if len(not_analyzed) > 0:
-		#print 'SIMULANDO ANALISIS NUEVOS'
-		analysis_new = an.perform_analysis(not_analyzed, extractors)
+		an.perform_store_analysis(not_analyzed, extractors)
 	if len(analyzed) > 0 and args.force_analysis:
-		#print 'SIMULANDO ANALISIS ANTIGUOS'
-		analysis_old = an.perform_analysis(analyzed, extractors)
+		an.perform_store_analysis(analyzed, extractors)
 
 	print 'Done\n'
-
-	print 'Storing dataset analysis in the database...'
-
-	if len(not_analyzed) > 0:
-		an.store_analysis(analysis_new, extractors)
-	if len(analyzed) > 0 and args.force_analysis:
-		an.store_analysis(analysis_old, extractors)
-
-	print 'Done\n'
-
-	skip = False
 
 	if set(extractors) & set(der_extractors):
 
-		print 'Computing derived descriptors...'
-		if len(not_analyzed) > 0:
-			der_new = an.compute_der_descriptors(not_analyzed, extractors)
-		if len(analyzed) > 0 and args.force_analysis:
-			der_old = an.compute_der_descriptors(analyzed, extractors)
-		print 'Done\n'
-
-		print 'Storing derived descriptors...'
+		print 'Computing and storing derived descriptors...'
 
 		if len(not_analyzed) > 0:
-			an.store_analysis(der_new, extractors)
+		 	an.compute_store_der_descriptors(not_analyzed, extractors)
 		if len(analyzed) > 0 and args.force_analysis:
-			an.store_analysis(der_old, extractors)
+		 	an.compute_store_der_descriptors(analyzed, extractors)
+		
 		print 'Done\n'

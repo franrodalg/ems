@@ -30,12 +30,32 @@ get_artists_in_datasets <- function(){
 	
 }
 
-get_descriptors <- function(){
+get_descriptors <- function(dataset_ids = NULL){
 	
 	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
 	
-	
-	all <- dbReadTable(db, 'excerpts_descriptors')
+	if(is.null(dataset_ids)){
+		all <- dbReadTable(db, 'excerpts_descriptors')
+	}
+	else{
+		
+		query <- 'SELECT edesc.* FROM excerpts_descriptors edesc INNER JOIN excerpts_datasets edata ON edesc.excerpt_id = edata.excerpt_id WHERE '
+		
+		count = 1
+		
+		for (id in dataset_ids){
+			
+			query <- paste(query, 'edata.dataset_id = ', id, sep = '')
+			if(count < length(dataset_ids)){
+				query <- paste(query, ' OR ')
+				count <- count + 1
+			}
+			
+		}
+		
+		all <- dbGetQuery(db, query)
+		
+	}
 	
 	desc_with_na <- names(all[, colMeans(is.na(all)) != 0])
 	descriptors <- names(all)[2:length(names(all))]
@@ -50,17 +70,39 @@ get_descriptors <- function(){
 	
 }
 
-get_dataset <- function(dataset_id, descriptors = NULL){
+get_dataset <- function(dataset_ids, descriptors = NULL, no_nas = TRUE){
 	
 	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
 	
-	query <- paste('SELECT albums_artists.*, excerpts_descriptors.* FROM excerpts_descriptors INNER JOIN excerpts ON excerpts_descriptors.excerpt_id  = excerpts.id INNER JOIN albums_artists ON excerpts.album_id = albums_artists.album_id INNER JOIN excerpts_datasets ON excerpts.id = excerpts_datasets.excerpt_id WHERE excerpts_datasets.dataset_id = ' , dataset_id)
+	query <- paste('SELECT albums_artists.*, excerpts_descriptors.* FROM excerpts_descriptors INNER JOIN excerpts ON excerpts_descriptors.excerpt_id  = excerpts.id INNER JOIN albums_artists ON excerpts.album_id = albums_artists.album_id INNER JOIN excerpts_datasets ON excerpts.id = excerpts_datasets.excerpt_id')
+	
+	if(!is.null(dataset_ids)){
+		query <- paste(query, ' WHERE ')
+		
+		count = 1
+		
+		for (id in dataset_ids){
+			
+			query <- paste(query, 'dataset_id = ', id, sep = '')
+			if(count < length(dataset_ids)){
+				query <- paste(query, ' OR ')
+				count <- count + 1
+			}
+		}	
+	}
 
 	dataset <- dbGetQuery(db, query)
 
 	if(is.null(descriptors)){
 		
-		descriptors <- get_descriptors()
+		if(no_nas){
+		
+			descriptors <- get_descriptors()
+		}
+		else{
+			
+			descriptors <- get_descriptors(dataset_ids)
+		}
 	}
 
 	dataset <- dataset[, c('excerpt_id', 'artist_id', 'album_id', descriptors)]

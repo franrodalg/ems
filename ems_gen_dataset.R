@@ -1,5 +1,6 @@
-source('ems_collection_eval.R')
+source('ems_collection.R')
 source('ems_db_interface.R')
+library('jsonlite')
 library('RMySQL')
 
 gen_dataset <- function(num_albums = 5, num_tracks = 5, 
@@ -11,7 +12,7 @@ gen_dataset <- function(num_albums = 5, num_tracks = 5,
 		min_num_tracks = num_tracks, min_track_dur = min_track_dur, 
 		filt_artists = 	filt_artists);
 	
-	json_report <- gen_json(report);
+	json_report <- toJSON(report, pretty = TRUE, digits = 10, auto_unbox = TRUE)
 	
 	sink(file = 'dataset_temp.json');
 	cat(json_report);

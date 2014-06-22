@@ -162,7 +162,7 @@ function p = mirtoolbox_json(mtb_features)
        
             desc = strcat('mtb_mfcc_', i_str);
 
-            if isnan(mtb_features.mtb_mfcc)
+            if isnan(mtb_features.mtb_mfcc(i))
 
                 json_string = ...
                     sprintf('%s\t\t\t"%s": null,\n', ...
@@ -239,97 +239,239 @@ function p = mirtoolbox_json(mtb_features)
             sprintf('%s\t\t\t"mtb_roughness_period_entropy": %f,\n', ...
                 json_string, mtb_features.mtb_roughness_period_entropy);
     end
-       
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_irregularity": %s,\n', ...
-            json_string, mtb_features.mtb_irregularity);
 
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_inharmonicity": %s,\n', ...
-            json_string, mtb_features.mtb_inharmonicity);
-    
-    for i = 1:length(mtb_features.mtb_chroma)
-       
-       if i < 10
-           i_str = strcat('0', num2str(i));
-       else
-           i_str = num2str(i);
-       end
-       
-       desc = strcat('mtb_chroma_', i_str);
- 
-       json_string = ...
-       sprintf('%s\t\t\t"%s": %f,\n', ...
-           json_string, desc, mtb_features.mtb_chroma(i));
-        
-    end   
-        
-        
-    for i = 1:length(mtb_features.mtb_key_strength)
-       
-       if i < 10
-           i_str = strcat('0', num2str(i));
-       else
-           i_str = num2str(i);
-       end
-       
-       desc = strcat('mtb_key_strength_', i_str);
- 
-       json_string = ...
-       sprintf('%s\t\t\t"%s": %f,\n', ...
-           json_string, desc, mtb_features.mtb_key_strength(i));
-        
-    end 
-       
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_key": %f,\n', ...
-           json_string, mtb_features.mtb_key);       
+    if isnan(mtb_features.mtb_irregularity)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_irregularity": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_irregularity": %f,\n', ...
+                json_string, mtb_features.mtb_irregularity);
+    end
 
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_mode": %f,\n', ...
-            json_string, mtb_features.mtb_mode);
-       
-         
-    for i = 1:length(mtb_features.mtb_tonal_centroid)
-       
-       if i < 10
-           i_str = strcat('0', num2str(i));
-       else
-           i_str = num2str(i);
-       end
-       
-       desc = strcat('mtb_tonal_centroid_', i_str);
- 
-       json_string = ...
-       sprintf('%s\t\t\t"%s": %f,\n', ...
-           json_string, desc, mtb_features.mtb_tonal_centroid(i));
-        
-    end 
-    
-    
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_hcdf_mean": %f,\n', ...
-            json_string, mtb_features.mtb_hcdf_mean);
-    
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_hcdf_median": %f,\n', ...
-            json_string, mtb_features.mtb_hcdf_median);
-       
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_hcdf_std": %f,\n', ...
-           json_string, mtb_features.mtb_hcdf_std);       
 
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_hcdf_slope": %f,\n', ...
-            json_string, mtb_features.mtb_hcdf_slope);
-       
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_hcdf_period_freq": %f,\n', ...
-           json_string, mtb_features.mtb_hcdf_period_freq);       
+    if isnan(mtb_features.mtb_inharmonicity)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_inharmonicity": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_inharmonicity": %f,\n', ...
+                json_string, mtb_features.mtb_inharmonicity);
+    end
 
-    json_string = ...
-        sprintf('%s\t\t\t"mtb_hcdf_period_entropy": %f\n', ...
-            json_string, mtb_features.mtb_hcdf_period_entropy);
+
+    if isnan(mtb_features.mtb_chroma)
+
+        for i = 1:12
+
+            if i < 10
+                i_str = strcat('0', num2str(i));
+            else
+                i_str = num2str(i);
+            end
+
+        desc = strcat('mtb_chroma_', i_str);
+
+        json_string = ...
+            sprintf('%s\t\t\t"%s": null,\n', ...
+                json_string, desc);
+        end
+
+    else
+
+for i = 1:length(mtb_features.mtb_chroma)
+
+if i < 10
+i_str = strcat('0', num2str(i));
+else
+i_str = num2str(i);
+end
+
+desc = strcat('mtb_chroma_', i_str);
+
+json_string = ...
+sprintf('%s\t\t\t"%s": %f,\n', ...
+        json_string, desc, mtb_features.mtb_chroma(i));
+
+end
+    end
+
+    if isnan(mtb_features.mtb_key_strength)
+
+        for i = 1:12
+
+            if i < 10
+                i_str = strcat('0', num2str(i));
+            else
+                i_str = num2str(i);
+            end
+
+            desc = strcat('mtb_key_strength_', i_str);
+
+            json_string = ...
+                sprintf('%s\t\t\t"%s": null,\n', ...
+                        json_string, desc);
+            end
+    else
+
+
+        for i = 1:length(mtb_features.mtb_key_strength)
+
+            if i < 10
+                i_str = strcat('0', num2str(i));
+            else
+                i_str = num2str(i);
+            end
+
+            desc = strcat('mtb_key_strength_', i_str);
+
+            if isnan(mtb_features.mtb_key_strength(i))
+
+                json_string = ...
+                    sprintf('%s\t\t\t"%s": null,\n', ...
+                        json_string, desc);
+
+            else
+
+                json_string = ...
+                    sprintf('%s\t\t\t"%s": %s,\n', ...
+                        json_string, desc, mtb_features.mtb_key_strength(i));
+
+            end
+
+        end
+
+    end
+
+    if isnan(mtb_features.mtb_key)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_key": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_key": %f,\n', ...
+                json_string, mtb_features.mtb_key);
+    end
+
+    if isnan(mtb_features.mtb_mode)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_mode": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_mode": %f,\n', ...
+                json_string, mtb_features.mtb_mode);
+    end
+
+
+    if isnan(mtb_features.mtb_tonal_centroid)
+
+        for i = 1:6
+
+            if i < 10
+                i_str = strcat('0', num2str(i));
+            else
+                i_str = num2str(i);
+            end
+
+            desc = strcat('mtb_tonal_centroid_', i_str);
+
+            json_string = ...
+                sprintf('%s\t\t\t"%s": null,\n', ...
+                    json_string, desc);
+        end
+    else
+
+
+        for i = 1:length(mtb_features.mtb_tonal_centroid)
+
+            if i < 10
+                i_str = strcat('0', num2str(i));
+            else
+                i_str = num2str(i);
+            end
+
+            desc = strcat('mtb_tonal_centroid_', i_str);
+
+            if isnan(mtb_features.mtb_tonal_centroid(i))
+
+                json_string = ...
+                    sprintf('%s\t\t\t"%s": null,\n', ...
+                        json_string, desc);
+
+            else
+
+                json_string = ...
+                    sprintf('%s\t\t\t"%s": %s,\n', ...
+                        json_string, desc, mtb_features.mtb_tonal_centroid(i));
+
+            end
+
+        end
+
+    end
+
+    if isnan(mtb_features.mtb_hcdf_mean)
+        json_string = ...
+        sprintf('%s\t\t\t"mtb_hcdf_mean": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_mean": %f,\n', ...
+                json_string, mtb_features.mtb_hcdf_mean);
+    end
+
+    if isnan(mtb_features.mtb_hcdf_median)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_median": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_median": %f,\n', ...
+                json_string, mtb_features.mtb_hcdf_median);
+    end
+
+    if isnan(mtb_features.mtb_hcdf_std)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_std": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_std": %f,\n', ...
+                json_string, mtb_features.mtb_hcdf_std);
+    end
+
+    if isnan(mtb_features.mtb_hcdf_slope)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_slope": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_slope": %f,\n', ...
+                json_string, mtb_features.mtb_hcdf_slope);
+    end
+
+    if isnan(mtb_features.mtb_hcdf_period_freq)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_period_freq": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_period_freq": %f,\n', ...
+                json_string, mtb_features.mtb_hcdf_period_freq);
+    end
+
+    if isnan(mtb_features.mtb_hcdf_period_entropy)
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_period_entropy": null,\n', ...
+                json_string);
+    else
+        json_string = ...
+            sprintf('%s\t\t\t"mtb_hcdf_period_entropy": %f\n', ...
+                json_string, mtb_features.mtb_hcdf_period_entropy);
+    end
        
        
     

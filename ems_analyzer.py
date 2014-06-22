@@ -417,7 +417,7 @@ def echonest(file_path):
     print 'Retrieving features from the EchoNest analyzer...'
 
     try: 
-        track = en_tr.track_from_filename(filename = file_path)
+        track = en_tr.track_from_filename(filename = file_path, force_upload = True)
         track.get_analysis()
         analysis = echonest_formater(track)
     except:
@@ -570,6 +570,10 @@ def perform_analysis(excerpt_ids, extractors):
 
 
 def perform_store_analysis(excerpt_ids, extractors):
+    """
+    """
+
+    print excerpt_ids
 
     paths = i.get_paths(excerpt_ids = excerpt_ids)
 

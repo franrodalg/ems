@@ -21,10 +21,6 @@ def gen_dataset(report, num_artists = 3, num_albums = 5, num_tracks = 5):
 
     artists = []
 
-
-    print(report.keys())
-    #print(set(report.keys())
-
     for i in random.sample(report.keys(), num_artists):
 
         #print(i)
@@ -45,8 +41,6 @@ def gen_dataset(report, num_artists = 3, num_albums = 5, num_tracks = 5):
         artists.append(artist)
 
     dataset['artists'] = artists
-
-    print(dataset)
 
     return dataset
 

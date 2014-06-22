@@ -1,0 +1,583 @@
+{
+	"113" : {
+		"name" : "Lemongrass",
+		"albums" : {
+			"586" : {
+				"title" : "Drumatic Universe",
+				"year" : "1998",
+				"tracks" : {
+					"6047" : {
+						"number" : 1,
+						"title" : "coo.lio.yin",
+						"duration" : "05:13",
+						"path" : "Lemongrass/1998 - Drumatic Universe/01 - coo.lio.yin.mp3"
+					},
+					"6050" : {
+						"number" : 4,
+						"title" : "Etiolate",
+						"duration" : "05:37",
+						"path" : "Lemongrass/1998 - Drumatic Universe/04 - Etiolate.mp3"
+					},
+					"6051" : {
+						"number" : 5,
+						"title" : "Why?",
+						"duration" : "05:17",
+						"path" : "Lemongrass/1998 - Drumatic Universe/05 - Why.mp3"
+					},
+					"6052" : {
+						"number" : 6,
+						"title" : "Tell It to My Heart",
+						"duration" : "08:37",
+						"path" : "Lemongrass/1998 - Drumatic Universe/06 - Tell It to My Heart.mp3"
+					},
+					"6053" : {
+						"number" : 7,
+						"title" : "Transcendental Meditation",
+						"duration" : "05:12",
+						"path" : "Lemongrass/1998 - Drumatic Universe/07 - Transcendental Meditation.mp3"
+					},
+					"6054" : {
+						"number" : 8,
+						"title" : "What Is Right",
+						"duration" : "05:04",
+						"path" : "Lemongrass/1998 - Drumatic Universe/08 - What Is Right.mp3"
+					},
+					"6055" : {
+						"number" : 9,
+						"title" : "Spira",
+						"duration" : "05:52",
+						"path" : "Lemongrass/1998 - Drumatic Universe/09 - Spira.mp3"
+					},
+					"6056" : {
+						"number" : 10,
+						"title" : "There Is a Land",
+						"duration" : "04:33",
+						"path" : "Lemongrass/1998 - Drumatic Universe/10 - There Is a Land.mp3"
+					},
+					"6057" : {
+						"number" : 11,
+						"title" : "Little Alien",
+						"duration" : "05:49",
+						"path" : "Lemongrass/1998 - Drumatic Universe/11 - Little Alien.mp3"
+					},
+					"6058" : {
+						"number" : 12,
+						"title" : "Wings",
+						"duration" : "03:40",
+						"path" : "Lemongrass/1998 - Drumatic Universe/12 - Wings.mp3"
+					},
+					"6059" : {
+						"number" : 13,
+						"title" : "Qu'est-ce Que Tu Fais?",
+						"duration" : "05:45",
+						"path" : "Lemongrass/1998 - Drumatic Universe/13 - Qu'est-ce Que Tu Fais.mp3"
+					}
+				}
+			},
+			"587" : {
+				"title" : "Voyage au Centre de la Terre",
+				"year" : "2001",
+				"tracks" : {
+					"6060" : {
+						"number" : 1,
+						"title" : "Falling Star",
+						"duration" : "03:23",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/01 - Falling Star.mp3"
+					},
+					"6061" : {
+						"number" : 2,
+						"title" : "Nightingales",
+						"duration" : "04:12",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/02 - Nightingales.mp3"
+					},
+					"6062" : {
+						"number" : 3,
+						"title" : "I Love You",
+						"duration" : "04:11",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/03 - I Love You.mp3"
+					},
+					"6063" : {
+						"number" : 4,
+						"title" : "Marchant",
+						"duration" : "04:41",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/04 - Marchant.mp3"
+					},
+					"6065" : {
+						"number" : 6,
+						"title" : "Voyage a la Lune",
+						"duration" : "03:43",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/06 - Voyage a la Lune.mp3"
+					},
+					"6066" : {
+						"number" : 7,
+						"title" : "La Mer",
+						"duration" : "03:55",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/07 - La Mer.mp3"
+					},
+					"6067" : {
+						"number" : 8,
+						"title" : "Space Migration",
+						"duration" : "04:26",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/08 - Space Migration.mp3"
+					},
+					"6068" : {
+						"number" : 9,
+						"title" : "La Plus Jolie",
+						"duration" : "05:12",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/09 - La Plus Jolie.mp3"
+					},
+					"6070" : {
+						"number" : 11,
+						"title" : "Je Sais",
+						"duration" : "05:16",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/11 - Je Sais.mp3"
+					},
+					"6071" : {
+						"number" : 12,
+						"title" : "Form of Life",
+						"duration" : "05:08",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/12 - Form of Life.mp3"
+					},
+					"6072" : {
+						"number" : 13,
+						"title" : "Rising Star",
+						"duration" : "04:47",
+						"path" : "Lemongrass/2001 - Voyage au Centre de la Terre/13 - Rising Star.mp3"
+					}
+				}
+			},
+			"588" : {
+				"title" : "Windows",
+				"year" : "2001",
+				"tracks" : {
+					"6073" : {
+						"number" : 1,
+						"title" : "The Well",
+						"duration" : "01:32",
+						"path" : "Lemongrass/2001 - Windows/01 - The Well.mp3"
+					},
+					"6074" : {
+						"number" : 2,
+						"title" : "Imagine",
+						"duration" : "04:42",
+						"path" : "Lemongrass/2001 - Windows/02 - Imagine.mp3"
+					},
+					"6075" : {
+						"number" : 3,
+						"title" : "Sunrise on Fujiyama",
+						"duration" : "06:57",
+						"path" : "Lemongrass/2001 - Windows/03 - Sunrise on Fujiyama.mp3"
+					},
+					"6076" : {
+						"number" : 4,
+						"title" : "Winnetou Melody",
+						"duration" : "04:47",
+						"path" : "Lemongrass/2001 - Windows/04 - Winnetou Melody.mp3"
+					},
+					"6077" : {
+						"number" : 5,
+						"title" : "Planet Tears",
+						"duration" : "06:56",
+						"path" : "Lemongrass/2001 - Windows/05 - Planet Tears.mp3"
+					},
+					"6078" : {
+						"number" : 6,
+						"title" : "Librabelle",
+						"duration" : "05:25",
+						"path" : "Lemongrass/2001 - Windows/06 - Librabelle.mp3"
+					},
+					"6079" : {
+						"number" : 7,
+						"title" : "Gipsy Moon",
+						"duration" : "04:18",
+						"path" : "Lemongrass/2001 - Windows/07 - Gipsy Moon.mp3"
+					},
+					"6080" : {
+						"number" : 8,
+						"title" : "Wei Fung Chi",
+						"duration" : "03:20",
+						"path" : "Lemongrass/2001 - Windows/08 - Wei Fung Chi.mp3"
+					},
+					"6081" : {
+						"number" : 9,
+						"title" : "Tokyo 2",
+						"duration" : "05:02",
+						"path" : "Lemongrass/2001 - Windows/09 - Tokyo 2.mp3"
+					},
+					"6083" : {
+						"number" : 11,
+						"title" : "Passengers",
+						"duration" : "05:09",
+						"path" : "Lemongrass/2001 - Windows/11 - Passengers.mp3"
+					},
+					"6084" : {
+						"number" : 12,
+						"title" : "Plain",
+						"duration" : "03:51",
+						"path" : "Lemongrass/2001 - Windows/12 - Plain.mp3"
+					},
+					"6085" : {
+						"number" : 13,
+						"title" : "Braindance",
+						"duration" : "04:22",
+						"path" : "Lemongrass/2001 - Windows/13 - Braindance.mp3"
+					},
+					"6087" : {
+						"number" : 15,
+						"title" : "Cho-Cho",
+						"duration" : "04:05",
+						"path" : "Lemongrass/2001 - Windows/15 - Cho-Cho.mp3"
+					},
+					"6088" : {
+						"number" : 16,
+						"title" : "Desert Sand",
+						"duration" : "03:49",
+						"path" : "Lemongrass/2001 - Windows/16 - Desert Sand.mp3"
+					}
+				}
+			},
+			"589" : {
+				"title" : "Skydiver",
+				"year" : "2003",
+				"tracks" : {
+					"6089" : {
+						"number" : 1,
+						"title" : "All There",
+						"duration" : "04:30",
+						"path" : "Lemongrass/2003 - Skydiver/01 - All There.mp3"
+					},
+					"6090" : {
+						"number" : 2,
+						"title" : "A Fabula",
+						"duration" : "04:04",
+						"path" : "Lemongrass/2003 - Skydiver/02 - A Fabula.mp3"
+					},
+					"6092" : {
+						"number" : 4,
+						"title" : "Wild Heat",
+						"duration" : "05:01",
+						"path" : "Lemongrass/2003 - Skydiver/04 - Wild Heat.mp3"
+					},
+					"6093" : {
+						"number" : 5,
+						"title" : "Pacifique",
+						"duration" : "04:34",
+						"path" : "Lemongrass/2003 - Skydiver/05 - Pacifique.mp3"
+					},
+					"6094" : {
+						"number" : 6,
+						"title" : "On the Way",
+						"duration" : "04:50",
+						"path" : "Lemongrass/2003 - Skydiver/06 - On the Way.mp3"
+					},
+					"6095" : {
+						"number" : 7,
+						"title" : "La Musique",
+						"duration" : "05:33",
+						"path" : "Lemongrass/2003 - Skydiver/07 - La Musique.mp3"
+					},
+					"6096" : {
+						"number" : 8,
+						"title" : "Enterprise",
+						"duration" : "05:32",
+						"path" : "Lemongrass/2003 - Skydiver/08 - Enterprise.mp3"
+					},
+					"6098" : {
+						"number" : 10,
+						"title" : "Bicycles",
+						"duration" : "04:53",
+						"path" : "Lemongrass/2003 - Skydiver/10 - Bicycles.mp3"
+					},
+					"6099" : {
+						"number" : 11,
+						"title" : "Mira",
+						"duration" : "03:30",
+						"path" : "Lemongrass/2003 - Skydiver/11 - Mira.mp3"
+					},
+					"6100" : {
+						"number" : 12,
+						"title" : "Restful Motion",
+						"duration" : "04:11",
+						"path" : "Lemongrass/2003 - Skydiver/12 - Restful Motion.mp3"
+					},
+					"6101" : {
+						"number" : 13,
+						"title" : "Le Contact",
+						"duration" : "03:51",
+						"path" : "Lemongrass/2003 - Skydiver/13 - Le Contact.mp3"
+					}
+				}
+			},
+			"590" : {
+				"title" : "Fleur Solaire",
+				"year" : "2004",
+				"tracks" : {
+					"6102" : {
+						"number" : 1,
+						"title" : "Fairyland",
+						"duration" : "04:48",
+						"path" : "Lemongrass/2004 - Fleur Solaire/01 - Fairyland.mp3"
+					},
+					"6106" : {
+						"number" : 5,
+						"title" : "Jardin",
+						"duration" : "04:21",
+						"path" : "Lemongrass/2004 - Fleur Solaire/05 - Jardin.mp3"
+					},
+					"6108" : {
+						"number" : 7,
+						"title" : "Feel All The Time",
+						"duration" : "03:31",
+						"path" : "Lemongrass/2004 - Fleur Solaire/07 - Feel All The Time.mp3"
+					},
+					"6110" : {
+						"number" : 9,
+						"title" : "Cascade",
+						"duration" : "04:21",
+						"path" : "Lemongrass/2004 - Fleur Solaire/09 - Cascade.mp3"
+					},
+					"6111" : {
+						"number" : 10,
+						"title" : "Larimar",
+						"duration" : "03:08",
+						"path" : "Lemongrass/2004 - Fleur Solaire/10 - Larimar.mp3"
+					},
+					"6112" : {
+						"number" : 11,
+						"title" : "Petit Dejeuner",
+						"duration" : "03:47",
+						"path" : "Lemongrass/2004 - Fleur Solaire/11 - Petit Dejeuner.mp3"
+					},
+					"6113" : {
+						"number" : 12,
+						"title" : "Body Building",
+						"duration" : "04:21",
+						"path" : "Lemongrass/2004 - Fleur Solaire/12 - Body Building.mp3"
+					},
+					"6115" : {
+						"number" : 14,
+						"title" : "Condor",
+						"duration" : "04:44",
+						"path" : "Lemongrass/2004 - Fleur Solaire/14 - Condor.mp3"
+					}
+				}
+			},
+			"591" : {
+				"title" : "Ikebana",
+				"year" : "2005",
+				"tracks" : {
+					"6116" : {
+						"number" : 1,
+						"title" : "Beach Ball",
+						"duration" : "03:15",
+						"path" : "Lemongrass/2005 - Ikebana/01 - Beach Ball.mp3"
+					},
+					"6118" : {
+						"number" : 3,
+						"title" : "Rendez-Vous",
+						"duration" : "03:24",
+						"path" : "Lemongrass/2005 - Ikebana/03 - Rendez-Vous.mp3"
+					},
+					"6123" : {
+						"number" : 8,
+						"title" : "Le Coup",
+						"duration" : "04:39",
+						"path" : "Lemongrass/2005 - Ikebana/08 - Le Coup.mp3"
+					},
+					"6125" : {
+						"number" : 10,
+						"title" : "Akari",
+						"duration" : "04:14",
+						"path" : "Lemongrass/2005 - Ikebana/10 - Akari.mp3"
+					},
+					"6126" : {
+						"number" : 11,
+						"title" : "Farewell",
+						"duration" : "04:02",
+						"path" : "Lemongrass/2005 - Ikebana/11 - Farewell.mp3"
+					},
+					"6130" : {
+						"number" : 15,
+						"title" : "Daybreak",
+						"duration" : "08:34",
+						"path" : "Lemongrass/2005 - Ikebana/15 - Daybreak.mp3"
+					}
+				}
+			},
+			"592" : {
+				"title" : "Filmotheque",
+				"year" : "2007",
+				"tracks" : {
+					"6131" : {
+						"number" : 1,
+						"title" : "Elle et Moi",
+						"duration" : "03:09",
+						"path" : "Lemongrass/2007 - Filmotheque/01 - Elle et Moi.mp3"
+					},
+					"6133" : {
+						"number" : 3,
+						"title" : "Sakura",
+						"duration" : "04:12",
+						"path" : "Lemongrass/2007 - Filmotheque/03 - Sakura.mp3"
+					},
+					"6134" : {
+						"number" : 4,
+						"title" : "The Camera",
+						"duration" : "02:40",
+						"path" : "Lemongrass/2007 - Filmotheque/04 - The Camera.mp3"
+					},
+					"6135" : {
+						"number" : 5,
+						"title" : "Fritz the Cat",
+						"duration" : "04:14",
+						"path" : "Lemongrass/2007 - Filmotheque/05 - Fritz the Cat.mp3"
+					},
+					"6136" : {
+						"number" : 6,
+						"title" : "Aloha",
+						"duration" : "04:09",
+						"path" : "Lemongrass/2007 - Filmotheque/06 - Aloha.mp3"
+					},
+					"6137" : {
+						"number" : 7,
+						"title" : "Girl From Jupiter",
+						"duration" : "03:52",
+						"path" : "Lemongrass/2007 - Filmotheque/07 - Girl From Jupiter.mp3"
+					},
+					"6138" : {
+						"number" : 8,
+						"title" : "Lonely Beach",
+						"duration" : "03:18",
+						"path" : "Lemongrass/2007 - Filmotheque/08 - Lonely Beach.mp3"
+					},
+					"6139" : {
+						"number" : 9,
+						"title" : "Salon de Musique",
+						"duration" : "04:14",
+						"path" : "Lemongrass/2007 - Filmotheque/09 - Salon de Musique.mp3"
+					},
+					"6140" : {
+						"number" : 10,
+						"title" : "Daydreamer",
+						"duration" : "03:55",
+						"path" : "Lemongrass/2007 - Filmotheque/10 - Daydreamer.mp3"
+					},
+					"6141" : {
+						"number" : 11,
+						"title" : "Spaceship",
+						"duration" : "03:58",
+						"path" : "Lemongrass/2007 - Filmotheque/11 - Spaceship.mp3"
+					},
+					"6142" : {
+						"number" : 12,
+						"title" : "Streets of Yokohama",
+						"duration" : "03:37",
+						"path" : "Lemongrass/2007 - Filmotheque/12 - Streets of Yokohama.mp3"
+					},
+					"6143" : {
+						"number" : 13,
+						"title" : "Les Affaires",
+						"duration" : "04:28",
+						"path" : "Lemongrass/2007 - Filmotheque/13 - Les Affaires.mp3"
+					},
+					"6144" : {
+						"number" : 14,
+						"title" : "At Home",
+						"duration" : "04:03",
+						"path" : "Lemongrass/2007 - Filmotheque/14 - At Home.mp3"
+					},
+					"6145" : {
+						"number" : 15,
+						"title" : "Hitchhikers",
+						"duration" : "03:40",
+						"path" : "Lemongrass/2007 - Filmotheque/15 - Hitchhikers.mp3"
+					},
+					"6146" : {
+						"number" : 16,
+						"title" : "El Circolo Polar",
+						"duration" : "02:40",
+						"path" : "Lemongrass/2007 - Filmotheque/16 - El Circolo Polar.mp3"
+					},
+					"6147" : {
+						"number" : 17,
+						"title" : "Grass-hopper",
+						"duration" : "05:02",
+						"path" : "Lemongrass/2007 - Filmotheque/17 - Grass-hopper.mp3"
+					}
+				}
+			},
+			"593" : {
+				"title" : "Pour l'Amour",
+				"year" : "2008",
+				"tracks" : {
+					"6148" : {
+						"number" : 1,
+						"title" : "Cafe de Paris",
+						"duration" : "04:48",
+						"path" : "Lemongrass/2008 - Pour l'Amour/01 - Cafe de Paris.mp3"
+					},
+					"6149" : {
+						"number" : 2,
+						"title" : "Loving You",
+						"duration" : "04:00",
+						"path" : "Lemongrass/2008 - Pour l'Amour/02 - Loving You.mp3"
+					},
+					"6152" : {
+						"number" : 5,
+						"title" : "Le Ciel",
+						"duration" : "03:44",
+						"path" : "Lemongrass/2008 - Pour l'Amour/05 - Le Ciel.mp3"
+					},
+					"6153" : {
+						"number" : 6,
+						"title" : "Ocean Kisses",
+						"duration" : "06:12",
+						"path" : "Lemongrass/2008 - Pour l'Amour/06 - Ocean Kisses.mp3"
+					},
+					"6154" : {
+						"number" : 7,
+						"title" : "Aperitif",
+						"duration" : "04:16",
+						"path" : "Lemongrass/2008 - Pour l'Amour/07 - Aperitif.mp3"
+					},
+					"6155" : {
+						"number" : 8,
+						"title" : "Dinner With You",
+						"duration" : "04:00",
+						"path" : "Lemongrass/2008 - Pour l'Amour/08 - Dinner With You.mp3"
+					},
+					"6156" : {
+						"number" : 9,
+						"title" : "La Promenade",
+						"duration" : "03:58",
+						"path" : "Lemongrass/2008 - Pour l'Amour/09 - La Promenade.mp3"
+					},
+					"6158" : {
+						"number" : 11,
+						"title" : "Ton Parfum",
+						"duration" : "04:35",
+						"path" : "Lemongrass/2008 - Pour l'Amour/11 - Ton Parfum.mp3"
+					},
+					"6159" : {
+						"number" : 12,
+						"title" : "Swimming Pool",
+						"duration" : "05:16",
+						"path" : "Lemongrass/2008 - Pour l'Amour/12 - Swimming Pool.mp3"
+					},
+					"6161" : {
+						"number" : 14,
+						"title" : "Nostalgia",
+						"duration" : "03:43",
+						"path" : "Lemongrass/2008 - Pour l'Amour/14 - Nostalgia.mp3"
+					},
+					"6162" : {
+						"number" : 15,
+						"title" : "Les Vacances",
+						"duration" : "05:23",
+						"path" : "Lemongrass/2008 - Pour l'Amour/15 - Les Vacances.mp3"
+					}
+				}
+			}
+		}
+	}
+}

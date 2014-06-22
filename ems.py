@@ -93,10 +93,16 @@ def _init_args():
 			'2.- Only the second half of the first minute (pending) ', 
 		type = int, default = 0, choices = [0, 1, 2])
 
-	parser.add_argument('-fa', '--force_analysis',
+	group_analysis = parser.add_mutually_exclusive_group()
+
+	group_analysis.add_argument('-fa', '--force_analysis',
 		help='forces the calculation of the features associated with ' + \
 			'the excerpts of the dataset, even if they are already ' + \
 			'stored in the database', action = 'store_true')
+
+	group_analysis.add_argument('-sa', '--skip_analysis',
+		help='impedes the calculation of the features associated with ' + \
+			'the excerpts of the dataset', action = 'store_true')
 	
 	# Artist Suggestion Mode
 
@@ -369,7 +375,7 @@ if __name__=='__main__':
 
 		#print report
 
-		#os.remove('dataset_temp.json')
+		os.remove('dataset_temp.json')
 
 
 		num_valid_artists = len(report)
@@ -442,6 +448,12 @@ if __name__=='__main__':
 				.format(ret_dataset['name'])
 			print 'Exiting'
 			sys.exit(0)
+
+	if args.skip_analysis:
+
+		print 'Skipping analysis'
+		print 'Exiting'
+		sys.exit(0)
 
 
 	print 'Checking which excerpts need to be analyzed...'

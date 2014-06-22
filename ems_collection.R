@@ -34,7 +34,7 @@ get_dataset_content_summary <- function(dataset){
 }
 
 
-gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur = 0, split_time = NULL, filt_artists = NULL, avoid_artists = NULL, tag = NULL, init_year = NULL, final_year = NULL, merge = FALSE, colab = FALSE, alias = TRUE){
+gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur = 0, no_vocal = TRUE, split_time = NULL, filt_artists = NULL, avoid_artists = NULL, tag = NULL, init_year = NULL, final_year = NULL, merge = FALSE, colab = FALSE, alias = TRUE){
 	
 	
 	albums_artists <- dbReadTable(db, "albums_artists")
@@ -88,7 +88,7 @@ gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur
 	
 	###
 	
-	tracks <- get_tracks(db, min_track_dur = min_track_dur, init_year = init_year, final_year = final_year)
+	tracks <- get_tracks(db, min_track_dur = min_track_dur, no_vocal = no_vocal, init_year = init_year, final_year = final_year)
 	tracks_albums <- dbReadTable(db, "tracks_albums")
 	
 	filt_tracks_albums <- tracks_albums[tracks_albums$track_id %in% tracks$id,]
@@ -168,8 +168,6 @@ gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur
 	report <- vector(mode = "list", length(filt_albums_per_artist))
 	names(report) <- names(filt_albums_per_artist)
 	
-	print(names(report))
-	
 	for(i in names(report)){
 		
 		name <- artists_names[artists_names$id == strtoi(i),]$name
@@ -236,10 +234,19 @@ gen_report <- function(db, min_num_albums = 0, min_num_tracks = 0, min_track_dur
 	
 }
 
-get_tracks <- function(db, min_track_dur = 0, init_year = NULL, final_year = NULL){
+get_tracks <- function(db, min_track_dur = 0, no_vocal = TRUE, init_year = NULL, final_year = NULL){
 	
+	
+	if(no_vocal){
+		
+		query <- paste("SELECT tracks_info.id, tracks_info.title, tracks_info.dur, tracks_albums.album_id FROM (tracks_info LEFT JOIN tracks_other_artists ON tracks_info.id = tracks_other_artists.track_id INNER JOIN tracks_albums ON tracks_albums.track_id = tracks_info.id) WHERE tracks_info.avail = 1 AND tracks_info.vocal = 0 AND tracks_info.version = 0 AND tracks_info.dj_mix = 0 AND tracks_info.dur_sec >= ", min_track_dur, " AND tracks_other_artists.artist_id IS NULL ORDER BY tracks_info.id;")
+		
+	}
+	else{
 	
 	query <- paste("SELECT tracks_info.id, tracks_info.title, tracks_info.dur, tracks_albums.album_id FROM (tracks_info LEFT JOIN tracks_other_artists ON tracks_info.id = tracks_other_artists.track_id INNER JOIN tracks_albums ON tracks_albums.track_id = tracks_info.id) WHERE tracks_info.avail = 1 AND tracks_info.version = 0 AND tracks_info.dj_mix = 0 AND tracks_info.dur_sec >= ", min_track_dur, " AND tracks_other_artists.artist_id IS NULL ORDER BY tracks_info.id;")
+	
+	}
 	
 	tracks <- dbGetQuery(db, query)
     
@@ -337,14 +344,17 @@ print_report <- function(report, summary = FALSE, show_tracks = TRUE){
 	
 	cat("Number of Artists found:", length(report), '\n\n')
 	
+	#print(report)
+	
 	for(i in names(report)){
 		
 		artist <- report[[i]]
+	
 		
 		cat("Artist ID: ", i, '\n')
-		cat("Artist Name: ", artist, '\n')
+		cat("Artist Name: ", artist$name, '\n')
 		
-		albums <- attributes(artist)$albums
+		albums <- artist$albums
 		
 		cat("Number of valid albums: ", length(albums), '\n')
 			
@@ -357,10 +367,10 @@ print_report <- function(report, summary = FALSE, show_tracks = TRUE){
 				album <- albums[[j]]
 				
 				cat("- Album ID: ", j, '\n')
-				cat("- Album Title: ", album, '\n')
-				cat("- Album Year: ", attributes(album)$year, '\n')
+				cat("- Album Title: ", album$title, '\n')
+				cat("- Album Year: ", album$year, '\n')
 			
-				tracks <- attributes(album)$tracks
+				tracks <- album$tracks
 			
 				cat("- Number of valid tracks: ", length(tracks), '\n')
 			
@@ -372,10 +382,10 @@ print_report <- function(report, summary = FALSE, show_tracks = TRUE){
 						track <- tracks[[k]]
 					
 						cat("-- Track ID: ", k, '\n')
-						cat("-- Track Number: ", track, '\n')
-						cat("-- Track Title: ", attributes(track)$title, '\n')
-						cat("-- Track Duration: ", attributes(track)$duration, '\n')
-						cat("-- Track Path: ", attributes(track)$path, '\n\n')
+						cat("-- Track Number: ", track$number, '\n')
+						cat("-- Track Title: ", track$title, '\n')
+						cat("-- Track Duration: ", track$duration, '\n')
+						cat("-- Track Path: ", track$path, '\n\n')
 										
 					}
 				

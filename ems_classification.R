@@ -14,9 +14,9 @@ classification <- function(){
 	datasets <- vector(mode = 'list')
 	datasets$atmospherical <- get_dataset(1)
 	datasets$postrock <- get_dataset(2)
-	datasets$techno
+	datasets$techno <- get_dataset(3)
 	datasets$ambient <- rbind(datasets$atmospherical, datasets$postrock)
-	datasets$ambient_techno <- rbind(datasets$atmospherical, datasets$postrock)
+	datasets$ambient_techno <- rbind(datasets$ambient, datasets$techno)
 	evals <- vector(mode = 'list', length = length(modes))
 	names(evals) <- names(modes)
 	

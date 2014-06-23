@@ -109,6 +109,17 @@ get_dataset <- function(dataset_ids, descriptors = NULL, no_nas = TRUE){
 	dataset <- dataset[order(dataset$excerpt_id),]
 	row.names(dataset) <- dataset$excerpt_id
 	
+	print(unique(dataset$artist_id))
+	
+	comb <- as.data.frame(combn(unique(dataset$artist_id),2))
+	for(i in 1:ncol(comb)){
+		if(check_alias(comb[1,i], comb[2,i])){
+			dataset[which(dataset$artist_id == comb[1,i]), 'artist_id'] <- comb[2,i]
+		}
+	}
+	
+	print(unique(dataset$artist_id))
+	
 	dbDisconnect(db)
 	return(dataset)
 	
@@ -125,5 +136,21 @@ get_path <- function(excerpt_id){
 	dbDisconnect(db)
 	return(path)
 	
+	
+}
+
+check_alias <- function(artist_1, artist_2){
+	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
+	query <- paste('SELECT alias_main_id FROM artists_aliases WHERE alias_artist_id = ' , artist_1, ' AND alias_main_id = ', artist_2)
+
+
+	main <- dbGetQuery(db, query)$alias_main_id
+	
+	dbDisconnect(db)
+	
+	if(length(main) > 0){return(TRUE)}
+	return(FALSE)
 	
 }

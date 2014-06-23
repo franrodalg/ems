@@ -62,10 +62,9 @@ classification <- function(){
 
 
 class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
+	
 		
 	train_test_datasets <- get_train_test_datasets(dataset, descriptors)
-	
-	# str(train_test_datasets)
 	
 	model <- svm(artist_id~., data = train_test_datasets$train)
 	
@@ -98,6 +97,7 @@ class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
 
 get_train_test_datasets <- function(dataset, descriptors = NULL){
 	
+
 	
 	train_test_datasets <- vector(mode = "list")
 	
@@ -105,8 +105,10 @@ get_train_test_datasets <- function(dataset, descriptors = NULL){
 		descriptors <- names(dataset)[4:length(names(dataset))]		
 	}
 	
-	train_test <- get_train_test_albums(dataset)
+
 	
+	train_test <- get_train_test_albums(dataset)
+
 	train_dataset <- dataset[which(dataset$album_id %in% train_test$train),]
 	test_dataset <- dataset[which(dataset$album_id %in% train_test$test),]
 	
@@ -125,10 +127,13 @@ get_train_test_datasets <- function(dataset, descriptors = NULL){
 
 get_train_test_albums <- function(dataset){
 	
+
+	
 	grouped <- split(dataset, as.factor(dataset$artist_id))
 	train_test_albums <- vector(mode = 'list', length = 0)
 	train_test_albums$train <- numeric(0)
 	train_test_albums$test <- numeric(0)
+
 	
 	for(artist in unique(dataset$artist_id)){
 		

@@ -14,6 +14,10 @@ classification <- function(){
 	datasets <- vector(mode = 'list')
 	datasets$atmospherical <- get_dataset(1)
 	datasets$postrock <- get_dataset(2)
+	
+	datasets$techno <- get_dataset(3)
+	datasets$atmospherical <- get_dataset(1)
+	datasets$postrock <- get_dataset(2)
 	datasets$techno <- get_dataset(3)
 	datasets$ambient <- rbind(datasets$atmospherical, datasets$postrock)
 	datasets$ambient_techno <- rbind(datasets$ambient, datasets$techno)
@@ -61,26 +65,55 @@ classification <- function(){
 }
 
 
-class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
+class_svm <- function(dataset, crit = 'artist_id', descriptors = NULL, self_class = FALSE){
 	
 		
-	train_test_datasets <- get_train_test_datasets(dataset, descriptors)
-	
-	model <- svm(artist_id~., data = train_test_datasets$train)
-	
+	train_test_datasets <- get_train_test_datasets(dataset, crit = crit, descriptors)
 	
 	if(self_class){
 		
-		train_test <- rbind(train_test_datasets$train, train_test_datasets$test)
-		
-		predictions <- predict(model, train_test[,-1])
-		ground_truth <- train_test[,1]
-		
+		train <- rbind(train_test_datasets$train, train_test_datasets$test)
+		test <- train		
 	}
 	else{
-		predictions <- predict(model, train_test_datasets$test[,-1])	
-		ground_truth <- train_test_datasets$test[,1]
+		train <- train_test_datasets$train
+		test <- train_test_datasets$test
+		
+		
 	}
+	
+	if(crit == 'artist_id'){
+		model <- svm(artist_id~., data = train)
+	}
+	else if(crit == 'dataset_id'){
+		model <- svm(dataset_id~., data = train)
+	}
+	else if(crit == 'excerpt_id'){
+		model <- svm(excerpt_id~., data = train)
+	}
+	else{
+		model <- svm(ambient~., data = train)
+
+	}
+	
+	
+	predictions <- predict(model, test[,-1])
+	ground_truth <- test[,1]
+	
+	#if(self_class){
+		
+	#	#train_test <- rbind(train_test_datasets$train, train_test_datasets$test)
+	#	train_test <- rbind(train_test_datasets$test, train_test_datasets$train)
+	#	print(train_test[,1:8])
+		
+	#	predictions <- predict(model, train_test[,-1])
+	#	ground_truth <- train_test[,1]
+		
+	#}
+	#else{
+	#	predictions <- predict(model, train_test_datasets$test[,-1])	
+	#	ground_truth <- train_test_datasets$test[,1]
+	#}
 	
 	tab <- table(pred = predictions, true <- ground_truth)	
 	
@@ -95,7 +128,7 @@ class_svm <- function(dataset, descriptors = NULL, self_class = FALSE){
 }
 
 
-get_train_test_datasets <- function(dataset, descriptors = NULL){
+get_train_test_datasets <- function(dataset, crit = 'artist_id', descriptors = NULL){
 	
 
 	
@@ -111,12 +144,13 @@ get_train_test_datasets <- function(dataset, descriptors = NULL){
 
 	train_dataset <- dataset[which(dataset$album_id %in% train_test$train),]
 	test_dataset <- dataset[which(dataset$album_id %in% train_test$test),]
+
 	
-	train_dataset <- train_dataset[, c('artist_id', paste(descriptors))]
-	test_dataset <- test_dataset[, c('artist_id', paste(descriptors))]
+	train_dataset <- train_dataset[, c(crit, paste(descriptors))]
+	test_dataset <- test_dataset[, c(crit, paste(descriptors))]
 	
-	train_dataset$artist_id <- as.factor(train_dataset$artist_id)
-	test_dataset$artist_id <- as.factor(test_dataset$artist_id)
+	train_dataset[[crit]] <- as.factor(train_dataset[[crit]])
+	test_dataset[[crit]] <- as.factor(test_dataset[[crit]])
 	
 	train_test_datasets$train <- train_dataset
 	train_test_datasets$test <- test_dataset
@@ -159,6 +193,57 @@ get_album_year <- function(album_id){
 	dbDisconnect(db)
 	
 	return(year)
+	
+}
+
+simple_evaluation <- function(class_results){
+	
+	df <- as.data.frame(class_results$confusion_table)
+	names(df) <- c('pred', 'real', 'freq')
+	df <- df[, c('real', 'pred', 'freq')]
+	
+	eval <- vector(mode = 'list')
+	all_tp <- 0
+	all_prec <- numeric(0)
+	all_rec <- numeric(0)
+	all_f1 <- numeric(0)
+	
+	ids <- unique(df$real)
+	
+	for(i in ids){
+		
+		real <- df[which(df$real == i),]
+		pred <- df[which(df$pred == i),]
+		
+		tp <- sum(real[which(real$pred == i), 'freq'])
+		fn <- sum(real[which(real$pred != i), 'freq'])
+		fp <- sum(pred[which(pred$real != i), 'freq'])
+		
+		prec <- tp / (tp + fp)
+		rec <- tp / (tp + fn)
+		f1 <- (2*prec*rec) / (prec + rec)
+
+		
+		eval[[paste(i)]] <- vector(mode = 'list')
+		eval[[paste(i)]][['precision']] <- prec
+		eval[[paste(i)]][['recall']] <- rec
+		eval[[paste(i)]][['f1-score']] <- f1
+		
+		all_tp <- all_tp + tp
+		all_prec <- c(all_prec, prec)
+		all_rec <- c(all_rec, rec)
+		all_f1 <- c(all_f1, f1)
+	
+	}
+	
+	eval[['accuracy']] <- all_tp / sum(class_results$confusion_table)
+	eval[['precision']] <- mean(all_prec)
+	eval[['recall']] <- mean(all_rec)
+	eval[['f1-score']] <- mean(all_f1)
+
+	
+	return(eval)
+	
 	
 }
 

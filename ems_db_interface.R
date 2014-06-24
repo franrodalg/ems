@@ -14,6 +14,21 @@ get_artist_name <- function(artist_id){
 	
 }
 
+get_dataset_name <- function(dataset_id){
+	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
+	
+	dataset_name <- dbGetQuery(db, 
+		paste('SELECT name FROM datasets WHERE id = ', dataset_id))$name
+	
+	dbDisconnect(db)
+	
+	return(dataset_name)
+
+	
+}
+
 get_artists_in_datasets <- function(){
 	
 	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
@@ -70,6 +85,28 @@ get_descriptors <- function(dataset_ids = NULL){
 	
 }
 
+get_descriptor_range <- function(descriptor){
+	
+	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
+	
+	min_str <- paste('min(', descriptor, ')', sep = '')
+	max_str <- paste('max(', descriptor, ')', sep = '')
+		
+	query <- paste('SELECT ', min_str, ', ', max_str, ' FROM excerpts_descriptors', sep = '')
+		
+	res <- dbGetQuery(db, query)		
+	
+	range <- data.frame(min = res[[min_str]], max = res[[max_str]])
+	
+	dbDisconnect(db)
+	
+
+	
+	return(range)
+
+	
+}
+
 get_dataset <- function(dataset_ids, descriptors = NULL, no_nas = TRUE){
 	
 	db <- dbConnect(MySQL(), host = 'localhost', user = 'root', db = 'ems')
@@ -109,16 +146,12 @@ get_dataset <- function(dataset_ids, descriptors = NULL, no_nas = TRUE){
 	dataset <- dataset[order(dataset$excerpt_id),]
 	row.names(dataset) <- dataset$excerpt_id
 	
-	print(unique(dataset$artist_id))
-	
 	comb <- as.data.frame(combn(unique(dataset$artist_id),2))
 	for(i in 1:ncol(comb)){
 		if(check_alias(comb[1,i], comb[2,i])){
 			dataset[which(dataset$artist_id == comb[1,i]), 'artist_id'] <- comb[2,i]
 		}
 	}
-	
-	print(unique(dataset$artist_id))
 	
 	dbDisconnect(db)
 	return(dataset)

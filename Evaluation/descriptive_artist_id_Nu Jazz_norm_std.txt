@@ -1,0 +1,158 @@
+[1] "Features:"
+ [1] mtb_ioi_var                 ess_ioi_var                 mtb_spec_kurtosis           ess_ioi_med                
+ [5] ess_ioi_mean                en_seg_pitch_01_kur         en_seg_dur_var              en_seg_pitch_11_kur        
+ [9] ess_spectral_strongpeak_var ess_spectral_kurtosis_var  
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 10
+[1] 506
+[1] 496
+[1] "NUM DESC: 10"
+[1] "Criteria: dataset_id; Class: Nu Jazz; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.706666666666667"
+[1] "Precision:  0.790289677682579"
+[1] "Recall:  0.706666666666667"
+[1] "F1-Score:  0.70044094192701"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.853333333333333"
+[1] "Mean Precision:  0.861891982071642"
+[1] "Mean Recall:  0.856969696969697"
+[1] "Mean F1-Score:  0.85709831464644"
+[1] "Features:"
+ [1] mtb_ioi_var                                    ess_ioi_var                                   
+ [3] mtb_spec_kurtosis                              ess_ioi_med                                   
+ [5] ess_ioi_mean                                   en_seg_pitch_01_kur                           
+ [7] en_seg_dur_var                                 en_seg_pitch_11_kur                           
+ [9] ess_spectral_strongpeak_var                    ess_spectral_kurtosis_var                     
+[11] ess_pitch_after_max_to_before_max_energy_ratio en_seg_timbre_02_kur                          
+[13] ess_pitch_var                                  en_end_of_fade_in                             
+[15] en_seg_loud_max_time_var                       ess_spectral_kurtosis_mean                    
+[17] en_beats_dur_var                               en_seg_pitch_09_kur                           
+[19] mtb_spec_skewness                              en_sec_tempo_var                              
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 20
+[1] 506
+[1] 486
+[1] "NUM DESC: 20"
+[1] "Criteria: dataset_id; Class: Nu Jazz; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.786666666666667"
+[1] "Precision:  0.823373373373373"
+[1] "Recall:  0.786666666666667"
+[1] "F1-Score:  0.784234947625795"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.932"
+[1] "Mean Precision:  0.936314569680548"
+[1] "Mean Recall:  0.930909090909091"
+[1] "Mean F1-Score:  0.930968269526221"
+[1] "Features:"
+ [1] mtb_ioi_var                                    ess_ioi_var                                   
+ [3] mtb_spec_kurtosis                              ess_ioi_med                                   
+ [5] ess_ioi_mean                                   en_seg_pitch_01_kur                           
+ [7] en_seg_dur_var                                 en_seg_pitch_11_kur                           
+ [9] ess_spectral_strongpeak_var                    ess_spectral_kurtosis_var                     
+[11] ess_pitch_after_max_to_before_max_energy_ratio en_seg_timbre_02_kur                          
+[13] ess_pitch_var                                  en_end_of_fade_in                             
+[15] en_seg_loud_max_time_var                       ess_spectral_kurtosis_mean                    
+[17] en_beats_dur_var                               en_seg_pitch_09_kur                           
+[19] mtb_spec_skewness                              en_sec_tempo_var                              
+[21] ess_scvalleys_06_var                           ess_scvalleys_04_var                          
+[23] en_seg_timbre_04_kur                           ess_scvalleys_03_var                          
+[25] en_seg_pitch_02_kur                            ess_scvalleys_05_var                          
+[27] ess_scvalleys_02_var                           ess_scvalleys_01_var                          
+[29] ess_spectral_spread_var                        ess_zerocrossingrate_var                      
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 30
+[1] 506
+[1] 476
+[1] "NUM DESC: 30"
+[1] "Criteria: dataset_id; Class: Nu Jazz; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.8"
+[1] "Precision:  0.85421888053467"
+[1] "Recall:  0.8"
+[1] "F1-Score:  0.80007518501686"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.972"
+[1] "Mean Precision:  0.973409338777904"
+[1] "Mean Recall:  0.973333333333333"
+[1] "Mean F1-Score:  0.973332848290831"
+[1] "Features:"
+ [1] mtb_ioi_var                                    ess_ioi_var                                   
+ [3] mtb_spec_kurtosis                              ess_ioi_med                                   
+ [5] ess_ioi_mean                                   en_seg_pitch_01_kur                           
+ [7] en_seg_dur_var                                 en_seg_pitch_11_kur                           
+ [9] ess_spectral_strongpeak_var                    ess_spectral_kurtosis_var                     
+[11] ess_pitch_after_max_to_before_max_energy_ratio en_seg_timbre_02_kur                          
+[13] ess_pitch_var                                  en_end_of_fade_in                             
+[15] en_seg_loud_max_time_var                       ess_spectral_kurtosis_mean                    
+[17] en_beats_dur_var                               en_seg_pitch_09_kur                           
+[19] mtb_spec_skewness                              en_sec_tempo_var                              
+[21] ess_scvalleys_06_var                           ess_scvalleys_04_var                          
+[23] en_seg_timbre_04_kur                           ess_scvalleys_03_var                          
+[25] en_seg_pitch_02_kur                            ess_scvalleys_05_var                          
+[27] ess_scvalleys_02_var                           ess_scvalleys_01_var                          
+[29] ess_spectral_spread_var                        ess_zerocrossingrate_var                      
+[31] ess_spectral_centroid_var                      ess_dynamic_complexity                        
+[33] ess_pitch_mean                                 ess_spectral_centroid_mean                    
+[35] en_seg_loud_max_pos_kur                        en_tatums_conf_kur                            
+[37] en_beats_conf_kur                              ess_spectral_rolloff_var                      
+[39] ess_spectral_rolloff_mean                      mtb_roughness_std                             
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 40
+[1] 506
+[1] 466
+[1] "NUM DESC: 40"
+[1] "Criteria: dataset_id; Class: Nu Jazz; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.88"
+[1] "Precision:  0.890625347848349"
+[1] "Recall:  0.88"
+[1] "F1-Score:  0.879140786749482"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.984"
+[1] "Mean Precision:  0.984933794600461"
+[1] "Mean Recall:  0.984242424242424"
+[1] "Mean F1-Score:  0.984241939199922"
+[1] "Features:"
+ [1] mtb_ioi_var                                    ess_ioi_var                                   
+ [3] mtb_spec_kurtosis                              ess_ioi_med                                   
+ [5] ess_ioi_mean                                   en_seg_pitch_01_kur                           
+ [7] en_seg_dur_var                                 en_seg_pitch_11_kur                           
+ [9] ess_spectral_strongpeak_var                    ess_spectral_kurtosis_var                     
+[11] ess_pitch_after_max_to_before_max_energy_ratio en_seg_timbre_02_kur                          
+[13] ess_pitch_var                                  en_end_of_fade_in                             
+[15] en_seg_loud_max_time_var                       ess_spectral_kurtosis_mean                    
+[17] en_beats_dur_var                               en_seg_pitch_09_kur                           
+[19] mtb_spec_skewness                              en_sec_tempo_var                              
+[21] ess_scvalleys_06_var                           ess_scvalleys_04_var                          
+[23] en_seg_timbre_04_kur                           ess_scvalleys_03_var                          
+[25] en_seg_pitch_02_kur                            ess_scvalleys_05_var                          
+[27] ess_scvalleys_02_var                           ess_scvalleys_01_var                          
+[29] ess_spectral_spread_var                        ess_zerocrossingrate_var                      
+[31] ess_spectral_centroid_var                      ess_dynamic_complexity                        
+[33] ess_pitch_mean                                 ess_spectral_centroid_mean                    
+[35] en_seg_loud_max_pos_kur                        en_tatums_conf_kur                            
+[37] en_beats_conf_kur                              ess_spectral_rolloff_var                      
+[39] ess_spectral_rolloff_mean                      mtb_roughness_std                             
+[41] en_seg_timbre_08_kur                           en_seg_timbre_11_kur                          
+[43] en_seg_pitch_06_kur                            mtb_ioi_mean                                  
+[45] en_seg_pitch_04_kur                            en_bar_dur_var                                
+[47] mtb_ioi_med                                    ess_spectral_skewness_mean                    
+[49] ess_zerocrossingrate_mean                      mtb_roughness_mean                            
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 50
+[1] 506
+[1] 456
+[1] "NUM DESC: 50"
+[1] "Criteria: dataset_id; Class: Nu Jazz; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.866666666666667"
+[1] "Precision:  0.874877810361681"
+[1] "Recall:  0.866666666666667"
+[1] "F1-Score:  0.86499493414387"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.992"
+[1] "Mean Precision:  0.992307692307692"
+[1] "Mean Recall:  0.991515151515152"
+[1] "Mean F1-Score:  0.99151466647265"

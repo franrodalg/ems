@@ -1,62 +1,96 @@
 library(e1071)
 library(stats)
+library(entropy)
 
 source('ems_db_interface.R')
 source('ems_feature_sets.R')
 source('ems_collection.R')
 
 
-get_summary <- function(dataset){
+get_summary <- function(dataset, crit = 'artist_id'){
 	
-	artists_ids <- unique(dataset$artist_id)
-	artists_names <- vector(mode = "list", length(artists_ids))
-	names(artists_names) <- artists_ids
+	
+	
+	unique_ids <- unique(dataset[[crit]])
+	
+	unique_names <- vector(mode = "list", length(unique_ids))
+	names(unique_names) <- unique_ids
 	
 	complete_summary <- vector(mode = "list", 0)
 	
-	descriptors <- names(dataset)[4:length(names(dataset))]
+	init_desc <- 4
 	
-	for(id in artists_ids){
-		name <- get_artist_name(id)
-		artists_names[[paste(id)]] <- name
+	if('ambient' %in% names(dataset)){init_desc = init_desc + 1}
+	if('dataset_id' %in% names(dataset)){init_desc = init_desc + 1}
 	
-		values = dataset[which(dataset$artist_id == id),]
+	descriptors <- names(dataset)[init_desc:length(names(dataset))]
+	
+	for(id in unique_ids){
+		
+		if(crit == 'artist_id'){
+			name <- get_artist_name(id)
+		}
+		else if(crit == 'dataset_id'){
+			name <- get_dataset_name(id)
+		}
+		else{
+			if(id == 0){
+				name <- 'Ambient'
+			}
+			else{
+				name <- 'No ambient'
+			}
+		}
+		
+		unique_names[[paste(id)]] <- name
+	
+		values = dataset[which(dataset[[crit]] == id),]
 	
 		summary = data.frame(
 			'desc' = descriptors,
-			'min' = numeric(length(descriptors)),
-			'max' = numeric(length(descriptors)),
-			'mean' = numeric(length(descriptors)),
-			'median' = numeric(length(descriptors)),
-			'std' = numeric(length(descriptors)),
-			'var' = numeric(length(descriptors)),
-			'skewness' = numeric(length(descriptors)),
-			'kurtosis' = numeric(length(descriptors)),
-			'iqr' = numeric(length(descriptors)),
-			'norm_mean' = numeric(length(descriptors)),
-			'norm_median' = numeric(length(descriptors)),
-			'norm_var' = numeric(length(descriptors)),
-			'norm_skewness' = numeric(length(descriptors)),
-			'norm_kurtosis' = numeric(length(descriptors)),
+			#'min' = numeric(length(descriptors)),
+			#'max' = numeric(length(descriptors)),
+			#'mean' = numeric(length(descriptors)),
+			#'median' = numeric(length(descriptors)),
+			#'std' = numeric(length(descriptors)),
+			#'var' = numeric(length(descriptors)),
+			#'skewness' = numeric(length(descriptors)),
+			#'kurtosis' = numeric(length(descriptors)),
+			#'iqr' = numeric(length(descriptors)),
+			'entropy' = numeric(length(descriptors)),
+			#'norm_mean' = numeric(length(descriptors)),
+			#'norm_median' = numeric(length(descriptors)),
+			'norm_std' = numeric(length(descriptors)),
+			#'norm_var' = numeric(length(descriptors)),
+			#'norm_skewness' = numeric(length(descriptors)),
+			#'norm_kurtosis' = numeric(length(descriptors)),
 			'norm_iqr' = numeric(length(descriptors))
 		)
 		
+	
+		
 		for(desc in descriptors){
 		
+			
+		
 			values_desc = values[[desc]]
+			values_desc = values_desc[!is.nan(values_desc)]
 			
-			minimum <- min(values_desc)
-			maximum <- max(values_desc)
+			range <- get_descriptor_range(desc)
 			
-			summary[which(summary$desc == desc), 'min'] = minimum
-			summary[which(summary$desc == desc), 'max'] = maximum
-			summary[which(summary$desc == desc), 'mean'] = mean(values_desc)
-			summary[which(summary$desc == desc), 'median'] = median(values_desc)
-			summary[which(summary$desc == desc), 'std'] = sd(values_desc)
-			summary[which(summary$desc == desc), 'var'] = var(values_desc)
-			summary[which(summary$desc == desc), 'skewness'] = skewness(values_desc)
-			summary[which(summary$desc == desc), 'kurtosis'] = kurtosis(values_desc)
-			summary[which(summary$desc == desc), 'iqr'] = IQR(values_desc)			
+			minimum <- range$min
+			maximum <- range$max
+			
+			#summary[which(summary$desc == desc), 'min'] = min(values_desc)
+			#summary[which(summary$desc == desc), 'max'] = max(values_desc)
+			#summary[which(summary$desc == desc), 'mean'] = mean(values_desc)
+			#summary[which(summary$desc == desc), 'median'] = median(values_desc)
+			#summary[which(summary$desc == desc), 'std'] = sd(values_desc)
+			#summary[which(summary$desc == desc), 'var'] = var(values_desc)
+			#summary[which(summary$desc == desc), 'skewness'] = skewness(values_desc)
+			#summary[which(summary$desc == desc), 'kurtosis'] = kurtosis(values_desc)
+			#summary[which(summary$desc == desc), 'iqr'] = IQR(values_desc)
+			summary[which(summary$desc == desc), 'entropy'] = entropy(values_desc)		
 					
 		 	if (minimum != maximum){
 				norm_values_desc = (values_desc - minimum)/ (maximum - minimum)
@@ -65,26 +99,28 @@ get_summary <- function(dataset){
 				norm_values_desc = 0.5
 			}
 		
-			summary[which(summary$desc == desc), 'norm_mean'] = mean(norm_values_desc)
-			summary[which(summary$desc == desc), 'norm_median'] = median(norm_values_desc)
+			#summary[which(summary$desc == desc), 'norm_min'] = min(norm_values_desc)
+			#summary[which(summary$desc == desc), 'norm_max'] = max(norm_values_desc)
+			#summary[which(summary$desc == desc), 'norm_mean'] = mean(norm_values_desc)
+			#summary[which(summary$desc == desc), 'norm_median'] = median(norm_values_desc)
 			summary[which(summary$desc == desc), 'norm_std'] = sd(norm_values_desc)
-			summary[which(summary$desc == desc), 'norm_var'] = var(norm_values_desc)
-			summary[which(summary$desc == desc), 'norm_skewness'] = skewness(norm_values_desc)
-			summary[which(summary$desc == desc), 'norm_kurtosis'] = kurtosis(norm_values_desc)
+			#summary[which(summary$desc == desc), 'norm_var'] = var(norm_values_desc)
+			#summary[which(summary$desc == desc), 'norm_skewness'] = skewness(norm_values_desc)
+			#summary[which(summary$desc == desc), 'norm_kurtosis'] = kurtosis(norm_values_desc)
 			summary[which(summary$desc == desc), 'norm_iqr'] = IQR(norm_values_desc)
-		
+			#summary[which(summary$desc == desc), 'norm_entropy'] = entropy(norm_values_desc)	
 			
 		}
-		
+	
 		complete_summary[[name]] <- summary
 		
 	}
 
-	
 	return(complete_summary)	
 }
 
 sort_descriptors <- function(art_summary, stat = 'norm_std', num = 20, reverse = FALSE){
+	
 	
 	valid <- names(art_summary)[2:length(names(art_summary))]
 	
@@ -99,29 +135,99 @@ sort_descriptors <- function(art_summary, stat = 'norm_std', num = 20, reverse =
 	
 }
 
-plot_descriptors <- function(dataset_id, descriptors = NULL){
-
-	dataset <- get_dataset(dataset_id, descriptors)
-
+plot_descriptors_data <- function(dataset, dataset_name, descriptors = NULL, crit = 'artist_id'){
+	
 	if(is.null(descriptors)){
-		descriptors <- names(dataset)[4:length(names(dataset))]
+		
+		init_desc <- 4
+	
+		if('ambient' %in% names(dataset)){init_desc = init_desc + 1}
+		if('dataset_id' %in% names(dataset)){init_desc = init_desc + 1}
+	
+		descriptors <- names(dataset)[init_desc:length(names(dataset))]
+
+
+	}
+	
+	unique_ids <- unique(dataset[[crit]])
+	unique_ids <- unique_ids[order(unique_ids)]
+	
+	width <- 10
+	height <- 6
+	cex <- 0.9
+	
+	if(crit == 'artist_id'){
+		unique_names <- unlist(lapply(unique_ids, get_artist_name))
+		if(dataset_name == 'all'){
+			width <- 20
+			height <- 6
+			cex <- 0.75
+		}
+		else if(dataset_name == 'ambient' || dataset_name == 'no_ambient'){
+			width <- 15
+			height <- 6
+			cex <- 0.75
+		}
+		
+	}
+	else if(crit == 'dataset_id')
+	{
+		unique_names <- unlist(lapply(unique_ids, get_dataset_name))
+		if(dataset_name == 'all'){
+			width <- 15
+			height <- 6
+			cex <- 0.85
+		}
+	}
+	else{
+		unique_names <- c('No Ambient', 'Ambient')
 	}
 	
 	
-	artist_ids <- unique(dataset$artist_id)
-	artist_ids <- artist_ids[order(artist_ids)]
-	artist_names <- unlist(lapply(artist_ids, get_artist_name))
 	
 	for(desc in descriptors){
 	
-		pdf(file = paste('Figures/dat_', dataset_id, '_bxplt_', desc, '.pdf', sep = ""))
+		pdf(file = paste('Figures/dat_', dataset_name, '_', crit,'_bxplt_', desc, '.pdf', sep = ""), width = width, height = height)
 	
-		boxplot(dataset[[desc]]~artist_id, data=dataset, main=desc, 
-			xlab="Artist", ylab=desc, names = artist_names)
+	
+		if(crit == 'artist_id'){
+			xlab = 'Artist'
+			
+			#print(cex)
+				
+			boxplot(dataset[[desc]]~artist_id, data=dataset, main=desc, 
+				xlab=xlab, ylab=desc, names = unique_names, cex.axis = cex)
 
-	
+		}
+		else if(crit == 'dataset_id')
+		{
+			xlab = 'Dataset'
+			
+			boxplot(dataset[[desc]]~dataset_id, data=dataset, main=desc, 
+				xlab=xlab, ylab=desc, names = unique_names, cex.axis = cex)
+
+		}
+		else{
+			xlab = 'Dataset'
+			
+			boxplot(dataset[[desc]]~ambient, data=dataset, main=desc, 
+				xlab=xlab, ylab=desc, names = unique_names, cex.axis = cex)
+
+		}
+			
 		dev.off()
 	}
+
+	
+}
+
+plot_descriptors <- function(dataset_id, descriptors = NULL){
+
+	dataset <- get_dataset(dataset_id, descriptors)
+	
+	plot_descriptors_data(dataset, paste(dataset_id, descriptors))
+
+
 
 }
 
@@ -138,10 +244,6 @@ compute_distances <- function(dataset_ids, distances = NULL, with_fs = FALSE){
 		feature_sets <- vector(mode ='list')
 		feature_sets$all <- get_descriptors(dataset_ids)
 	}
-	
-	#artists_ids <- unique(dataset$artist_id)
-	#artists_names <- vector(mode = "list", length(artists_ids))
-	#names(artists_names) <- artists_ids
 	
 	sum <- get_dataset_content_summary(dataset)
 	
@@ -173,8 +275,6 @@ compute_distances <- function(dataset_ids, distances = NULL, with_fs = FALSE){
 				dist_matrix[(which(row.names(dist_matrix) == excerpt)),] <- distancevector(mat, mat[which(row.names(dist_matrix) == excerpt),], d = distance)
 			}
 			
-			#print(head(dist_matrix))
-			
 					
 			dist[[set]]$dist_matrix <- dist_matrix
 			
@@ -188,11 +288,7 @@ compute_distances <- function(dataset_ids, distances = NULL, with_fs = FALSE){
 		
 		}
 		
-		report[[distance]] <- dist
-		
-		#report[[distance]]$dist_excerpts <- dist
-		#report[[distance]]$dist_albums <- dist_albums
-		#report[[distance]]$dist_artists <- dist_artists		
+		report[[distance]] <- dist		
 				
 	}
 		
@@ -209,14 +305,10 @@ get_grouped_distances <- function(distance_matrix, grouping){
 	sorting <- order(type.convert(row.names(grouped_distances)))
 	
 	grouped_distances <- grouped_distances[sorting, sorting]
-	
-	#print(grouping)
-	#print(grouped_distances)
-	
+
 	for(group in names(grouping)){
 		
 		group_rows <- distance_matrix[which(row.names(distance_matrix) %in% grouping[[group]]),]
-		#print(group_rows)
 		
 		for(group_2 in names(grouping)){
 			
@@ -234,8 +326,6 @@ get_grouped_distances <- function(distance_matrix, grouping){
 		}
 		
 	}
-	
-	#print(grouped_distances)
 	
 	
 	return(grouped_distances)

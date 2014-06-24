@@ -331,7 +331,7 @@ filter_report <- function(report, artists){
 				
 	}
 	
-	print(names(aux))
+	#print(names(aux))
 	
 	return(aux)
 	

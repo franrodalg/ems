@@ -1,0 +1,132 @@
+[1] "Features:"
+ [1] en_seg_loud_max_time_var ess_ioi_mean             ess_ioi_med              en_seg_pitch_02_kur      en_seg_timbre_11_kur    
+ [6] en_end_of_fade_in        en_seg_pitch_06_kur      en_seg_pitch_12_kur      en_beats_dur_var         en_seg_pitch_03_kur     
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 10
+[1] 506
+[1] 496
+[1] "NUM DESC: 10"
+[1] "Criteria: dataset_id; Class: IDM; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.613333333333333"
+[1] "Precision:  0.671860885275519"
+[1] "Recall:  0.613333333333333"
+[1] "F1-Score:  0.614196416805606"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.8"
+[1] "Mean Precision:  0.811792944580922"
+[1] "Mean Recall:  0.802424242424242"
+[1] "Mean F1-Score:  0.802418334773689"
+[1] "Features:"
+ [1] en_seg_loud_max_time_var ess_ioi_mean             ess_ioi_med              en_seg_pitch_02_kur      en_seg_timbre_11_kur    
+ [6] en_end_of_fade_in        en_seg_pitch_06_kur      en_seg_pitch_12_kur      en_beats_dur_var         en_seg_pitch_03_kur     
+[11] ess_ioi_var              en_seg_pitch_08_kur      ess_spectral_spread_var  en_bar_dur_var           en_seg_loud_max_pos_kur 
+[16] en_beats_conf_kur        en_tatums_conf_kur       en_seg_loud_max_time_kur en_seg_timbre_08_kur     en_seg_pitch_10_kur     
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 20
+[1] 506
+[1] 486
+[1] "NUM DESC: 20"
+[1] "Criteria: dataset_id; Class: IDM; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.786666666666667"
+[1] "Precision:  0.82962962962963"
+[1] "Recall:  0.786666666666667"
+[1] "F1-Score:  0.791096759949219"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.889333333333333"
+[1] "Mean Precision:  0.896232052069405"
+[1] "Mean Recall:  0.890909090909091"
+[1] "Mean F1-Score:  0.890924895210609"
+[1] "Features:"
+ [1] en_seg_loud_max_time_var              ess_ioi_mean                          ess_ioi_med                          
+ [4] en_seg_pitch_02_kur                   en_seg_timbre_11_kur                  en_end_of_fade_in                    
+ [7] en_seg_pitch_06_kur                   en_seg_pitch_12_kur                   en_beats_dur_var                     
+[10] en_seg_pitch_03_kur                   ess_ioi_var                           en_seg_pitch_08_kur                  
+[13] ess_spectral_spread_var               en_bar_dur_var                        en_seg_loud_max_pos_kur              
+[16] en_beats_conf_kur                     en_tatums_conf_kur                    en_seg_loud_max_time_kur             
+[19] en_seg_timbre_08_kur                  en_seg_pitch_10_kur                   ess_mfcc_11_var                      
+[22] mtb_roughness_period_entropy          en_seg_pitch_02_skew                  en_bar_conf_kur                      
+[25] en_seg_pitch_07_skew                  ess_mfcc_13_var                       ess_mfcc_04_var                      
+[28] en_seg_timbre_11_skew                 en_segments_per_section_var           ess_beats_loudness_band_ratio_04_mean
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 30
+[1] 506
+[1] 476
+[1] "NUM DESC: 30"
+[1] "Criteria: dataset_id; Class: IDM; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.933333333333333"
+[1] "Precision:  0.934871794871795"
+[1] "Recall:  0.933333333333333"
+[1] "F1-Score:  0.933850873682807"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.933333333333333"
+[1] "Mean Precision:  0.937482710813094"
+[1] "Mean Recall:  0.934545454545455"
+[1] "Mean F1-Score:  0.934589220303506"
+[1] "Features:"
+ [1] en_seg_loud_max_time_var              ess_ioi_mean                          ess_ioi_med                          
+ [4] en_seg_pitch_02_kur                   en_seg_timbre_11_kur                  en_end_of_fade_in                    
+ [7] en_seg_pitch_06_kur                   en_seg_pitch_12_kur                   en_beats_dur_var                     
+[10] en_seg_pitch_03_kur                   ess_ioi_var                           en_seg_pitch_08_kur                  
+[13] ess_spectral_spread_var               en_bar_dur_var                        en_seg_loud_max_pos_kur              
+[16] en_beats_conf_kur                     en_tatums_conf_kur                    en_seg_loud_max_time_kur             
+[19] en_seg_timbre_08_kur                  en_seg_pitch_10_kur                   ess_mfcc_11_var                      
+[22] mtb_roughness_period_entropy          en_seg_pitch_02_skew                  en_bar_conf_kur                      
+[25] en_seg_pitch_07_skew                  ess_mfcc_13_var                       ess_mfcc_04_var                      
+[28] en_seg_timbre_11_skew                 en_segments_per_section_var           ess_beats_loudness_band_ratio_04_mean
+[31] en_seg_pitch_06_skew                  en_seg_loud_start_kur                 en_seg_pitch_12_skew                 
+[34] en_sections                           en_seg_pitch_03_skew                  ess_beats_loudness_band_ratio_05_var 
+[37] mtb_mfcc_09                           en_seg_timbre_09_med                  en_seg_pitch_10_skew                 
+[40] ess_ibi_var                          
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 40
+[1] 506
+[1] 466
+[1] "NUM DESC: 40"
+[1] "Criteria: dataset_id; Class: IDM; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.933333333333333"
+[1] "Precision:  0.935136876006441"
+[1] "Recall:  0.933333333333333"
+[1] "F1-Score:  0.933247863247863"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.953333333333333"
+[1] "Mean Precision:  0.955486940188839"
+[1] "Mean Recall:  0.955151515151515"
+[1] "Mean F1-Score:  0.955151030109013"
+[1] "Features:"
+ [1] en_seg_loud_max_time_var              ess_ioi_mean                          ess_ioi_med                          
+ [4] en_seg_pitch_02_kur                   en_seg_timbre_11_kur                  en_end_of_fade_in                    
+ [7] en_seg_pitch_06_kur                   en_seg_pitch_12_kur                   en_beats_dur_var                     
+[10] en_seg_pitch_03_kur                   ess_ioi_var                           en_seg_pitch_08_kur                  
+[13] ess_spectral_spread_var               en_bar_dur_var                        en_seg_loud_max_pos_kur              
+[16] en_beats_conf_kur                     en_tatums_conf_kur                    en_seg_loud_max_time_kur             
+[19] en_seg_timbre_08_kur                  en_seg_pitch_10_kur                   ess_mfcc_11_var                      
+[22] mtb_roughness_period_entropy          en_seg_pitch_02_skew                  en_bar_conf_kur                      
+[25] en_seg_pitch_07_skew                  ess_mfcc_13_var                       ess_mfcc_04_var                      
+[28] en_seg_timbre_11_skew                 en_segments_per_section_var           ess_beats_loudness_band_ratio_04_mean
+[31] en_seg_pitch_06_skew                  en_seg_loud_start_kur                 en_seg_pitch_12_skew                 
+[34] en_sections                           en_seg_pitch_03_skew                  ess_beats_loudness_band_ratio_05_var 
+[37] mtb_mfcc_09                           en_seg_timbre_09_med                  en_seg_pitch_10_skew                 
+[40] ess_ibi_var                           en_seg_timbre_01_var                  en_seg_timbre_09_mean                
+[43] en_seg_loud_max_var                   en_sec_tempo_var                      en_tatums_per_beat_var               
+[46] en_seg_pitch_07_kur                   en_seg_timbre_03_var                  en_sec_dur_kur                       
+[49] ess_mfcc_13_mean                      en_seg_timbre_09_kur                 
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 50
+[1] 506
+[1] 456
+[1] "NUM DESC: 50"
+[1] "Criteria: dataset_id; Class: IDM; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.946666666666667"
+[1] "Precision:  0.949074074074074"
+[1] "Recall:  0.946666666666667"
+[1] "F1-Score:  0.947148090005233"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.970666666666667"
+[1] "Mean Precision:  0.972182878849546"
+[1] "Mean Recall:  0.96969696969697"
+[1] "Mean F1-Score:  0.969720251737058"

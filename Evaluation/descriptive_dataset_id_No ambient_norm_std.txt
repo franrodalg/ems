@@ -1,0 +1,153 @@
+[1] "Features:"
+ [1] mtb_ioi_var                 mtb_roughness_std           en_seg_loud_max_pos_kur     en_seg_pitch_11_kur        
+ [5] en_seg_pitch_01_kur         ess_scvalleys_04_var        ess_scvalleys_03_var        ess_scvalleys_05_var       
+ [9] en_segments_per_section_var ess_scvalleys_02_var       
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 10
+[1] 506
+[1] 496
+[1] "NUM DESC: 10"
+[1] "Criteria: ambient; Class: No ambient; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.511111111111111"
+[1] "Precision:  0.534700942004313"
+[1] "Recall:  0.511111111111111"
+[1] "F1-Score:  0.511787786589522"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.755555555555556"
+[1] "Mean Precision:  0.763183231409867"
+[1] "Mean Recall:  0.756767676767677"
+[1] "Mean F1-Score:  0.756741273816571"
+[1] "Features:"
+ [1] mtb_ioi_var                 mtb_roughness_std           en_seg_loud_max_pos_kur     en_seg_pitch_11_kur        
+ [5] en_seg_pitch_01_kur         ess_scvalleys_04_var        ess_scvalleys_03_var        ess_scvalleys_05_var       
+ [9] en_segments_per_section_var ess_scvalleys_02_var        ess_scvalleys_01_var        mtb_spec_kurtosis          
+[13] en_seg_timbre_02_kur        ess_scvalleys_06_var        mtb_roughness_mean          en_tatums_per_beat_var     
+[17] mtb_ioi_med                 en_tatums_per_beat_kur      ess_spectral_strongpeak_var en_bar_conf_kur            
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 20
+[1] 506
+[1] 486
+[1] "NUM DESC: 20"
+[1] "Criteria: ambient; Class: No ambient; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.622222222222222"
+[1] "Precision:  0.660301544860368"
+[1] "Recall:  0.622222222222222"
+[1] "F1-Score:  0.624473188501965"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.888888888888889"
+[1] "Mean Precision:  0.892190705314396"
+[1] "Mean Recall:  0.89010101010101"
+[1] "Mean F1-Score:  0.890116240642556"
+[1] "Features:"
+ [1] mtb_ioi_var                                    mtb_roughness_std                             
+ [3] en_seg_loud_max_pos_kur                        en_seg_pitch_11_kur                           
+ [5] en_seg_pitch_01_kur                            ess_scvalleys_04_var                          
+ [7] ess_scvalleys_03_var                           ess_scvalleys_05_var                          
+ [9] en_segments_per_section_var                    ess_scvalleys_02_var                          
+[11] ess_scvalleys_01_var                           mtb_spec_kurtosis                             
+[13] en_seg_timbre_02_kur                           ess_scvalleys_06_var                          
+[15] mtb_roughness_mean                             en_tatums_per_beat_var                        
+[17] mtb_ioi_med                                    en_tatums_per_beat_kur                        
+[19] ess_spectral_strongpeak_var                    en_bar_conf_kur                               
+[21] ess_spectral_kurtosis_mean                     ess_pitch_after_max_to_before_max_energy_ratio
+[23] en_seg_pitch_12_kur                            en_seg_pitch_09_kur                           
+[25] ess_spectral_centroid_mean                     en_seg_timbre_11_skew                         
+[27] ess_dynamic_complexity                         ess_spectral_rolloff_mean                     
+[29] ess_ibi_var                                    en_seg_timbre_11_kur                          
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 30
+[1] 506
+[1] 476
+[1] "NUM DESC: 30"
+[1] "Criteria: ambient; Class: No ambient; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.697777777777778"
+[1] "Precision:  0.737575757575758"
+[1] "Recall:  0.697777777777778"
+[1] "F1-Score:  0.698646074646075"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.918666666666667"
+[1] "Mean Precision:  0.920858064883435"
+[1] "Mean Recall:  0.91959595959596"
+[1] "Mean F1-Score:  0.919547271948386"
+[1] "Features:"
+ [1] mtb_ioi_var                                    mtb_roughness_std                             
+ [3] en_seg_loud_max_pos_kur                        en_seg_pitch_11_kur                           
+ [5] en_seg_pitch_01_kur                            ess_scvalleys_04_var                          
+ [7] ess_scvalleys_03_var                           ess_scvalleys_05_var                          
+ [9] en_segments_per_section_var                    ess_scvalleys_02_var                          
+[11] ess_scvalleys_01_var                           mtb_spec_kurtosis                             
+[13] en_seg_timbre_02_kur                           ess_scvalleys_06_var                          
+[15] mtb_roughness_mean                             en_tatums_per_beat_var                        
+[17] mtb_ioi_med                                    en_tatums_per_beat_kur                        
+[19] ess_spectral_strongpeak_var                    en_bar_conf_kur                               
+[21] ess_spectral_kurtosis_mean                     ess_pitch_after_max_to_before_max_energy_ratio
+[23] en_seg_pitch_12_kur                            en_seg_pitch_09_kur                           
+[25] ess_spectral_centroid_mean                     en_seg_timbre_11_skew                         
+[27] ess_dynamic_complexity                         ess_spectral_rolloff_mean                     
+[29] ess_ibi_var                                    en_seg_timbre_11_kur                          
+[31] en_seg_pitch_11_skew                           ess_spectral_centroid_var                     
+[33] ess_scvalleys_02_mean                          ess_ioi_var                                   
+[35] ess_zerocrossingrate_var                       ess_spectral_kurtosis_var                     
+[37] ess_zerocrossingrate_mean                      ess_pitch_mean                                
+[39] mtb_roughness_period_entropy                   en_seg_loud_max_pos_skew                      
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 40
+[1] 506
+[1] 466
+[1] "NUM DESC: 40"
+[1] "Criteria: ambient; Class: No ambient; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.768888888888889"
+[1] "Precision:  0.805579580926347"
+[1] "Recall:  0.768888888888889"
+[1] "F1-Score:  0.772361474160079"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.942666666666667"
+[1] "Mean Precision:  0.944607608401157"
+[1] "Mean Recall:  0.941818181818182"
+[1] "Mean F1-Score:  0.941844210682339"
+[1] "Features:"
+ [1] mtb_ioi_var                                    mtb_roughness_std                             
+ [3] en_seg_loud_max_pos_kur                        en_seg_pitch_11_kur                           
+ [5] en_seg_pitch_01_kur                            ess_scvalleys_04_var                          
+ [7] ess_scvalleys_03_var                           ess_scvalleys_05_var                          
+ [9] en_segments_per_section_var                    ess_scvalleys_02_var                          
+[11] ess_scvalleys_01_var                           mtb_spec_kurtosis                             
+[13] en_seg_timbre_02_kur                           ess_scvalleys_06_var                          
+[15] mtb_roughness_mean                             en_tatums_per_beat_var                        
+[17] mtb_ioi_med                                    en_tatums_per_beat_kur                        
+[19] ess_spectral_strongpeak_var                    en_bar_conf_kur                               
+[21] ess_spectral_kurtosis_mean                     ess_pitch_after_max_to_before_max_energy_ratio
+[23] en_seg_pitch_12_kur                            en_seg_pitch_09_kur                           
+[25] ess_spectral_centroid_mean                     en_seg_timbre_11_skew                         
+[27] ess_dynamic_complexity                         ess_spectral_rolloff_mean                     
+[29] ess_ibi_var                                    en_seg_timbre_11_kur                          
+[31] en_seg_pitch_11_skew                           ess_spectral_centroid_var                     
+[33] ess_scvalleys_02_mean                          ess_ioi_var                                   
+[35] ess_zerocrossingrate_var                       ess_spectral_kurtosis_var                     
+[37] ess_zerocrossingrate_mean                      ess_pitch_mean                                
+[39] mtb_roughness_period_entropy                   en_seg_loud_max_pos_skew                      
+[41] ess_spectral_spread_var                        ess_scvalleys_03_mean                         
+[43] en_seg_pitch_10_kur                            ess_spectral_rolloff_var                      
+[45] en_seg_loud_max_kur                            ess_spectral_strongpeak_mean                  
+[47] en_seg_timbre_09_skew                          en_seg_pitch_06_kur                           
+[49] ess_scvalleys_01_mean                          en_seg_timbre_02_skew                         
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med en_bar_conf_skew en_bar_conf_var ... mtb_tonal_centroid_06
+[1] 50
+[1] 506
+[1] 456
+[1] "NUM DESC: 50"
+[1] "Criteria: ambient; Class: No ambient; Stat: norm_std"
+[1] "DESCRIPTIVE"
+[1] "Accuracy:  0.804444444444444"
+[1] "Precision:  0.829873309911636"
+[1] "Recall:  0.804444444444445"
+[1] "F1-Score:  0.806375801813758"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.952888888888889"
+[1] "Mean Precision:  0.954505372838971"
+[1] "Mean Recall:  0.953131313131313"
+[1] "Mean F1-Score:  0.953127268232941"

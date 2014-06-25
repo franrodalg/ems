@@ -1,0 +1,606 @@
+[1] 108
+[1] "CHI SQUARED"
+ [1] "en_seg_timbre_03_var"      "en_end_of_fade_in"         "ess_mfcc_03_var"           "ess_mfcc_05_var"          
+ [5] "ess_hpcp_22_var"           "ess_mfcc_04_var"           "en_seg_loud_max_time_kur"  "en_seg_loud_max_time_skew"
+ [9] "en_seg_loud_start_med"     "en_seg_timbre_02_var"      "en_seg_timbre_04_var"      "en_seg_loud_start_skew"   
+[13] "en_seg_timbre_01_skew"     "ess_spectral_flux_mean"    "en_seg_loud_start_mean"    "en_seg_timbre_09_var"     
+[17] "en_seg_timbre_07_var"      "en_seg_timbre_05_var"      "ess_second_peak_weight"    "ess_mfcc_06_var"          
+$`108`
+$`108`$precision
+[1] 0.7777778
+
+$`108`$recall
+[1] 0.7
+
+$`108`$`f1-score`
+[1] 0.7368421
+
+
+$Other
+$Other$precision
+[1] 0.8846154
+
+$Other$recall
+[1] 0.92
+
+$Other$`f1-score`
+[1] 0.9019608
+
+
+$accuracy
+[1] 0.8571429
+
+$precision
+[1] 0.8311966
+
+$recall
+[1] 0.81
+
+$`f1-score`
+[1] 0.8194014
+
+[1] "INFORMATION GAIN"
+ [1] "en_seg_timbre_02_var"      "en_seg_timbre_03_var"      "en_end_of_fade_in"         "ess_mfcc_03_var"          
+ [5] "en_seg_timbre_04_var"      "en_seg_loud_start_skew"    "ess_mfcc_04_var"           "ess_spectral_flux_mean"   
+ [9] "ess_hpcp_22_var"           "ess_mfcc_05_var"           "en_seg_loud_max_time_kur"  "en_seg_loud_max_time_skew"
+[13] "en_seg_loud_start_med"     "en_seg_timbre_01_skew"     "en_seg_timbre_07_var"      "ess_spectral_skewness_var"
+[17] "ess_mfcc_06_var"           "en_seg_loud_start_mean"    "en_seg_timbre_09_var"      "en_seg_timbre_05_var"     
+$`108`
+$`108`$precision
+[1] 0.6363636
+
+$`108`$recall
+[1] 0.7
+
+$`108`$`f1-score`
+[1] 0.6666667
+
+
+$Other
+$Other$precision
+[1] 0.875
+
+$Other$recall
+[1] 0.84
+
+$Other$`f1-score`
+[1] 0.8571429
+
+
+$accuracy
+[1] 0.8
+
+$precision
+[1] 0.7556818
+
+$recall
+[1] 0.77
+
+$`f1-score`
+[1] 0.7619048
+
+[1] "GAIN RATIO"
+ [1] "en_seg_timbre_04_var"      "ess_spectral_skewness_var" "ess_mfcc_05_var"           "ess_mfcc_05_mean"         
+ [5] "ess_spectral_kurtosis_var" "en_seg_timbre_03_var"      "ess_ioi_kur"               "ess_ioi_med"              
+ [9] "ess_ioi_skew"              "en_seg_timbre_02_var"      "en_seg_loud_max_time_kur"  "en_seg_loud_max_time_skew"
+[13] "ess_scvalleys_06_mean"     "en_seg_loud_start_mean"    "ess_onset_rate"            "ess_ioi_mean"             
+[17] "en_seg_loud_start_med"     "ess_hpcp_22_var"           "ess_mfcc_03_var"           "ess_mfcc_04_var"          
+$`108`
+$`108`$precision
+[1] 0.4444444
+
+$`108`$recall
+[1] 0.4
+
+$`108`$`f1-score`
+[1] 0.4210526
+
+
+$Other
+$Other$precision
+[1] 0.7692308
+
+$Other$recall
+[1] 0.8
+
+$Other$`f1-score`
+[1] 0.7843137
+
+
+$accuracy
+[1] 0.6857143
+
+$precision
+[1] 0.6068376
+
+$recall
+[1] 0.6
+
+$`f1-score`
+[1] 0.6026832
+
+[1] "SYMMETRICAL UNCERTAINTY"
+ [1] "en_seg_timbre_02_var"      "en_seg_timbre_04_var"      "en_seg_timbre_03_var"      "ess_mfcc_05_var"          
+ [5] "en_seg_loud_max_time_kur"  "en_seg_loud_max_time_skew" "ess_mfcc_03_var"           "ess_spectral_skewness_var"
+ [9] "ess_hpcp_22_var"           "en_seg_loud_start_med"     "ess_mfcc_04_var"           "en_seg_loud_start_skew"   
+[13] "en_seg_loud_start_mean"    "en_end_of_fade_in"         "ess_mfcc_05_mean"          "ess_spectral_kurtosis_var"
+[17] "en_seg_timbre_01_skew"     "en_seg_timbre_07_var"      "ess_onset_rate"            "ess_ioi_mean"             
+$`108`
+$`108`$precision
+[1] 0.7142857
+
+$`108`$recall
+[1] 0.5
+
+$`108`$`f1-score`
+[1] 0.5882353
+
+
+$Other
+$Other$precision
+[1] 0.8214286
+
+$Other$recall
+[1] 0.92
+
+$Other$`f1-score`
+[1] 0.8679245
+
+
+$accuracy
+[1] 0.8
+
+$precision
+[1] 0.7678571
+
+$recall
+[1] 0.71
+
+$`f1-score`
+[1] 0.7280799
+
+[1] "RELIEF"
+ [1] "en_seg_timbre_02_var"      "en_seg_timbre_04_var"      "en_seg_timbre_03_var"      "ess_mfcc_05_var"          
+ [5] "en_seg_loud_max_time_kur"  "en_seg_loud_max_time_skew" "ess_mfcc_03_var"           "ess_spectral_skewness_var"
+ [9] "ess_hpcp_22_var"           "en_seg_loud_start_med"     "ess_mfcc_04_var"           "en_seg_loud_start_skew"   
+[13] "en_seg_loud_start_mean"    "en_end_of_fade_in"         "ess_mfcc_05_mean"          "ess_spectral_kurtosis_var"
+[17] "en_seg_timbre_01_skew"     "en_seg_timbre_07_var"      "ess_onset_rate"            "ess_ioi_mean"             
+$`108`
+$`108`$precision
+[1] 0.7142857
+
+$`108`$recall
+[1] 0.5
+
+$`108`$`f1-score`
+[1] 0.5882353
+
+
+$Other
+$Other$precision
+[1] 0.8214286
+
+$Other$recall
+[1] 0.92
+
+$Other$`f1-score`
+[1] 0.8679245
+
+
+$accuracy
+[1] 0.8
+
+$precision
+[1] 0.7678571
+
+$recall
+[1] 0.71
+
+$`f1-score`
+[1] 0.7280799
+
+[1] ""
+[1] 94
+[1] "CHI SQUARED"
+ [1] "en_seg_loud_max_time_var"  "en_seg_timbre_11_var"      "en_seg_timbre_08_var"      "en_seg_conf_mean"         
+ [5] "en_end_of_fade_in"         "en_seg_pitch_07_med"       "mtb_hcdf_mean"             "mtb_hcdf_median"          
+ [9] "en_energy"                 "en_seg_conf_med"           "ess_onset_rate"            "ess_pitch_changes_rate"   
+[13] "ess_pitch_salience_var"    "en_seg_loud_max_time_skew" "ess_mfcc_08_var"           "en_seg_pitch_07_skew"     
+[17] "ess_mfcc_12_var"           "ess_mfcc_07_var"           "en_seg_dur_mean"           "en_seg_rate"              
+$`94`
+$`94`$precision
+[1] 0.8181818
+
+$`94`$recall
+[1] 0.9
+
+$`94`$`f1-score`
+[1] 0.8571429
+
+
+$Other
+$Other$precision
+[1] 0.9583333
+
+$Other$recall
+[1] 0.92
+
+$Other$`f1-score`
+[1] 0.9387755
+
+
+$accuracy
+[1] 0.9142857
+
+$precision
+[1] 0.8882576
+
+$recall
+[1] 0.91
+
+$`f1-score`
+[1] 0.8979592
+
+[1] "INFORMATION GAIN"
+ [1] "en_end_of_fade_in"            "en_seg_loud_max_time_var"     "en_seg_conf_mean"             "en_seg_timbre_11_var"        
+ [5] "ess_onset_rate"               "en_seg_timbre_08_var"         "mtb_hcdf_mean"                "mtb_hcdf_median"             
+ [9] "en_seg_loud_max_time_skew"    "ess_mfcc_12_var"              "en_seg_pitch_07_med"          "ess_pitch_salience_var"      
+[13] "en_energy"                    "en_seg_conf_med"              "ess_mfcc_07_var"              "ess_pitch_changes_rate"      
+[17] "ess_mfcc_08_var"              "en_beats_conf_med"            "en_tatums_conf_med"           "ess_spectral_contrast_06_var"
+$`94`
+$`94`$precision
+[1] 0.7777778
+
+$`94`$recall
+[1] 0.7
+
+$`94`$`f1-score`
+[1] 0.7368421
+
+
+$Other
+$Other$precision
+[1] 0.8846154
+
+$Other$recall
+[1] 0.92
+
+$Other$`f1-score`
+[1] 0.9019608
+
+
+$accuracy
+[1] 0.8571429
+
+$precision
+[1] 0.8311966
+
+$recall
+[1] 0.81
+
+$`f1-score`
+[1] 0.8194014
+
+[1] "GAIN RATIO"
+ [1] "mtb_hcdf_mean"                "mtb_hcdf_median"              "ess_pitch_salience_var"       "en_seg_timbre_08_var"        
+ [5] "ess_spectral_contrast_06_var" "en_seg_timbre_04_var"         "ess_spectral_flux_var"        "en_seg_conf_med"             
+ [9] "en_seg_timbre_11_mean"        "en_seg_timbre_11_med"         "mtb_roughness_std"            "en_seg_timbre_06_med"        
+[13] "ess_spectral_flux_mean"       "en_beats_conf_mean"           "en_tatums_conf_mean"          "en_seg_timbre_10_var"        
+[17] "ess_spectral_strongpeak_var"  "ess_pitch_changes_rate"       "en_seg_pitch_07_med"          "en_danceability"             
+$`94`
+$`94`$precision
+[1] 0.6923077
+
+$`94`$recall
+[1] 0.9
+
+$`94`$`f1-score`
+[1] 0.7826087
+
+
+$Other
+$Other$precision
+[1] 0.9545455
+
+$Other$recall
+[1] 0.84
+
+$Other$`f1-score`
+[1] 0.893617
+
+
+$accuracy
+[1] 0.8571429
+
+$precision
+[1] 0.8234266
+
+$recall
+[1] 0.87
+
+$`f1-score`
+[1] 0.8381129
+
+[1] "SYMMETRICAL UNCERTAINTY"
+ [1] "en_seg_timbre_08_var"         "mtb_hcdf_mean"                "mtb_hcdf_median"              "ess_pitch_salience_var"      
+ [5] "en_end_of_fade_in"            "en_seg_conf_med"              "en_seg_loud_max_time_var"     "ess_spectral_contrast_06_var"
+ [9] "en_seg_timbre_04_var"         "en_seg_timbre_11_var"         "en_seg_pitch_07_med"          "en_seg_conf_mean"            
+[13] "ess_spectral_flux_var"        "en_energy"                    "ess_mfcc_12_var"              "ess_onset_rate"              
+[17] "ess_pitch_changes_rate"       "ess_mfcc_07_var"              "ess_mfcc_08_var"              "ess_spectral_flux_mean"      
+$`94`
+$`94`$precision
+[1] 0.8
+
+$`94`$recall
+[1] 0.8
+
+$`94`$`f1-score`
+[1] 0.8
+
+
+$Other
+$Other$precision
+[1] 0.92
+
+$Other$recall
+[1] 0.92
+
+$Other$`f1-score`
+[1] 0.92
+
+
+$accuracy
+[1] 0.8857143
+
+$precision
+[1] 0.86
+
+$recall
+[1] 0.86
+
+$`f1-score`
+[1] 0.86
+
+[1] "RELIEF"
+ [1] "en_seg_timbre_08_var"         "mtb_hcdf_mean"                "mtb_hcdf_median"              "ess_pitch_salience_var"      
+ [5] "en_end_of_fade_in"            "en_seg_conf_med"              "en_seg_loud_max_time_var"     "ess_spectral_contrast_06_var"
+ [9] "en_seg_timbre_04_var"         "en_seg_timbre_11_var"         "en_seg_pitch_07_med"          "en_seg_conf_mean"            
+[13] "ess_spectral_flux_var"        "en_energy"                    "ess_mfcc_12_var"              "ess_onset_rate"              
+[17] "ess_pitch_changes_rate"       "ess_mfcc_07_var"              "ess_mfcc_08_var"              "ess_spectral_flux_mean"      
+$`94`
+$`94`$precision
+[1] 0.8
+
+$`94`$recall
+[1] 0.8
+
+$`94`$`f1-score`
+[1] 0.8
+
+
+$Other
+$Other$precision
+[1] 0.92
+
+$Other$recall
+[1] 0.92
+
+$Other$`f1-score`
+[1] 0.92
+
+
+$accuracy
+[1] 0.8857143
+
+$precision
+[1] 0.86
+
+$recall
+[1] 0.86
+
+$`f1-score`
+[1] 0.86
+
+[1] ""
+[1] 66
+[1] "CHI SQUARED"
+ [1] "ess_beats_loudness_var"       "ess_spectral_contrast_01_var" "en_seg_pitch_07_kur"          "en_sec_loud_skew"            
+ [5] "en_seg_loud_max_kur"          "en_seg_timbre_01_kur"         "en_seg_conf_kur"              "en_seg_conf_skew"            
+ [9] "ess_spectral_flux_mean"       "ess_spectral_rms_var"         "en_seg_loud_max_skew"         "en_seg_timbre_01_skew"       
+[13] "ess_beats_loudness_mean"      "mtb_rms"                      "mtb_key_strength_05"          "en_sec_loud_kur"             
+[17] "en_segments"                  "mtb_key_strength_11"          "mtb_chroma_06"                "en_seg_pitch_05_kur"         
+$`66`
+$`66`$precision
+[1] 0.7692308
+
+$`66`$recall
+[1] 1
+
+$`66`$`f1-score`
+[1] 0.8695652
+
+
+$Other
+$Other$precision
+[1] 1
+
+$Other$recall
+[1] 0.88
+
+$Other$`f1-score`
+[1] 0.9361702
+
+
+$accuracy
+[1] 0.9142857
+
+$precision
+[1] 0.8846154
+
+$recall
+[1] 0.94
+
+$`f1-score`
+[1] 0.9028677
+
+[1] "INFORMATION GAIN"
+ [1] "ess_spectral_contrast_01_var" "en_seg_pitch_07_kur"          "ess_beats_loudness_var"       "en_sec_loud_skew"            
+ [5] "en_seg_loud_max_kur"          "en_seg_timbre_01_kur"         "en_seg_conf_kur"              "en_seg_conf_skew"            
+ [9] "ess_spectral_flux_mean"       "ess_spectral_rms_var"         "en_seg_loud_max_skew"         "en_seg_timbre_01_skew"       
+[13] "en_sec_loud_kur"              "en_segments"                  "ess_danceability"             "en_energy"                   
+[17] "ess_beats_loudness_mean"      "mtb_rms"                      "mtb_key_strength_05"          "mtb_roughness_period_freq"   
+$`66`
+$`66`$precision
+[1] 0.7142857
+
+$`66`$recall
+[1] 1
+
+$`66`$`f1-score`
+[1] 0.8333333
+
+
+$Other
+$Other$precision
+[1] 1
+
+$Other$recall
+[1] 0.84
+
+$Other$`f1-score`
+[1] 0.9130435
+
+
+$accuracy
+[1] 0.8857143
+
+$precision
+[1] 0.8571429
+
+$recall
+[1] 0.92
+
+$`f1-score`
+[1] 0.8731884
+
+[1] "GAIN RATIO"
+ [1] "ess_beats_loudness_var"       "ess_hpcp_04_var"              "en_sec_loud_skew"             "en_seg_loud_max_kur"         
+ [5] "en_seg_timbre_01_kur"         "ess_hpcp_16_mean"             "en_seg_loud_max_skew"         "en_seg_timbre_01_skew"       
+ [9] "ess_spectral_contrast_01_var" "ess_spectral_rms_var"         "mtb_key_strength_11"          "en_seg_conf_kur"             
+[13] "en_seg_conf_skew"             "en_seg_pitch_07_kur"          "ess_spectral_flux_mean"       "ess_beats_loudness_mean"     
+[17] "mtb_rms"                      "ess_danceability"             "mtb_roughness_period_freq"    "ess_pitch_changes"           
+$`66`
+$`66`$precision
+[1] 0.6666667
+
+$`66`$recall
+[1] 1
+
+$`66`$`f1-score`
+[1] 0.8
+
+
+$Other
+$Other$precision
+[1] 1
+
+$Other$recall
+[1] 0.8
+
+$Other$`f1-score`
+[1] 0.8888889
+
+
+$accuracy
+[1] 0.8571429
+
+$precision
+[1] 0.8333333
+
+$recall
+[1] 0.9
+
+$`f1-score`
+[1] 0.8444444
+
+[1] "SYMMETRICAL UNCERTAINTY"
+ [1] "ess_beats_loudness_var"       "ess_spectral_contrast_01_var" "en_sec_loud_skew"             "en_seg_loud_max_kur"         
+ [5] "en_seg_timbre_01_kur"         "en_seg_pitch_07_kur"          "en_seg_conf_kur"              "en_seg_conf_skew"            
+ [9] "ess_spectral_rms_var"         "en_seg_loud_max_skew"         "en_seg_timbre_01_skew"        "ess_hpcp_04_var"             
+[13] "ess_spectral_flux_mean"       "mtb_key_strength_11"          "ess_hpcp_16_mean"             "ess_danceability"            
+[17] "ess_beats_loudness_mean"      "mtb_rms"                      "mtb_roughness_period_freq"    "ess_pitch_changes"           
+$`66`
+$`66`$precision
+[1] 0.6666667
+
+$`66`$recall
+[1] 1
+
+$`66`$`f1-score`
+[1] 0.8
+
+
+$Other
+$Other$precision
+[1] 1
+
+$Other$recall
+[1] 0.8
+
+$Other$`f1-score`
+[1] 0.8888889
+
+
+$accuracy
+[1] 0.8571429
+
+$precision
+[1] 0.8333333
+
+$recall
+[1] 0.9
+
+$`f1-score`
+[1] 0.8444444
+
+[1] "RELIEF"
+ [1] "ess_beats_loudness_var"       "ess_spectral_contrast_01_var" "en_sec_loud_skew"             "en_seg_loud_max_kur"         
+ [5] "en_seg_timbre_01_kur"         "en_seg_pitch_07_kur"          "en_seg_conf_kur"              "en_seg_conf_skew"            
+ [9] "ess_spectral_rms_var"         "en_seg_loud_max_skew"         "en_seg_timbre_01_skew"        "ess_hpcp_04_var"             
+[13] "ess_spectral_flux_mean"       "mtb_key_strength_11"          "ess_hpcp_16_mean"             "ess_danceability"            
+[17] "ess_beats_loudness_mean"      "mtb_rms"                      "mtb_roughness_period_freq"    "ess_pitch_changes"           
+$`66`
+$`66`$precision
+[1] 0.6666667
+
+$`66`$recall
+[1] 1
+
+$`66`$`f1-score`
+[1] 0.8
+
+
+$Other
+$Other$precision
+[1] 1
+
+$Other$recall
+[1] 0.8
+
+$Other$`f1-score`
+[1] 0.8888889
+
+
+$accuracy
+[1] 0.8571429
+
+$precision
+[1] 0.8333333
+
+$recall
+[1] 0.9
+
+$`f1-score`
+[1] 0.8444444
+
+[1] 

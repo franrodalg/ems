@@ -1,6 +1,7 @@
 library(e1071)
 library(RMySQL)
 library(jsonlite)
+library(FSelector)
 
 source('ems_feature_sets.R')
 
@@ -21,6 +22,8 @@ classification <- function(){
 	datasets$techno <- get_dataset(3)
 	datasets$ambient <- rbind(datasets$atmospherical, datasets$postrock)
 	datasets$ambient_techno <- rbind(datasets$ambient, datasets$techno)
+	
+	
 	evals <- vector(mode = 'list', length = length(modes))
 	names(evals) <- names(modes)
 	
@@ -64,6 +67,116 @@ classification <- function(){
 	
 }
 
+
+get_fs_subset <- function(filt_dataset, alg){
+	
+	if(alg == 'chi.sq'){
+		#print('Hola')
+		#print(names(filt_dataset))
+		print('CHI SQUARED')
+		weights <- chi.squared(artist_id~., filt_dataset)
+	}
+	else if(alg == 'cons'){
+		print('CONSISTENCY')
+		print(nrow(filt_dataset))
+		weights <- consistency(artist_id~., filt_dataset)
+		print(weights)
+	}
+	else if(alg == 'lin.cor'){
+		print('LINEAR CORRELATION')
+		weights <- linear.correlation(artist_id~., filt_dataset)
+	}
+	else if(alg == 'rank.cor'){
+		print('RANKED CORRELATION')
+		weights <- rank.correlation(artist_id~., filt_dataset)
+	}
+	else if(alg == 'info.gain'){
+		print('INFORMATION GAIN')
+		weights <- information.gain(artist_id~., filt_dataset)
+	}
+	else if(alg == 'gain.rat'){
+		print('GAIN RATIO')
+		weights <- gain.ratio(artist_id~., filt_dataset)
+	}
+	else if(alg == 'sym.unc'){
+		print('SYMMETRICAL UNCERTAINTY')
+		weights <- symmetrical.uncertainty(artist_id~., filt_dataset)
+	}
+	else if(alg == 'relief'){
+		print('RELIEF')
+		weights <- relief(artist_id~., filt_dataset)
+	}
+	else{
+		return(NULL)
+	}
+	
+	subset <- cutoff.k(weights, 20)
+	
+	return(subset)
+	
+}
+
+
+class_fs <- function(dataset_ids = c(1)){
+	
+	d <- get_dataset(dataset_ids)
+	fs_algs <- c('chi.sq', 'info.gain', 'gain.rat', 'sym.unc', 'relief')
+	fs_algs <- c('relief')
+	
+	artists <- unique(d$artist_id)
+	
+	for(artist in artists){
+		
+		print(get_artist_name(artist))
+		
+		d_artist <- d
+		#print(head(names(d1)))
+		#print(head(names(d1_artist)))
+		
+		d_artist[which(d_artist$artist_id != artist), 'artist_id'] <- 'Other'
+		
+		#print(head(names(d1_artist)))
+		
+		d_artist_filt <- d_artist[, c('artist_id', names(d_artist[6:length(names(d_artist))]))]
+		#print(head(names(d1_artist_filt)))
+		
+		print('NO FEATURE SELECTION')
+		
+		results <- class_svm(d_artist)
+		#print(results$confusion_table)
+		eval <- simple_evaluation(results)
+		#print(eval)	
+		#print(paste('Precision: ', eval[[paste(artist)]]$precision))
+		#print(paste('Recall: ', eval[[paste(artist)]]$recall))
+		print(paste('F1-Score: ', eval[[paste(artist)]]$'f1-score'))
+		
+		
+		for(alg in fs_algs){
+		
+			subset <- get_fs_subset(d_artist_filt, alg)
+		
+			#print(subset)
+			
+			results <- class_svm(d_artist, descriptors = subset)
+			
+			#print(results$confusion_table)
+			
+			
+			eval <- simple_evaluation(results)
+			
+			#print(paste('Precision: ', eval[[paste(artist)]]$precision))
+			#print(paste('Recall: ', eval[[paste(artist)]]$recall))
+			print(paste('F1-Score: ', eval[[paste(artist)]]$'f1-score'))
+			
+		}
+		
+		
+		print('')
+	}
+	
+	
+	
+}
 
 class_svm <- function(dataset, crit = 'artist_id', descriptors = NULL, self_class = FALSE){
 	
@@ -219,10 +332,26 @@ simple_evaluation <- function(class_results){
 		fn <- sum(real[which(real$pred != i), 'freq'])
 		fp <- sum(pred[which(pred$real != i), 'freq'])
 		
-		prec <- tp / (tp + fp)
-		rec <- tp / (tp + fn)
-		f1 <- (2*prec*rec) / (prec + rec)
-
+		if((tp + fp) != 0){
+			prec <- tp / (tp + fp)
+		}
+		else{
+			prec <- 0
+		}
+		
+		if((tp + fn) != 0){
+			rec <- tp /(tp + fn)
+		}
+		else{
+			rec <- 0
+		}
+		
+		if((prec + rec) != 0){
+			f1 <- (2*prec*rec) / (prec + rec)
+		}
+		else{
+			f1 <- 0
+		}
 		
 		eval[[paste(i)]] <- vector(mode = 'list')
 		eval[[paste(i)]][['precision']] <- prec

@@ -1,0 +1,256 @@
+[1] "Features:"
+ [1] ess_ioi_var                 mtb_ioi_var                 ess_spectral_strongpeak_var
+ [4] en_seg_pitch_02_kur         ess_ioi_med                 en_seg_pitch_11_kur        
+ [7] ess_ioi_mean                en_seg_pitch_09_kur         en_seg_pitch_06_kur        
+[10] en_seg_pitch_01_kur        
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 10
+[1] 506
+[1] 496
+[1] "NUM DESC: 10"
+[1] "Criteria: artist_id; Class: Monolake; Stat: norm_std"
+[1] "DESCRIPTIVE"
+$predictions
+357 358 359 360 361 362 363 364 365 366 372 373 374 375 376 352 353 354 355 356 367 368 369 370 
+336 333 333 333 333 337 337 337 334 337 334 334 334 334 334 337 336 336 336 336 335 334 336 335 
+371 
+335 
+Levels: 333 334 337 335 336
+
+$ground_truth
+ [1] 333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335
+[24] 335 335
+Levels: 333 334 337 335 336
+
+$confusion_table
+     
+pred  333 334 337 335 336
+  333   4   0   0   0   0
+  334   0   5   1   1   0
+  337   0   0   4   0   1
+  335   0   0   0   3   0
+  336   1   0   0   1   4
+
+[1] "Accuracy:  0.8"
+[1] "Precision:  0.836190476190476"
+[1] "Recall:  0.8"
+[1] "F1-Score:  0.79989898989899"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.876"
+[1] "Mean Precision:  0.899642857142857"
+[1] "Mean Recall:  0.88"
+[1] "Mean F1-Score:  0.879926538108356"
+[1] "Features:"
+ [1] ess_ioi_var                  mtb_ioi_var                  ess_spectral_strongpeak_var 
+ [4] en_seg_pitch_02_kur          ess_ioi_med                  en_seg_pitch_11_kur         
+ [7] ess_ioi_mean                 en_seg_pitch_09_kur          en_seg_pitch_06_kur         
+[10] en_seg_pitch_01_kur          en_seg_timbre_11_kur         en_seg_pitch_04_kur         
+[13] en_seg_pitch_08_kur          en_seg_pitch_03_kur          en_seg_loud_max_time_var    
+[16] en_seg_pitch_12_kur          en_segments_per_section_var  en_seg_pitch_10_kur         
+[19] en_seg_pitch_07_kur          ess_spectral_strongpeak_mean
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 20
+[1] 506
+[1] 486
+[1] "NUM DESC: 20"
+[1] "Criteria: artist_id; Class: Monolake; Stat: norm_std"
+[1] "DESCRIPTIVE"
+$predictions
+357 358 359 360 361 362 363 364 365 366 372 373 374 375 376 352 353 354 355 356 367 368 369 370 
+333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335 335 
+371 
+335 
+Levels: 333 334 337 335 336
+
+$ground_truth
+ [1] 333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335
+[24] 335 335
+Levels: 333 334 337 335 336
+
+$confusion_table
+     
+pred  333 334 337 335 336
+  333   5   0   0   0   0
+  334   0   5   0   0   0
+  337   0   0   5   0   0
+  335   0   0   0   5   0
+  336   0   0   0   0   5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.972"
+[1] "Mean Precision:  0.977619047619048"
+[1] "Mean Recall:  0.970909090909091"
+[1] "Mean F1-Score:  0.970872359963269"
+[1] "Features:"
+ [1] ess_ioi_var                  mtb_ioi_var                  ess_spectral_strongpeak_var 
+ [4] en_seg_pitch_02_kur          ess_ioi_med                  en_seg_pitch_11_kur         
+ [7] ess_ioi_mean                 en_seg_pitch_09_kur          en_seg_pitch_06_kur         
+[10] en_seg_pitch_01_kur          en_seg_timbre_11_kur         en_seg_pitch_04_kur         
+[13] en_seg_pitch_08_kur          en_seg_pitch_03_kur          en_seg_loud_max_time_var    
+[16] en_seg_pitch_12_kur          en_segments_per_section_var  en_seg_pitch_10_kur         
+[19] en_seg_pitch_07_kur          ess_spectral_strongpeak_mean ess_scvalleys_03_var        
+[22] ess_scvalleys_04_var         ess_scvalleys_02_var         ess_spectral_kurtosis_var   
+[25] en_tatums_per_beat_var       mtb_roughness_std            ess_scvalleys_01_var        
+[28] ess_scvalleys_05_var         en_seg_timbre_06_kur         ess_scvalleys_06_var        
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 30
+[1] 506
+[1] 476
+[1] "NUM DESC: 30"
+[1] "Criteria: artist_id; Class: Monolake; Stat: norm_std"
+[1] "DESCRIPTIVE"
+$predictions
+357 358 359 360 361 362 363 364 365 366 372 373 374 375 376 352 353 354 355 356 367 368 369 370 
+333 333 333 333 333 337 337 337 334 337 334 334 334 334 334 336 336 336 336 334 335 335 335 335 
+371 
+335 
+Levels: 333 334 337 335 336
+
+$ground_truth
+ [1] 333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335
+[24] 335 335
+Levels: 333 334 337 335 336
+
+$confusion_table
+     
+pred  333 334 337 335 336
+  333   5   0   0   0   0
+  334   0   5   1   0   1
+  337   0   0   4   0   0
+  335   0   0   0   5   0
+  336   0   0   0   0   4
+
+[1] "Accuracy:  0.92"
+[1] "Precision:  0.942857142857143"
+[1] "Recall:  0.92"
+[1] "F1-Score:  0.922222222222222"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.992"
+[1] "Mean Precision:  0.993333333333333"
+[1] "Mean Recall:  0.992727272727273"
+[1] "Mean F1-Score:  0.992727272727273"
+[1] "Features:"
+ [1] ess_ioi_var                           mtb_ioi_var                          
+ [3] ess_spectral_strongpeak_var           en_seg_pitch_02_kur                  
+ [5] ess_ioi_med                           en_seg_pitch_11_kur                  
+ [7] ess_ioi_mean                          en_seg_pitch_09_kur                  
+ [9] en_seg_pitch_06_kur                   en_seg_pitch_01_kur                  
+[11] en_seg_timbre_11_kur                  en_seg_pitch_04_kur                  
+[13] en_seg_pitch_08_kur                   en_seg_pitch_03_kur                  
+[15] en_seg_loud_max_time_var              en_seg_pitch_12_kur                  
+[17] en_segments_per_section_var           en_seg_pitch_10_kur                  
+[19] en_seg_pitch_07_kur                   ess_spectral_strongpeak_mean         
+[21] ess_scvalleys_03_var                  ess_scvalleys_04_var                 
+[23] ess_scvalleys_02_var                  ess_spectral_kurtosis_var            
+[25] en_tatums_per_beat_var                mtb_roughness_std                    
+[27] ess_scvalleys_01_var                  ess_scvalleys_05_var                 
+[29] en_seg_timbre_06_kur                  ess_scvalleys_06_var                 
+[31] en_sec_dur_var                        en_seg_timbre_11_skew                
+[33] mtb_roughness_mean                    en_seg_pitch_11_skew                 
+[35] en_tatums_per_beat_kur                ess_beats_loudness_band_ratio_04_mean
+[37] en_bars_per_section_var               ess_mfcc_13_var                      
+[39] mtb_ioi_med                           mtb_spec_kurtosis                    
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 40
+[1] 506
+[1] 466
+[1] "NUM DESC: 40"
+[1] "Criteria: artist_id; Class: Monolake; Stat: norm_std"
+[1] "DESCRIPTIVE"
+$predictions
+357 358 359 360 361 362 363 364 365 366 372 373 374 375 376 352 353 354 355 356 367 368 369 370 
+333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335 335 
+371 
+335 
+Levels: 333 334 337 335 336
+
+$ground_truth
+ [1] 333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335
+[24] 335 335
+Levels: 333 334 337 335 336
+
+$confusion_table
+     
+pred  333 334 337 335 336
+  333   5   0   0   0   0
+  334   0   5   0   0   0
+  337   0   0   5   0   0
+  335   0   0   0   5   0
+  336   0   0   0   0   5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.988"
+[1] "Mean Precision:  0.99"
+[1] "Mean Recall:  0.989090909090909"
+[1] "Mean F1-Score:  0.989090909090909"
+[1] "Features:"
+ [1] ess_ioi_var                           mtb_ioi_var                          
+ [3] ess_spectral_strongpeak_var           en_seg_pitch_02_kur                  
+ [5] ess_ioi_med                           en_seg_pitch_11_kur                  
+ [7] ess_ioi_mean                          en_seg_pitch_09_kur                  
+ [9] en_seg_pitch_06_kur                   en_seg_pitch_01_kur                  
+[11] en_seg_timbre_11_kur                  en_seg_pitch_04_kur                  
+[13] en_seg_pitch_08_kur                   en_seg_pitch_03_kur                  
+[15] en_seg_loud_max_time_var              en_seg_pitch_12_kur                  
+[17] en_segments_per_section_var           en_seg_pitch_10_kur                  
+[19] en_seg_pitch_07_kur                   ess_spectral_strongpeak_mean         
+[21] ess_scvalleys_03_var                  ess_scvalleys_04_var                 
+[23] ess_scvalleys_02_var                  ess_spectral_kurtosis_var            
+[25] en_tatums_per_beat_var                mtb_roughness_std                    
+[27] ess_scvalleys_01_var                  ess_scvalleys_05_var                 
+[29] en_seg_timbre_06_kur                  ess_scvalleys_06_var                 
+[31] en_sec_dur_var                        en_seg_timbre_11_skew                
+[33] mtb_roughness_mean                    en_seg_pitch_11_skew                 
+[35] en_tatums_per_beat_kur                ess_beats_loudness_band_ratio_04_mean
+[37] en_bars_per_section_var               ess_mfcc_13_var                      
+[39] mtb_ioi_med                           mtb_spec_kurtosis                    
+[41] en_seg_pitch_02_skew                  ess_spectral_kurtosis_mean           
+[43] en_seg_pitch_09_skew                  mtb_hcdf_period_entropy              
+[45] en_seg_loud_start_kur                 en_seg_loud_max_pos_kur              
+[47] en_seg_timbre_07_kur                  ess_dynamic_complexity               
+[49] ess_scvalleys_01_mean                 ess_scvalleys_02_mean                
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 50
+[1] 506
+[1] 456
+[1] "NUM DESC: 50"
+[1] "Criteria: artist_id; Class: Monolake; Stat: norm_std"
+[1] "DESCRIPTIVE"
+$predictions
+357 358 359 360 361 362 363 364 365 366 372 373 374 375 376 352 353 354 355 356 367 368 369 370 
+333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335 335 
+371 
+335 
+Levels: 333 334 337 335 336
+
+$ground_truth
+ [1] 333 333 333 333 333 337 337 337 337 337 334 334 334 334 334 336 336 336 336 336 335 335 335
+[24] 335 335
+Levels: 333 334 337 335 336
+
+$confusion_table
+     
+pred  333 334 337 335 336
+  333   5   0   0   0   0
+  334   0   5   0   0   0
+  337   0   0   5   0   0
+  335   0   0   0   5   0
+  336   0   0   0   0   5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.996"
+[1] "Mean Precision:  0.996666666666667"
+[1] "Mean Recall:  0.996363636363636"
+[1] "Mean F1-Score:  0.996363636363636"

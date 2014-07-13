@@ -71,8 +71,6 @@ classification <- function(){
 get_fs_subset <- function(filt_dataset, alg){
 	
 	if(alg == 'chi.sq'){
-		#print('Hola')
-		#print(names(filt_dataset))
 		print('CHI SQUARED')
 		weights <- chi.squared(artist_id~., filt_dataset)
 	}
@@ -130,42 +128,24 @@ class_fs <- function(dataset_ids = c(1)){
 		print(get_artist_name(artist))
 		
 		d_artist <- d
-		#print(head(names(d1)))
-		#print(head(names(d1_artist)))
 		
 		d_artist[which(d_artist$artist_id != artist), 'artist_id'] <- 'Other'
-		
-		#print(head(names(d1_artist)))
-		
+			
 		d_artist_filt <- d_artist[, c('artist_id', names(d_artist[6:length(names(d_artist))]))]
-		#print(head(names(d1_artist_filt)))
-		
+
 		print('NO FEATURE SELECTION')
 		
 		results <- class_svm(d_artist)
-		#print(results$confusion_table)
 		eval <- simple_evaluation(results)
-		#print(eval)	
-		#print(paste('Precision: ', eval[[paste(artist)]]$precision))
-		#print(paste('Recall: ', eval[[paste(artist)]]$recall))
 		print(paste('F1-Score: ', eval[[paste(artist)]]$'f1-score'))
 		
 		
 		for(alg in fs_algs){
 		
 			subset <- get_fs_subset(d_artist_filt, alg)
-		
-			#print(subset)
 			
 			results <- class_svm(d_artist, descriptors = subset)
-			
-			#print(results$confusion_table)
-			
-			
 			eval <- simple_evaluation(results)
-			
-			#print(paste('Precision: ', eval[[paste(artist)]]$precision))
-			#print(paste('Recall: ', eval[[paste(artist)]]$recall))
 			print(paste('F1-Score: ', eval[[paste(artist)]]$'f1-score'))
 			
 		}
@@ -201,8 +181,8 @@ class_svm <- function(dataset, crit = 'artist_id', descriptors = NULL, self_clas
 	else if(crit == 'dataset_id'){
 		model <- svm(dataset_id~., data = train)
 	}
-	else if(crit == 'excerpt_id'){
-		model <- svm(excerpt_id~., data = train)
+	else if(crit == 'album_id'){
+		model <- svm(album_id~., data = train)
 	}
 	else{
 		model <- svm(ambient~., data = train)
@@ -274,8 +254,6 @@ get_train_test_datasets <- function(dataset, crit = 'artist_id', descriptors = N
 
 get_train_test_albums <- function(dataset){
 	
-
-	
 	grouped <- split(dataset, as.factor(dataset$artist_id))
 	train_test_albums <- vector(mode = 'list', length = 0)
 	train_test_albums$train <- numeric(0)
@@ -322,7 +300,7 @@ simple_evaluation <- function(class_results){
 	all_f1 <- numeric(0)
 	
 	ids <- unique(df$real)
-	
+    
 	for(i in ids){
 		
 		real <- df[which(df$real == i),]

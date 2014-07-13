@@ -1,0 +1,245 @@
+[1] "Features:"
+ [1] en_time_signature        en_beats_per_bar_med     en_tatums_per_beat_med  
+ [4] mtb_ioi_var              ess_ioi_var              en_sec_tempo_var        
+ [7] en_beats_dur_var         en_tatums_dur_var        en_seg_loud_max_time_var
+[10] ess_ioi_mean            
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 10
+[1] 506
+[1] 496
+[1] "NUM DESC: 10"
+[1] "Criteria: artist_id; Class: Boards of Canada; Stat: norm_iqr"
+[1] "DESCRIPTIVE"
+$predictions
+227 228 229 230 231 237 238 239 240 241 242 243 244 245 246 232 233 234 235 236 247 248 249 250 
+ 76  76  76  73  73  73  73  73  73  73  73  79  79  76  79  78  73  73  74  78  73  74  73  74 
+251 
+ 74 
+Levels: 73 76 79 74 78
+
+$ground_truth
+ [1] 76 76 76 76 76 73 73 73 73 73 79 79 79 79 79 78 78 78 78 78 74 74 74 74 74
+Levels: 73 76 79 74 78
+
+$confusion_table
+    
+pred 73 76 79 74 78
+  73  5  2  1  2  2
+  76  0  3  1  0  0
+  79  0  0  3  0  0
+  74  0  0  0  3  1
+  78  0  0  0  0  2
+
+[1] "Accuracy:  0.64"
+[1] "Precision:  0.783333333333333"
+[1] "Recall:  0.64"
+[1] "F1-Score:  0.64859943977591"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.9"
+[1] "Mean Precision:  0.922404761904762"
+[1] "Mean Recall:  0.898181818181818"
+[1] "Mean F1-Score:  0.898834498834499"
+[1] "Features:"
+ [1] en_time_signature           en_beats_per_bar_med        en_tatums_per_beat_med     
+ [4] mtb_ioi_var                 ess_ioi_var                 en_sec_tempo_var           
+ [7] en_beats_dur_var            en_tatums_dur_var           en_seg_loud_max_time_var   
+[10] ess_ioi_mean                ess_ioi_med                 en_seg_pitch_11_kur        
+[13] en_seg_pitch_02_kur         mtb_spec_kurtosis           en_seg_loud_max_time_kur   
+[16] en_seg_pitch_01_kur         en_seg_timbre_02_kur        ess_spectral_strongpeak_var
+[19] en_seg_pitch_09_kur         en_beats_dur_kur           
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 20
+[1] 506
+[1] 486
+[1] "NUM DESC: 20"
+[1] "Criteria: artist_id; Class: Boards of Canada; Stat: norm_iqr"
+[1] "DESCRIPTIVE"
+$predictions
+227 228 229 230 231 237 238 239 240 241 242 243 244 245 246 232 233 234 235 236 247 248 249 250 
+ 73  76  76  73  73  74  73  73  73  73  79  79  79  79  79  78  73  78  78  78  74  74  74  74 
+251 
+ 74 
+Levels: 73 76 79 74 78
+
+$ground_truth
+ [1] 76 76 76 76 76 73 73 73 73 73 79 79 79 79 79 78 78 78 78 78 74 74 74 74 74
+Levels: 73 76 79 74 78
+
+$confusion_table
+    
+pred 73 76 79 74 78
+  73  4  3  0  0  1
+  76  0  2  0  0  0
+  79  0  0  5  0  0
+  74  1  0  0  5  0
+  78  0  0  0  0  4
+
+[1] "Accuracy:  0.8"
+[1] "Precision:  0.866666666666667"
+[1] "Recall:  0.8"
+[1] "F1-Score:  0.796958596958597"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.968"
+[1] "Mean Precision:  0.973333333333333"
+[1] "Mean Recall:  0.967272727272727"
+[1] "Mean F1-Score:  0.967235996326905"
+[1] "Features:"
+ [1] en_time_signature           en_beats_per_bar_med        en_tatums_per_beat_med     
+ [4] mtb_ioi_var                 ess_ioi_var                 en_sec_tempo_var           
+ [7] en_beats_dur_var            en_tatums_dur_var           en_seg_loud_max_time_var   
+[10] ess_ioi_mean                ess_ioi_med                 en_seg_pitch_11_kur        
+[13] en_seg_pitch_02_kur         mtb_spec_kurtosis           en_seg_loud_max_time_kur   
+[16] en_seg_pitch_01_kur         en_seg_timbre_02_kur        ess_spectral_strongpeak_var
+[19] en_seg_pitch_09_kur         en_beats_dur_kur            en_tatums_dur_kur          
+[22] en_seg_loud_max_pos_kur     en_seg_timbre_11_kur        ess_scvalleys_05_var       
+[25] en_seg_pitch_03_kur         en_seg_timbre_04_kur        ess_scvalleys_01_var       
+[28] ess_spectral_kurtosis_var   ess_scvalleys_04_var        en_end_of_fade_in          
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 30
+[1] 506
+[1] 476
+[1] "NUM DESC: 30"
+[1] "Criteria: artist_id; Class: Boards of Canada; Stat: norm_iqr"
+[1] "DESCRIPTIVE"
+$predictions
+227 228 229 230 231 237 238 239 240 241 242 243 244 245 246 232 233 234 235 236 247 248 249 250 
+ 76  76  76  76  76  73  73  73  73  73  79  79  79  79  79  78  78  78  78  78  74  74  74  74 
+251 
+ 74 
+Levels: 73 76 79 74 78
+
+$ground_truth
+ [1] 76 76 76 76 76 73 73 73 73 73 79 79 79 79 79 78 78 78 78 78 74 74 74 74 74
+Levels: 73 76 79 74 78
+
+$confusion_table
+    
+pred 73 76 79 74 78
+  73  5  0  0  0  0
+  76  0  5  0  0  0
+  79  0  0  5  0  0
+  74  0  0  0  5  0
+  78  0  0  0  0  5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.988"
+[1] "Mean Precision:  0.99"
+[1] "Mean Recall:  0.989090909090909"
+[1] "Mean F1-Score:  0.989090909090909"
+[1] "Features:"
+ [1] en_time_signature           en_beats_per_bar_med        en_tatums_per_beat_med     
+ [4] mtb_ioi_var                 ess_ioi_var                 en_sec_tempo_var           
+ [7] en_beats_dur_var            en_tatums_dur_var           en_seg_loud_max_time_var   
+[10] ess_ioi_mean                ess_ioi_med                 en_seg_pitch_11_kur        
+[13] en_seg_pitch_02_kur         mtb_spec_kurtosis           en_seg_loud_max_time_kur   
+[16] en_seg_pitch_01_kur         en_seg_timbre_02_kur        ess_spectral_strongpeak_var
+[19] en_seg_pitch_09_kur         en_beats_dur_kur            en_tatums_dur_kur          
+[22] en_seg_loud_max_pos_kur     en_seg_timbre_11_kur        ess_scvalleys_05_var       
+[25] en_seg_pitch_03_kur         en_seg_timbre_04_kur        ess_scvalleys_01_var       
+[28] ess_spectral_kurtosis_var   ess_scvalleys_04_var        en_end_of_fade_in          
+[31] ess_scvalleys_02_var        en_bar_dur_var              en_seg_pitch_04_kur        
+[34] en_seg_timbre_08_kur        ess_scvalleys_03_var        en_seg_dur_var             
+[37] mtb_roughness_std           en_seg_pitch_08_kur         ess_scvalleys_06_var       
+[40] en_sec_dur_var             
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 40
+[1] 506
+[1] 466
+[1] "NUM DESC: 40"
+[1] "Criteria: artist_id; Class: Boards of Canada; Stat: norm_iqr"
+[1] "DESCRIPTIVE"
+$predictions
+227 228 229 230 231 237 238 239 240 241 242 243 244 245 246 232 233 234 235 236 247 248 249 250 
+ 76  76  76  76  76  73  73  73  73  73  79  79  79  79  79  78  78  78  78  78  74  74  74  74 
+251 
+ 74 
+Levels: 73 76 79 74 78
+
+$ground_truth
+ [1] 76 76 76 76 76 73 73 73 73 73 79 79 79 79 79 78 78 78 78 78 74 74 74 74 74
+Levels: 73 76 79 74 78
+
+$confusion_table
+    
+pred 73 76 79 74 78
+  73  5  0  0  0  0
+  76  0  5  0  0  0
+  79  0  0  5  0  0
+  74  0  0  0  5  0
+  78  0  0  0  0  5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  1"
+[1] "Mean Precision:  1"
+[1] "Mean Recall:  1"
+[1] "Mean F1-Score:  1"
+[1] "Features:"
+ [1] en_time_signature                              en_beats_per_bar_med                          
+ [3] en_tatums_per_beat_med                         mtb_ioi_var                                   
+ [5] ess_ioi_var                                    en_sec_tempo_var                              
+ [7] en_beats_dur_var                               en_tatums_dur_var                             
+ [9] en_seg_loud_max_time_var                       ess_ioi_mean                                  
+[11] ess_ioi_med                                    en_seg_pitch_11_kur                           
+[13] en_seg_pitch_02_kur                            mtb_spec_kurtosis                             
+[15] en_seg_loud_max_time_kur                       en_seg_pitch_01_kur                           
+[17] en_seg_timbre_02_kur                           ess_spectral_strongpeak_var                   
+[19] en_seg_pitch_09_kur                            en_beats_dur_kur                              
+[21] en_tatums_dur_kur                              en_seg_loud_max_pos_kur                       
+[23] en_seg_timbre_11_kur                           ess_scvalleys_05_var                          
+[25] en_seg_pitch_03_kur                            en_seg_timbre_04_kur                          
+[27] ess_scvalleys_01_var                           ess_spectral_kurtosis_var                     
+[29] ess_scvalleys_04_var                           en_end_of_fade_in                             
+[31] ess_scvalleys_02_var                           en_bar_dur_var                                
+[33] en_seg_pitch_04_kur                            en_seg_timbre_08_kur                          
+[35] ess_scvalleys_03_var                           en_seg_dur_var                                
+[37] mtb_roughness_std                              en_seg_pitch_08_kur                           
+[39] ess_scvalleys_06_var                           en_sec_dur_var                                
+[41] en_seg_pitch_06_kur                            en_segments_per_section_var                   
+[43] ess_ibi_var                                    mtb_roughness_mean                            
+[45] en_tatums_dur_skew                             ess_spectral_centroid_mean                    
+[47] en_seg_loud_max_kur                            ess_spectral_rolloff_mean                     
+[49] en_seg_pitch_12_kur                            ess_pitch_after_max_to_before_max_energy_ratio
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 50
+[1] 506
+[1] 456
+[1] "NUM DESC: 50"
+[1] "Criteria: artist_id; Class: Boards of Canada; Stat: norm_iqr"
+[1] "DESCRIPTIVE"
+$predictions
+227 228 229 230 231 237 238 239 240 241 242 243 244 245 246 232 233 234 235 236 247 248 249 250 
+ 76  76  76  76  76  73  73  73  76  73  79  79  79  79  79  78  78  78  78  78  74  74  74  74 
+251 
+ 74 
+Levels: 73 76 79 74 78
+
+$ground_truth
+ [1] 76 76 76 76 76 73 73 73 73 73 79 79 79 79 79 78 78 78 78 78 74 74 74 74 74
+Levels: 73 76 79 74 78
+
+$confusion_table
+    
+pred 73 76 79 74 78
+  73  4  0  0  0  0
+  76  1  5  0  0  0
+  79  0  0  5  0  0
+  74  0  0  0  5  0
+  78  0  0  0  0  5
+
+[1] "Accuracy:  0.96"
+[1] "Precision:  0.966666666666667"
+[1] "Recall:  0.96"
+[1] "F1-Score:  0.95959595959596"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.984"
+[1] "Mean Precision:  0.986666666666667"
+[1] "Mean Recall:  0.985454545454545"
+[1] "Mean F1-Score:  0.985454545454545"

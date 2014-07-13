@@ -96,7 +96,6 @@ obtain_desc_features <- function(datasets){
 		
 		for(class in names(datasets[[dataset]]$sum[[c]])){
 
-			#for(s in c('norm_std')){
 			for(s in c('norm_std', 'norm_iqr', 'entropy')){
 				datasets[[dataset]]$desc_feats[[c]][[class]][[s]] <- sort_descriptors(datasets[[dataset]]$sum[[c]][[class]], stat = s, num = 50)
 				
@@ -158,9 +157,9 @@ analyze_disc <- function(datasets){
 	
 }
 
-analyze_desc <- function(datasets_feats){
+analyze_desc <- function(datasets){
 	
-	
+
 	ambient <- c('Ambient', 'No ambient')
 	dataset <- c('Atmospheric Ambient', 'IDM Ambient', 'Post-Rock Ambient', 'Techno', 'IDM', 'Nu Jazz')
 	artist <- c('Michael Stearns', 'Tetsu Inoue', 'Vidna Obmana','Boards of Canada', 'The Album Leaf',  'The American Dollar', 'Plastikman','Jeff Mills', 'Legowelt', 'Aphex Twin', 'Autechre', 'Squarepusher', 'ISAN', 'Monolake', 'Tycho', 'Lemongrass', 'Bonobo', 'Four Tet')
@@ -171,17 +170,17 @@ analyze_desc <- function(datasets_feats){
 		
 		print(s)
 		
-		for(c in ambient){
-			print(c)		
-			test_desc(datasets_feats, 'ambient', c, s)			
-		}
-		for(c in dataset){
-			print(c)
-			test_desc(datasets_feats, 'dataset_id', c, s)
-		}
+		#for(c in ambient){
+		#	print(c)
+		#	test_desc(datasets, 'ambient', c, s)
+		#}
+		#for(c in dataset){
+		#	print(c)
+		#	test_desc(datasets, 'dataset_id', c, s)
+		#}
 		for(c in artist){
 			print(c)
-			test_desc(datasets_feats, 'artist_id', c, s)
+			test_desc(datasets, 'artist_id', c, s)
 		}
 		
 		
@@ -192,6 +191,7 @@ analyze_desc <- function(datasets_feats){
 
 test_desc <- function(datasets, crit, class, stat){
 	
+    
 	
 	if(crit == 'ambient'){
 		class_crit <- 'dataset_id'
@@ -201,7 +201,7 @@ test_desc <- function(datasets, crit, class, stat){
 		
 	}
 	else if(crit == 'artist_id'){
-		class_crit <- 'excerpt_id'
+		class_crit <- 'album_id'
 	}
 	
 	if(class == 'Ambient'){
@@ -321,14 +321,12 @@ test_desc <- function(datasets, crit, class, stat){
 	}
 	
 	
-	#print(paste('descriptive_', class_crit, '_' ,class, '_', stat, '.txt', sep = ''))
+	print(paste('descriptive_', class_crit, '_' ,class, '_', stat, '.txt', sep = ''))
 	
 	sink(paste('Evaluation/descriptive_',class_crit,'_',class,'_',stat,'.txt', sep = ''))
 	
 
-	
-	#for(num_desc in c(10)){
-	for(num_desc in c(10,20,30,40,50)){			
+    for(num_desc in c(10,20,30,40,50)){
 		
 		class_feats <- datasets[['all']]$desc_feats[[crit]][[class]][[stat]]$desc[1:num_desc]
 		
@@ -337,7 +335,7 @@ test_desc <- function(datasets, crit, class, stat){
 		print(length(class_feats))
 		
 				
-		feats <- datasets_feats[['all']]$sum[[crit]][[class]]$desc
+		feats <- datasets[['all']]$sum[[crit]][[class]]$desc
 		print(length(feats))
 		no_class_feats <- feats[! feats %in% class_feats]
 		print(length(no_class_feats))
@@ -352,7 +350,7 @@ test_desc <- function(datasets, crit, class, stat){
 					
 		results <- class_svm(data, crit = class_crit, descriptors = class_feats, self_class = TRUE)			
 				
-		#print(results)		
+		print(results)
 					
 		eval <- simple_evaluation(results)
 		print(paste('Accuracy: ', eval$accuracy))

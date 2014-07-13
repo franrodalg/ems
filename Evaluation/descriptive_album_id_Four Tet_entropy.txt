@@ -1,0 +1,261 @@
+[1] "Features:"
+ [1] mtb_key_strength_08         mtb_mfcc_12                 en_seg_timbre_10_med       
+ [4] en_tatums_dur_skew          ess_mfcc_10_mean            en_segments_per_section_kur
+ [7] en_bars_per_section_kur     mtb_key_strength_01         mtb_key_strength_09        
+[10] mtb_key_strength_06        
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 10
+[1] 506
+[1] 496
+[1] "NUM DESC: 10"
+[1] "Criteria: artist_id; Class: Four Tet; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+427 428 429 430 431 432 433 434 435 436 442 443 444 445 446 437 438 439 440 441 447 448 449 450 
+202 203 203 203 203 201 201 201 201 200 199 199 199 199 199 202 202 202 200 202 200 200 200 200 
+451 
+200 
+Levels: 199 201 203 200 202
+
+$ground_truth
+ [1] 203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200
+[24] 200 200
+Levels: 199 201 203 200 202
+
+$confusion_table
+     
+pred  199 201 203 200 202
+  199   5   0   0   0   0
+  201   0   4   0   0   0
+  203   0   0   4   0   0
+  200   0   1   0   5   1
+  202   0   0   1   0   4
+
+[1] "Accuracy:  0.88"
+[1] "Precision:  0.902857142857143"
+[1] "Recall:  0.88"
+[1] "F1-Score:  0.882222222222222"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.912"
+[1] "Mean Precision:  0.933515873015873"
+[1] "Mean Recall:  0.912727272727273"
+[1] "Mean F1-Score:  0.912148760330578"
+[1] "Features:"
+ [1] mtb_key_strength_08         mtb_mfcc_12                 en_seg_timbre_10_med       
+ [4] en_tatums_dur_skew          ess_mfcc_10_mean            en_segments_per_section_kur
+ [7] en_bars_per_section_kur     mtb_key_strength_01         mtb_key_strength_09        
+[10] mtb_key_strength_06         en_tatums_dur_var           ess_mfcc_07_mean           
+[13] en_sec_tempo_var            en_beats_dur_var            en_beats_dur_skew          
+[16] en_seg_loud_max_time_var    en_seg_pitch_08_kur         en_seg_pitch_06_kur        
+[19] en_sec_dur_kur              ess_ioi_kur                
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 20
+[1] 506
+[1] 486
+[1] "NUM DESC: 20"
+[1] "Criteria: artist_id; Class: Four Tet; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+427 428 429 430 431 432 433 434 435 436 442 443 444 445 446 437 438 439 440 441 447 448 449 450 
+203 203 203 203 203 201 202 202 201 200 199 199 202 199 199 202 202 202 202 202 200 200 200 200 
+451 
+200 
+Levels: 199 201 203 200 202
+
+$ground_truth
+ [1] 203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200
+[24] 200 200
+Levels: 199 201 203 200 202
+
+$confusion_table
+     
+pred  199 201 203 200 202
+  199   4   0   0   0   0
+  201   0   2   0   0   0
+  203   0   0   5   0   0
+  200   0   1   0   5   0
+  202   1   2   0   0   5
+
+[1] "Accuracy:  0.84"
+[1] "Precision:  0.891666666666667"
+[1] "Recall:  0.84"
+[1] "F1-Score:  0.827727827727828"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.984"
+[1] "Mean Precision:  0.987619047619048"
+[1] "Mean Recall:  0.985454545454545"
+[1] "Mean F1-Score:  0.985454545454545"
+[1] "Features:"
+ [1] mtb_key_strength_08                            mtb_mfcc_12                                   
+ [3] en_seg_timbre_10_med                           en_tatums_dur_skew                            
+ [5] ess_mfcc_10_mean                               en_segments_per_section_kur                   
+ [7] en_bars_per_section_kur                        mtb_key_strength_01                           
+ [9] mtb_key_strength_09                            mtb_key_strength_06                           
+[11] en_tatums_dur_var                              ess_mfcc_07_mean                              
+[13] en_sec_tempo_var                               en_beats_dur_var                              
+[15] en_beats_dur_skew                              en_seg_loud_max_time_var                      
+[17] en_seg_pitch_08_kur                            en_seg_pitch_06_kur                           
+[19] en_sec_dur_kur                                 ess_ioi_kur                                   
+[21] mtb_ioi_kur                                    ess_ioi_var                                   
+[23] ess_pitch_after_max_to_before_max_energy_ratio en_seg_pitch_03_kur                           
+[25] en_sec_time_sig_var                            ess_spectral_kurtosis_var                     
+[27] ess_ibi_var                                    en_seg_pitch_07_kur                           
+[29] en_sec_time_sig_conf_var                       en_seg_pitch_10_kur                           
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 30
+[1] 506
+[1] 476
+[1] "NUM DESC: 30"
+[1] "Criteria: artist_id; Class: Four Tet; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+427 428 429 430 431 432 433 434 435 436 442 443 444 445 446 437 438 439 440 441 447 448 449 450 
+203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200 200 
+451 
+200 
+Levels: 199 201 203 200 202
+
+$ground_truth
+ [1] 203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200
+[24] 200 200
+Levels: 199 201 203 200 202
+
+$confusion_table
+     
+pred  199 201 203 200 202
+  199   5   0   0   0   0
+  201   0   5   0   0   0
+  203   0   0   5   0   0
+  200   0   0   0   5   0
+  202   0   0   0   0   5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.98"
+[1] "Mean Precision:  0.984285714285714"
+[1] "Mean Recall:  0.981818181818182"
+[1] "Mean F1-Score:  0.981818181818182"
+[1] "Features:"
+ [1] mtb_key_strength_08                            mtb_mfcc_12                                   
+ [3] en_seg_timbre_10_med                           en_tatums_dur_skew                            
+ [5] ess_mfcc_10_mean                               en_segments_per_section_kur                   
+ [7] en_bars_per_section_kur                        mtb_key_strength_01                           
+ [9] mtb_key_strength_09                            mtb_key_strength_06                           
+[11] en_tatums_dur_var                              ess_mfcc_07_mean                              
+[13] en_sec_tempo_var                               en_beats_dur_var                              
+[15] en_beats_dur_skew                              en_seg_loud_max_time_var                      
+[17] en_seg_pitch_08_kur                            en_seg_pitch_06_kur                           
+[19] en_sec_dur_kur                                 ess_ioi_kur                                   
+[21] mtb_ioi_kur                                    ess_ioi_var                                   
+[23] ess_pitch_after_max_to_before_max_energy_ratio en_seg_pitch_03_kur                           
+[25] en_sec_time_sig_var                            ess_spectral_kurtosis_var                     
+[27] ess_ibi_var                                    en_seg_pitch_07_kur                           
+[29] en_sec_time_sig_conf_var                       en_seg_pitch_10_kur                           
+[31] en_seg_pitch_09_kur                            mtb_chroma_06                                 
+[33] en_end_of_fade_in                              ess_tuning_frequency_var                      
+[35] en_seg_timbre_07_kur                           en_seg_pitch_11_kur                           
+[37] en_seg_dur_kur                                 mtb_ioi_var                                   
+[39] en_seg_pitch_04_kur                            mtb_roughness_period_freq                     
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 40
+[1] 506
+[1] 466
+[1] "NUM DESC: 40"
+[1] "Criteria: artist_id; Class: Four Tet; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+427 428 429 430 431 432 433 434 435 436 442 443 444 445 446 437 438 439 440 441 447 448 449 450 
+203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200 200 
+451 
+200 
+Levels: 199 201 203 200 202
+
+$ground_truth
+ [1] 203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200
+[24] 200 200
+Levels: 199 201 203 200 202
+
+$confusion_table
+     
+pred  199 201 203 200 202
+  199   5   0   0   0   0
+  201   0   5   0   0   0
+  203   0   0   5   0   0
+  200   0   0   0   5   0
+  202   0   0   0   0   5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.992"
+[1] "Mean Precision:  0.993333333333333"
+[1] "Mean Recall:  0.992727272727273"
+[1] "Mean F1-Score:  0.992727272727273"
+[1] "Features:"
+ [1] mtb_key_strength_08                            mtb_mfcc_12                                   
+ [3] en_seg_timbre_10_med                           en_tatums_dur_skew                            
+ [5] ess_mfcc_10_mean                               en_segments_per_section_kur                   
+ [7] en_bars_per_section_kur                        mtb_key_strength_01                           
+ [9] mtb_key_strength_09                            mtb_key_strength_06                           
+[11] en_tatums_dur_var                              ess_mfcc_07_mean                              
+[13] en_sec_tempo_var                               en_beats_dur_var                              
+[15] en_beats_dur_skew                              en_seg_loud_max_time_var                      
+[17] en_seg_pitch_08_kur                            en_seg_pitch_06_kur                           
+[19] en_sec_dur_kur                                 ess_ioi_kur                                   
+[21] mtb_ioi_kur                                    ess_ioi_var                                   
+[23] ess_pitch_after_max_to_before_max_energy_ratio en_seg_pitch_03_kur                           
+[25] en_sec_time_sig_var                            ess_spectral_kurtosis_var                     
+[27] ess_ibi_var                                    en_seg_pitch_07_kur                           
+[29] en_sec_time_sig_conf_var                       en_seg_pitch_10_kur                           
+[31] en_seg_pitch_09_kur                            mtb_chroma_06                                 
+[33] en_end_of_fade_in                              ess_tuning_frequency_var                      
+[35] en_seg_timbre_07_kur                           en_seg_pitch_11_kur                           
+[37] en_seg_dur_kur                                 mtb_ioi_var                                   
+[39] en_seg_pitch_04_kur                            mtb_roughness_period_freq                     
+[41] en_tatums_dur_kur                              mtb_chroma_07                                 
+[43] ess_average_loudness                           en_seg_timbre_08_kur                          
+[45] mtb_chroma_08                                  ess_beats_loudness_band_ratio_06_var          
+[47] en_seg_loud_max_time_kur                       en_seg_timbre_11_kur                          
+[49] en_seg_timbre_08_skew                          en_beats_dur_kur                              
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 50
+[1] 506
+[1] 456
+[1] "NUM DESC: 50"
+[1] "Criteria: artist_id; Class: Four Tet; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+427 428 429 430 431 432 433 434 435 436 442 443 444 445 446 437 438 439 440 441 447 448 449 450 
+203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200 200 
+451 
+200 
+Levels: 199 201 203 200 202
+
+$ground_truth
+ [1] 203 203 203 203 203 201 201 201 201 201 199 199 199 199 199 202 202 202 202 202 200 200 200
+[24] 200 200
+Levels: 199 201 203 200 202
+
+$confusion_table
+     
+pred  199 201 203 200 202
+  199   5   0   0   0   0
+  201   0   5   0   0   0
+  203   0   0   5   0   0
+  200   0   0   0   5   0
+  202   0   0   0   0   5
+
+[1] "Accuracy:  1"
+[1] "Precision:  1"
+[1] "Recall:  1"
+[1] "F1-Score:  1"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  1"
+[1] "Mean Precision:  1"
+[1] "Mean Recall:  1"
+[1] "Mean F1-Score:  1"

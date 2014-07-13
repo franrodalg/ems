@@ -1,0 +1,247 @@
+[1] "Features:"
+ [1] mtb_key_strength_05   en_seg_timbre_04_med  ess_mfcc_09_mean      en_beats_dur_skew    
+ [5] en_tatums_dur_skew    en_bar_dur_skew       ess_mfcc_11_mean      mtb_tonal_centroid_06
+ [9] mtb_tonal_centroid_03 en_seg_timbre_02_mean
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 10
+[1] 506
+[1] 496
+[1] "NUM DESC: 10"
+[1] "Criteria: artist_id; Class: Lemongrass; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 402 403 404 405 406 422 423 424 425 
+586 586 586 586 586 590 587 590 590 590 588 588 588 588 588 587 587 587 587 587 589 589 589 589 
+426 
+589 
+Levels: 586 588 590 587 589
+
+$ground_truth
+ [1] 586 586 586 586 586 590 590 590 590 590 588 588 588 588 588 587 587 587 587 587 589 589 589
+[24] 589 589
+Levels: 586 588 590 587 589
+
+$confusion_table
+     
+pred  586 588 590 587 589
+  586   5   0   0   0   0
+  588   0   5   0   0   0
+  590   0   0   4   0   0
+  587   0   0   1   5   0
+  589   0   0   0   0   5
+
+[1] "Accuracy:  0.96"
+[1] "Precision:  0.966666666666667"
+[1] "Recall:  0.96"
+[1] "F1-Score:  0.95959595959596"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.916"
+[1] "Mean Precision:  0.927571428571429"
+[1] "Mean Recall:  0.912727272727273"
+[1] "Mean F1-Score:  0.912653810835629"
+[1] "Features:"
+ [1] mtb_key_strength_05   en_seg_timbre_04_med  ess_mfcc_09_mean      en_beats_dur_skew    
+ [5] en_tatums_dur_skew    en_bar_dur_skew       ess_mfcc_11_mean      mtb_tonal_centroid_06
+ [9] mtb_tonal_centroid_03 en_seg_timbre_02_mean mtb_key_strength_02   mtb_key_strength_03  
+[13] mtb_key_strength_06   ess_ioi_var           en_sec_loud_kur       en_seg_pitch_03_kur  
+[17] en_sec_tempo_var      en_tatums_dur_var     en_beats_dur_var      en_sec_time_sig_var  
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 20
+[1] 506
+[1] 486
+[1] "NUM DESC: 20"
+[1] "Criteria: artist_id; Class: Lemongrass; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 402 403 404 405 406 422 423 424 425 
+586 586 586 586 586 590 590 590 590 590 588 587 588 588 588 587 587 587 586 587 589 589 589 589 
+426 
+586 
+Levels: 586 588 590 587 589
+
+$ground_truth
+ [1] 586 586 586 586 586 590 590 590 590 590 588 588 588 588 588 587 587 587 587 587 589 589 589
+[24] 589 589
+Levels: 586 588 590 587 589
+
+$confusion_table
+     
+pred  586 588 590 587 589
+  586   5   0   0   1   1
+  588   0   4   0   0   0
+  590   0   0   5   0   0
+  587   0   1   0   4   0
+  589   0   0   0   0   4
+
+[1] "Accuracy:  0.88"
+[1] "Precision:  0.902857142857143"
+[1] "Recall:  0.88"
+[1] "F1-Score:  0.882222222222222"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.972"
+[1] "Mean Precision:  0.977619047619048"
+[1] "Mean Recall:  0.974545454545454"
+[1] "Mean F1-Score:  0.974545454545454"
+[1] "Features:"
+ [1] mtb_key_strength_05       en_seg_timbre_04_med      ess_mfcc_09_mean         
+ [4] en_beats_dur_skew         en_tatums_dur_skew        en_bar_dur_skew          
+ [7] ess_mfcc_11_mean          mtb_tonal_centroid_06     mtb_tonal_centroid_03    
+[10] en_seg_timbre_02_mean     mtb_key_strength_02       mtb_key_strength_03      
+[13] mtb_key_strength_06       ess_ioi_var               en_sec_loud_kur          
+[16] en_seg_pitch_03_kur       en_sec_tempo_var          en_tatums_dur_var        
+[19] en_beats_dur_var          en_sec_time_sig_var       en_seg_pitch_08_kur      
+[22] en_sec_time_sig_conf_var  ess_ibi_var               ess_spectral_kurtosis_var
+[25] en_seg_loud_max_time_kur  en_end_of_fade_in         en_seg_pitch_07_kur      
+[28] en_beats_dur_kur          en_tatums_dur_kur         en_seg_pitch_10_kur      
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 30
+[1] 506
+[1] 476
+[1] "NUM DESC: 30"
+[1] "Criteria: artist_id; Class: Lemongrass; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 402 403 404 405 406 422 423 424 425 
+586 586 586 586 586 590 590 590 590 590 588 587 588 588 588 587 587 587 587 587 589 589 587 590 
+426 
+586 
+Levels: 586 588 590 587 589
+
+$ground_truth
+ [1] 586 586 586 586 586 590 590 590 590 590 588 588 588 588 588 587 587 587 587 587 589 589 589
+[24] 589 589
+Levels: 586 588 590 587 589
+
+$confusion_table
+     
+pred  586 588 590 587 589
+  586   5   0   0   0   1
+  588   0   4   0   0   0
+  590   0   0   5   0   1
+  587   0   1   0   5   1
+  589   0   0   0   0   2
+
+[1] "Accuracy:  0.84"
+[1] "Precision:  0.876190476190476"
+[1] "Recall:  0.84"
+[1] "F1-Score:  0.822366522366522"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.984"
+[1] "Mean Precision:  0.986666666666667"
+[1] "Mean Recall:  0.981818181818182"
+[1] "Mean F1-Score:  0.98178145087236"
+[1] "Features:"
+ [1] mtb_key_strength_05       en_seg_timbre_04_med      ess_mfcc_09_mean         
+ [4] en_beats_dur_skew         en_tatums_dur_skew        en_bar_dur_skew          
+ [7] ess_mfcc_11_mean          mtb_tonal_centroid_06     mtb_tonal_centroid_03    
+[10] en_seg_timbre_02_mean     mtb_key_strength_02       mtb_key_strength_03      
+[13] mtb_key_strength_06       ess_ioi_var               en_sec_loud_kur          
+[16] en_seg_pitch_03_kur       en_sec_tempo_var          en_tatums_dur_var        
+[19] en_beats_dur_var          en_sec_time_sig_var       en_seg_pitch_08_kur      
+[22] en_sec_time_sig_conf_var  ess_ibi_var               ess_spectral_kurtosis_var
+[25] en_seg_loud_max_time_kur  en_end_of_fade_in         en_seg_pitch_07_kur      
+[28] en_beats_dur_kur          en_tatums_dur_kur         en_seg_pitch_10_kur      
+[31] mtb_roughness_period_freq mtb_key_strength_04       en_seg_pitch_12_kur      
+[34] en_seg_timbre_11_kur      en_seg_timbre_03_kur      en_seg_pitch_09_kur      
+[37] en_seg_dur_kur            ess_second_peak_weight    ess_average_loudness     
+[40] mtb_ioi_var              
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 40
+[1] 506
+[1] 466
+[1] "NUM DESC: 40"
+[1] "Criteria: artist_id; Class: Lemongrass; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 402 403 404 405 406 422 423 424 425 
+586 586 586 586 586 590 590 590 590 587 588 587 588 588 588 587 587 587 587 587 589 589 587 589 
+426 
+586 
+Levels: 586 588 590 587 589
+
+$ground_truth
+ [1] 586 586 586 586 586 590 590 590 590 590 588 588 588 588 588 587 587 587 587 587 589 589 589
+[24] 589 589
+Levels: 586 588 590 587 589
+
+$confusion_table
+     
+pred  586 588 590 587 589
+  586   5   0   0   0   1
+  588   0   4   0   0   0
+  590   0   0   4   0   0
+  587   0   1   1   5   1
+  589   0   0   0   0   3
+
+[1] "Accuracy:  0.84"
+[1] "Precision:  0.891666666666667"
+[1] "Recall:  0.84"
+[1] "F1-Score:  0.841219891219891"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.996"
+[1] "Mean Precision:  0.996666666666667"
+[1] "Mean Recall:  0.992727272727273"
+[1] "Mean F1-Score:  0.992690541781451"
+[1] "Features:"
+ [1] mtb_key_strength_05                            en_seg_timbre_04_med                          
+ [3] ess_mfcc_09_mean                               en_beats_dur_skew                             
+ [5] en_tatums_dur_skew                             en_bar_dur_skew                               
+ [7] ess_mfcc_11_mean                               mtb_tonal_centroid_06                         
+ [9] mtb_tonal_centroid_03                          en_seg_timbre_02_mean                         
+[11] mtb_key_strength_02                            mtb_key_strength_03                           
+[13] mtb_key_strength_06                            ess_ioi_var                                   
+[15] en_sec_loud_kur                                en_seg_pitch_03_kur                           
+[17] en_sec_tempo_var                               en_tatums_dur_var                             
+[19] en_beats_dur_var                               en_sec_time_sig_var                           
+[21] en_seg_pitch_08_kur                            en_sec_time_sig_conf_var                      
+[23] ess_ibi_var                                    ess_spectral_kurtosis_var                     
+[25] en_seg_loud_max_time_kur                       en_end_of_fade_in                             
+[27] en_seg_pitch_07_kur                            en_beats_dur_kur                              
+[29] en_tatums_dur_kur                              en_seg_pitch_10_kur                           
+[31] mtb_roughness_period_freq                      mtb_key_strength_04                           
+[33] en_seg_pitch_12_kur                            en_seg_timbre_11_kur                          
+[35] en_seg_timbre_03_kur                           en_seg_pitch_09_kur                           
+[37] en_seg_dur_kur                                 ess_second_peak_weight                        
+[39] ess_average_loudness                           mtb_ioi_var                                   
+[41] en_mode                                        mtb_key_strength_11                           
+[43] mtb_chroma_07                                  en_seg_timbre_05_kur                          
+[45] ess_tuning_frequency_var                       en_acousticness                               
+[47] mtb_tonal_centroid_01                          ess_pitch_after_max_to_before_max_energy_ratio
+[49] en_tatums_conf_kur                             en_beats_conf_kur                             
+506 Levels: en_acousticness en_bar_conf_kur en_bar_conf_mean en_bar_conf_med ... mtb_tonal_centroid_06
+[1] 50
+[1] 506
+[1] 456
+[1] "NUM DESC: 50"
+[1] "Criteria: artist_id; Class: Lemongrass; Stat: entropy"
+[1] "DESCRIPTIVE"
+$predictions
+407 408 409 410 411 412 413 414 415 416 417 418 419 420 421 402 403 404 405 406 422 423 424 425 
+586 586 586 586 586 590 590 590 590 590 588 587 588 588 588 587 587 587 587 587 589 589 589 589 
+426 
+586 
+Levels: 586 588 590 587 589
+
+$ground_truth
+ [1] 586 586 586 586 586 590 590 590 590 590 588 588 588 588 588 587 587 587 587 587 589 589 589
+[24] 589 589
+Levels: 586 588 590 587 589
+
+$confusion_table
+     
+pred  586 588 590 587 589
+  586   5   0   0   0   1
+  588   0   4   0   0   0
+  590   0   0   5   0   0
+  587   0   1   0   5   0
+  589   0   0   0   0   4
+
+[1] "Accuracy:  0.92"
+[1] "Precision:  0.933333333333333"
+[1] "Recall:  0.92"
+[1] "F1-Score:  0.919191919191919"
+[1] "NON-DESCRIPTIVE"
+[1] "Mean Accuracy:  0.996"
+[1] "Mean Precision:  0.996666666666667"
+[1] "Mean Recall:  0.996363636363636"
+[1] "Mean F1-Score:  0.996363636363636"
